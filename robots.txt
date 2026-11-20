@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://swcx0101.github.io/eco-paper-hook/sitemap.xml
+Sitemap: https://rongfumenye.github.io/eco-paper-hook/sitemap.xml
