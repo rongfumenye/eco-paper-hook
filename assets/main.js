@@ -152,3 +152,41 @@ function sendInquiry(ev) {
     });
   }
 })();
+
+// ===== 语言下拉菜单交互 =====
+(function () {
+  function closeAll(except) {
+    var all = document.querySelectorAll('.lang-dd');
+    for (var i = 0; i < all.length; i++) {
+      if (all[i] !== except) {
+        all[i].classList.remove('open');
+        var btn = all[i].querySelector('.lang-dd-btn');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      }
+    }
+  }
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest ? e.target.closest('.lang-dd-btn') : null;
+    if (btn) {
+      var dd = btn.parentElement;
+      var willOpen = !dd.classList.contains('open');
+      closeAll(dd);
+      dd.classList.toggle('open', willOpen);
+      btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+      e.stopPropagation();
+      return;
+    }
+    // 点击下拉内选项：记忆语言偏好
+    var item = e.target.closest ? e.target.closest('.lang-dd-menu a') : null;
+    if (item) {
+      var m = (item.getAttribute('href') || '').match(/(?:\.\.\/)?(?:en|zh|ru|ar)\//);
+      if (!m) m = (item.getAttribute('href') || '').match(/^\/?(?:eco-paper-hook\/)?(en|zh|ru|ar)\//);
+      if (m) { try { localStorage.setItem('ph-lang', m[1]); } catch (err) {} }
+      return;
+    }
+    closeAll(null);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeAll(null);
+  });
+})();
