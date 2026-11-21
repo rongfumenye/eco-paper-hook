@@ -19,7 +19,16 @@
     printing: { zh: '1–4 色专色，大豆油墨', en: '1–4 spot colours, soy ink', ru: '1–4 цвета, соевые чернила', ar: '1–4 ألوان، حبر صويا' },
     finish: { zh: '烫金 / 击凸 / 压凹', en: 'Foil / emboss / deboss', ru: 'Фольга / тиснение', ar: 'رقائق / نقش بارز' },
     pack: '1,000 / 5,000 pcs per carton',
-    lead: '7–12 days'
+    lead: '7–12 days',
+    // 简报 §5 新增字段（均为 reference 参考值，需按订单确认）
+    dimensions: 'Custom / per drawing',
+    moq: { zh:'常规 10,000 只 / 定制 30,000 只', en:'Standard 10,000 pcs / Custom 30,000 pcs', ru:'Стандарт 10 000 шт. / На заказ 30 000 шт.', ar:'قياسي 10٬000 / مخصص 30٬000' },
+    sampleLead: { zh:'3–7 天（按款评估）', en:'3–7 days (per item)', ru:'3–7 дней (по item)', ar:'3–7 أيام (حسب النوع)' },
+    // 区分：reference=行业区间参考；tested=逐款实测（当前无逐款实测数据，勿编造）
+    specNature: { zh:'以下为常规生产区间（参考值），非逐款实测数据；精确参数请索取规格书与样品。',
+      en:'Values below are typical production ranges (reference), not per-item tested data; request a spec sheet and samples for exact figures.',
+      ru:'Значения — отраслевые диапазоны (справочно), не измерения по каждой модели; запросите спецификацию и образцы.',
+      ar:'القيم نطاقات إنتاج معتادة (إرشادية)، ليست قياسات لكل نوع؛ اطلب ورقة المواصفات والعينات.' }
   };
 
   // 14 款现成 SKU —— 名称来自现有页面；应用/推荐钩型为合理归类，规格用通用区间

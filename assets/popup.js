@@ -73,7 +73,8 @@
   var isSub = src.indexOf('../') === 0;
   var ASSET = isSub ? '../assets/' : 'assets/';
   var productHref = isSub ? 'products.html' : 'zh/products.html';
-  var waHref = 'https://wa.me/8615515601979';
+  var _cfg = window.PH_CONFIG || {};
+  var waHref = (_cfg.whatsapp && _cfg.whatsapp.url) ? _cfg.whatsapp.url : 'https://wa.me/8615515601979';
 
   var dir = LANG === 'ar' ? 'rtl' : 'ltr';
 
