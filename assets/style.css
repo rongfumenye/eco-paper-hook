@@ -619,3 +619,6 @@ body.tn .tn-header .tn-nav{max-width:1520px;padding-left:32px;padding-right:32px
 @media(max-width:900px){
   .tn-actions .lang-dd{display:none}
 }
+
+/* 场景锚点跳转：避免被 sticky 顶栏遮挡 */
+[id^="case-"]{scroll-margin-top:88px}
