@@ -78,69 +78,7 @@ if ('IntersectionObserver' in window && nums.length) {
   });
 }
 
-// ===== 询价表单：拼装邮件（四种语言共用，文案随页面语言切换）=====
-var PH_MAIL = '1450920332@qq.com';
-var PH_I18N = {
-  en: {
-    subject: 'Website inquiry',
-    name: 'Name', company: 'Company', email: 'Email', market: 'Market',
-    category: 'Product category', peg: 'Peg diameter', weight: 'Unit weight',
-    qty: 'Quantity', notes: 'Notes',
-    tip: 'Your email client should open. If not, write to 1450920332@qq.com or WhatsApp +86 155 1560 1979.'
-  },
-  zh: {
-    subject: '官网询价',
-    name: '姓名', company: '公司', email: '邮箱', market: '目标市场',
-    category: '需求产品', peg: '挂钩孔径', weight: '单件克重',
-    qty: '预计数量', notes: '需求说明',
-    tip: '已调起邮件客户端。若未自动打开，请直接发送至 1450920332@qq.com 或 WhatsApp +86 155 1560 1979。'
-  },
-  ru: {
-    subject: 'Запрос с сайта',
-    name: 'Имя', company: 'Компания', email: 'E-mail', market: 'Рынок',
-    category: 'Категория продукта', peg: 'Диаметр отверстия', weight: 'Вес, г',
-    qty: 'Количество', notes: 'Комментарий',
-    tip: 'Почтовый клиент должен открыться. Если нет — напишите на 1450920332@qq.com или в WhatsApp +86 155 1560 1979.'
-  },
-  ar: {
-    subject: 'استفسار من الموقع',
-    name: 'الاسم', company: 'الشركة', email: 'البريد الإلكتروني', market: 'السوق',
-    category: 'فئة المنتج', peg: 'قطر الفتحة', weight: 'الوزن بالغرام',
-    qty: 'الكمية', notes: 'ملاحظات',
-    tip: 'سيُفتح برنامج البريد. إن لم يفتح، راسلنا على 1450920332@qq.com أو واتساب ‎+86 155 1560 1979.'
-  }
-};
-var PH_DOCLANG = (document.documentElement.lang || 'en').toLowerCase();
-var PH_LANG = PH_DOCLANG.indexOf('zh') === 0 ? 'zh'
-  : PH_DOCLANG.indexOf('ru') === 0 ? 'ru'
-  : PH_DOCLANG.indexOf('ar') === 0 ? 'ar' : 'en';
-
-function sendInquiry(ev) {
-  if (ev && ev.preventDefault) ev.preventDefault();
-  var f = (ev && ev.target) ? ev.target : document.querySelector('.form');
-  if (!f) return false;
-  var t = PH_I18N[PH_LANG] || PH_I18N.en;
-  var d = new FormData(f);
-  var g = function (k) { return (d.get(k) || '').toString().trim(); };
-  var lines = [];
-  var pairs = [
-    ['name', t.name, ''], ['company', t.company, ''], ['email', t.email, ''],
-    ['market', t.market, ''], ['category', t.category, ''],
-    ['peg', t.peg, ' mm'], ['weight', t.weight, ' g'], ['qty', t.qty, '']
-  ];
-  pairs.forEach(function (p) {
-    var v = g(p[0]);
-    if (v) lines.push(p[1] + ': ' + v + p[2]);
-  });
-  lines.push('', t.notes + ':', g('notes'));
-  var subject = t.subject + ' - ' + (g('category') || 'Paper hooks') + ' - ' + (g('name') || '');
-  window.location.href = 'mailto:' + PH_MAIL
-    + '?subject=' + encodeURIComponent(subject)
-    + '&body=' + encodeURIComponent(lines.join('\n'));
-  var tip = document.getElementById('formTip');
-  if (tip) { tip.style.display = 'block'; tip.textContent = t.tip; }
-  return false;
-}
+// ===== 询价表单逻辑已迁移至 inquiry.js（含真后端+兜底）=====
 
 // ===== 多语言：记住语言偏好 =====
 (function () {

@@ -1,322 +1,586 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://rongfumenye.github.io/eco-paper-hook/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rongfumenye.github.io/eco-paper-hook/en/index.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://rongfumenye.github.io/eco-paper-hook/zh/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://rongfumenye.github.io/eco-paper-hook/ru/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rongfumenye.github.io/eco-paper-hook/ar/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rongfumenye.github.io/eco-paper-hook/"/>
+    <loc>https://kalozen.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/"/>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://rongfumenye.github.io/eco-paper-hook/en/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rongfumenye.github.io/eco-paper-hook/en/index.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://rongfumenye.github.io/eco-paper-hook/zh/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://rongfumenye.github.io/eco-paper-hook/ru/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rongfumenye.github.io/eco-paper-hook/ar/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rongfumenye.github.io/eco-paper-hook/"/>
+    <loc>https://kalozen.com/en/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/"/>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://rongfumenye.github.io/eco-paper-hook/zh/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rongfumenye.github.io/eco-paper-hook/en/index.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://rongfumenye.github.io/eco-paper-hook/zh/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://rongfumenye.github.io/eco-paper-hook/ru/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rongfumenye.github.io/eco-paper-hook/ar/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rongfumenye.github.io/eco-paper-hook/"/>
+    <loc>https://kalozen.com/zh/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/"/>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://rongfumenye.github.io/eco-paper-hook/ru/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rongfumenye.github.io/eco-paper-hook/en/index.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://rongfumenye.github.io/eco-paper-hook/zh/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://rongfumenye.github.io/eco-paper-hook/ru/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rongfumenye.github.io/eco-paper-hook/ar/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rongfumenye.github.io/eco-paper-hook/"/>
+    <loc>https://kalozen.com/ru/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/"/>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://rongfumenye.github.io/eco-paper-hook/ar/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rongfumenye.github.io/eco-paper-hook/en/index.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://rongfumenye.github.io/eco-paper-hook/zh/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://rongfumenye.github.io/eco-paper-hook/ru/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rongfumenye.github.io/eco-paper-hook/ar/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rongfumenye.github.io/eco-paper-hook/"/>
+    <loc>https://kalozen.com/ar/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/"/>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://rongfumenye.github.io/eco-paper-hook/en/eco.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rongfumenye.github.io/eco-paper-hook/en/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://rongfumenye.github.io/eco-paper-hook/zh/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://rongfumenye.github.io/eco-paper-hook/ru/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rongfumenye.github.io/eco-paper-hook/ar/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rongfumenye.github.io/eco-paper-hook/en/eco.html"/>
+    <loc>https://kalozen.com/en/eco.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/eco.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/eco.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/eco.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/eco.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/eco.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://rongfumenye.github.io/eco-paper-hook/zh/eco.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rongfumenye.github.io/eco-paper-hook/en/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://rongfumenye.github.io/eco-paper-hook/zh/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://rongfumenye.github.io/eco-paper-hook/ru/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rongfumenye.github.io/eco-paper-hook/ar/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rongfumenye.github.io/eco-paper-hook/en/eco.html"/>
+    <loc>https://kalozen.com/zh/eco.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/eco.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/eco.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/eco.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/eco.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/eco.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://rongfumenye.github.io/eco-paper-hook/ru/eco.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rongfumenye.github.io/eco-paper-hook/en/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://rongfumenye.github.io/eco-paper-hook/zh/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://rongfumenye.github.io/eco-paper-hook/ru/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rongfumenye.github.io/eco-paper-hook/ar/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rongfumenye.github.io/eco-paper-hook/en/eco.html"/>
+    <loc>https://kalozen.com/ru/eco.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/eco.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/eco.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/eco.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/eco.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/eco.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://rongfumenye.github.io/eco-paper-hook/ar/eco.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rongfumenye.github.io/eco-paper-hook/en/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://rongfumenye.github.io/eco-paper-hook/zh/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://rongfumenye.github.io/eco-paper-hook/ru/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rongfumenye.github.io/eco-paper-hook/ar/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rongfumenye.github.io/eco-paper-hook/en/eco.html"/>
+    <loc>https://kalozen.com/ar/eco.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/eco.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/eco.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/eco.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/eco.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/eco.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://rongfumenye.github.io/eco-paper-hook/en/products.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rongfumenye.github.io/eco-paper-hook/en/products.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://rongfumenye.github.io/eco-paper-hook/zh/products.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://rongfumenye.github.io/eco-paper-hook/ru/products.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rongfumenye.github.io/eco-paper-hook/ar/products.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rongfumenye.github.io/eco-paper-hook/en/products.html"/>
+    <loc>https://kalozen.com/en/products.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/products.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/products.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/products.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/products.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/products.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://rongfumenye.github.io/eco-paper-hook/zh/products.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rongfumenye.github.io/eco-paper-hook/en/products.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://rongfumenye.github.io/eco-paper-hook/zh/products.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://rongfumenye.github.io/eco-paper-hook/ru/products.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rongfumenye.github.io/eco-paper-hook/ar/products.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rongfumenye.github.io/eco-paper-hook/en/products.html"/>
+    <loc>https://kalozen.com/zh/products.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/products.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/products.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/products.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/products.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/products.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://rongfumenye.github.io/eco-paper-hook/ru/products.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rongfumenye.github.io/eco-paper-hook/en/products.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://rongfumenye.github.io/eco-paper-hook/zh/products.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://rongfumenye.github.io/eco-paper-hook/ru/products.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rongfumenye.github.io/eco-paper-hook/ar/products.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rongfumenye.github.io/eco-paper-hook/en/products.html"/>
+    <loc>https://kalozen.com/ru/products.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/products.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/products.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/products.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/products.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/products.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://rongfumenye.github.io/eco-paper-hook/ar/products.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rongfumenye.github.io/eco-paper-hook/en/products.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://rongfumenye.github.io/eco-paper-hook/zh/products.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://rongfumenye.github.io/eco-paper-hook/ru/products.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rongfumenye.github.io/eco-paper-hook/ar/products.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rongfumenye.github.io/eco-paper-hook/en/products.html"/>
+    <loc>https://kalozen.com/ar/products.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/products.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/products.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/products.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/products.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/products.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://rongfumenye.github.io/eco-paper-hook/en/custom.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rongfumenye.github.io/eco-paper-hook/en/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://rongfumenye.github.io/eco-paper-hook/zh/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://rongfumenye.github.io/eco-paper-hook/ru/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rongfumenye.github.io/eco-paper-hook/ar/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rongfumenye.github.io/eco-paper-hook/en/custom.html"/>
+    <loc>https://kalozen.com/en/custom.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/custom.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/custom.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/custom.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/custom.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/custom.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://rongfumenye.github.io/eco-paper-hook/zh/custom.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rongfumenye.github.io/eco-paper-hook/en/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://rongfumenye.github.io/eco-paper-hook/zh/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://rongfumenye.github.io/eco-paper-hook/ru/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rongfumenye.github.io/eco-paper-hook/ar/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rongfumenye.github.io/eco-paper-hook/en/custom.html"/>
+    <loc>https://kalozen.com/zh/custom.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/custom.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/custom.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/custom.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/custom.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/custom.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://rongfumenye.github.io/eco-paper-hook/ru/custom.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rongfumenye.github.io/eco-paper-hook/en/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://rongfumenye.github.io/eco-paper-hook/zh/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://rongfumenye.github.io/eco-paper-hook/ru/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rongfumenye.github.io/eco-paper-hook/ar/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rongfumenye.github.io/eco-paper-hook/en/custom.html"/>
+    <loc>https://kalozen.com/ru/custom.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/custom.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/custom.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/custom.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/custom.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/custom.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://rongfumenye.github.io/eco-paper-hook/ar/custom.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rongfumenye.github.io/eco-paper-hook/en/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://rongfumenye.github.io/eco-paper-hook/zh/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://rongfumenye.github.io/eco-paper-hook/ru/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rongfumenye.github.io/eco-paper-hook/ar/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rongfumenye.github.io/eco-paper-hook/en/custom.html"/>
+    <loc>https://kalozen.com/ar/custom.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/custom.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/custom.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/custom.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/custom.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/custom.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://rongfumenye.github.io/eco-paper-hook/en/cases.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rongfumenye.github.io/eco-paper-hook/en/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://rongfumenye.github.io/eco-paper-hook/zh/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://rongfumenye.github.io/eco-paper-hook/ru/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rongfumenye.github.io/eco-paper-hook/ar/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rongfumenye.github.io/eco-paper-hook/en/cases.html"/>
+    <loc>https://kalozen.com/en/cases.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/cases.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/cases.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/cases.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/cases.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/cases.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://rongfumenye.github.io/eco-paper-hook/zh/cases.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rongfumenye.github.io/eco-paper-hook/en/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://rongfumenye.github.io/eco-paper-hook/zh/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://rongfumenye.github.io/eco-paper-hook/ru/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rongfumenye.github.io/eco-paper-hook/ar/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rongfumenye.github.io/eco-paper-hook/en/cases.html"/>
+    <loc>https://kalozen.com/zh/cases.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/cases.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/cases.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/cases.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/cases.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/cases.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://rongfumenye.github.io/eco-paper-hook/ru/cases.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rongfumenye.github.io/eco-paper-hook/en/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://rongfumenye.github.io/eco-paper-hook/zh/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://rongfumenye.github.io/eco-paper-hook/ru/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rongfumenye.github.io/eco-paper-hook/ar/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rongfumenye.github.io/eco-paper-hook/en/cases.html"/>
+    <loc>https://kalozen.com/ru/cases.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/cases.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/cases.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/cases.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/cases.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/cases.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://rongfumenye.github.io/eco-paper-hook/ar/cases.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rongfumenye.github.io/eco-paper-hook/en/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://rongfumenye.github.io/eco-paper-hook/zh/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://rongfumenye.github.io/eco-paper-hook/ru/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rongfumenye.github.io/eco-paper-hook/ar/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rongfumenye.github.io/eco-paper-hook/en/cases.html"/>
+    <loc>https://kalozen.com/ar/cases.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/cases.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/cases.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/cases.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/cases.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/cases.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://rongfumenye.github.io/eco-paper-hook/en/about.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rongfumenye.github.io/eco-paper-hook/en/about.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://rongfumenye.github.io/eco-paper-hook/zh/about.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://rongfumenye.github.io/eco-paper-hook/ru/about.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rongfumenye.github.io/eco-paper-hook/ar/about.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rongfumenye.github.io/eco-paper-hook/en/about.html"/>
+    <loc>https://kalozen.com/en/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/about.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://rongfumenye.github.io/eco-paper-hook/zh/about.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rongfumenye.github.io/eco-paper-hook/en/about.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://rongfumenye.github.io/eco-paper-hook/zh/about.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://rongfumenye.github.io/eco-paper-hook/ru/about.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rongfumenye.github.io/eco-paper-hook/ar/about.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rongfumenye.github.io/eco-paper-hook/en/about.html"/>
+    <loc>https://kalozen.com/zh/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/about.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://rongfumenye.github.io/eco-paper-hook/ru/about.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rongfumenye.github.io/eco-paper-hook/en/about.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://rongfumenye.github.io/eco-paper-hook/zh/about.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://rongfumenye.github.io/eco-paper-hook/ru/about.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rongfumenye.github.io/eco-paper-hook/ar/about.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rongfumenye.github.io/eco-paper-hook/en/about.html"/>
+    <loc>https://kalozen.com/ru/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/about.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://rongfumenye.github.io/eco-paper-hook/ar/about.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rongfumenye.github.io/eco-paper-hook/en/about.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://rongfumenye.github.io/eco-paper-hook/zh/about.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://rongfumenye.github.io/eco-paper-hook/ru/about.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rongfumenye.github.io/eco-paper-hook/ar/about.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rongfumenye.github.io/eco-paper-hook/en/about.html"/>
+    <loc>https://kalozen.com/ar/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/about.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://rongfumenye.github.io/eco-paper-hook/en/contact.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rongfumenye.github.io/eco-paper-hook/en/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://rongfumenye.github.io/eco-paper-hook/zh/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://rongfumenye.github.io/eco-paper-hook/ru/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rongfumenye.github.io/eco-paper-hook/ar/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rongfumenye.github.io/eco-paper-hook/en/contact.html"/>
+    <loc>https://kalozen.com/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/contact.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://rongfumenye.github.io/eco-paper-hook/zh/contact.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rongfumenye.github.io/eco-paper-hook/en/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://rongfumenye.github.io/eco-paper-hook/zh/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://rongfumenye.github.io/eco-paper-hook/ru/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rongfumenye.github.io/eco-paper-hook/ar/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rongfumenye.github.io/eco-paper-hook/en/contact.html"/>
+    <loc>https://kalozen.com/zh/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/contact.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://rongfumenye.github.io/eco-paper-hook/ru/contact.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rongfumenye.github.io/eco-paper-hook/en/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://rongfumenye.github.io/eco-paper-hook/zh/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://rongfumenye.github.io/eco-paper-hook/ru/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rongfumenye.github.io/eco-paper-hook/ar/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rongfumenye.github.io/eco-paper-hook/en/contact.html"/>
+    <loc>https://kalozen.com/ru/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/contact.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://rongfumenye.github.io/eco-paper-hook/ar/contact.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rongfumenye.github.io/eco-paper-hook/en/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://rongfumenye.github.io/eco-paper-hook/zh/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://rongfumenye.github.io/eco-paper-hook/ru/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rongfumenye.github.io/eco-paper-hook/ar/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rongfumenye.github.io/eco-paper-hook/en/contact.html"/>
+    <loc>https://kalozen.com/ar/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/contact.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/privacy.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/zh/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/privacy.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/ru/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/privacy.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/ar/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/privacy.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/terms.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/zh/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/terms.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/ru/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/terms.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/ar/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/terms.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/cookie.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/cookie.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/cookie.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/cookie.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/cookie.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/cookie.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/zh/cookie.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/cookie.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/cookie.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/cookie.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/cookie.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/cookie.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/ru/cookie.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/cookie.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/cookie.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/cookie.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/cookie.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/cookie.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/ar/cookie.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/cookie.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/cookie.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/cookie.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/cookie.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/cookie.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/faq.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/zh/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/faq.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/ru/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/faq.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/ar/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/faq.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/sample.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/sample.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/sample.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/sample.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/sample.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/sample.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/zh/sample.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/sample.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/sample.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/sample.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/sample.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/sample.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/ru/sample.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/sample.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/sample.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/sample.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/sample.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/sample.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/ar/sample.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/sample.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/sample.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/sample.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/sample.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/sample.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/product.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/product.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/product.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/product.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/product.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/product.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/zh/product.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/product.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/product.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/product.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/product.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/product.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/ru/product.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/product.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/product.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/product.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/product.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/product.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/ar/product.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/product.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/product.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/product.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/product.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/product.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-11-21</lastmod>
   </url>
 </urlset>
