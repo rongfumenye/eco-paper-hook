@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>产品详情 | KALOZEN</title>
-<meta name="description" content="纸质挂钩产品规格、材质、承重与应用说明；规格为常规区间，最终以样品与合同为准。">
+<title>产品详情 · 规格与询价 | KALOZEN</title>
+<meta name="description" content="KALOZEN 三种环保纸质袜钩的规格、材质、承重与应用说明。规格为常规参考区间，最终以样品与图纸为准；可在线询价、申请样品。">
 <link rel="canonical" href="https://kalozen.com/zh/product.html">
 <link rel="alternate" hreflang="en" href="https://kalozen.com/en/product.html">
 <link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/product.html">
@@ -12,7 +12,7 @@
 <link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/product.html">
 <meta property="og:type" content="product">
 <meta property="og:site_name" content="KALOZEN">
-<meta property="og:title" content="产品详情 | KALOZEN">
+<meta property="og:title" content="产品详情 · 规格与询价 | KALOZEN">
 <meta property="og:image" content="https://kalozen.com/assets/img/product-grid.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230e2c24'/%3E%3C/svg%3E">
@@ -38,7 +38,7 @@
 
 <main class="main">
 <section class="wrap" style="padding-top:34px;padding-bottom:20px">
-  <div style="font-size:12.5px;color:var(--muted)"><a href="products.html">产品中心</a> / <span id="crumbSku">产品</span></div>
+  <div style="font-size:12.5px;color:var(--muted)"><a id="pBack" href="products.html">产品中心</a> / <span id="crumbSku">产品</span></div>
   <h1 id="pName" style="font-size:clamp(24px,3vw,36px);line-height:1.2;margin-top:14px">产品详情</h1>
 </section>
 
@@ -48,9 +48,7 @@
       <div class="figure" style="border-radius:var(--r-l);overflow:hidden;background:#f3f0e8;aspect-ratio:5/4;display:grid;place-items:center">
         <img id="pImg" src="../assets/img/product-grid.jpg" alt="产品概念图" style="width:100%;height:100%;object-fit:cover">
       </div>
-      <div id="conceptNote" style="margin-top:10px;font-size:12px;color:var(--kraft);background:#faf6ec;border:1px solid #e8dfc9;border-radius:8px;padding:8px 12px">
-        ⚠ 当前为概念示意图，非实物照片。实拍图待补后替换。
-      </div>
+      <div id="conceptNote" style="margin-top:10px;font-size:12px;color:var(--kraft);background:#faf6ec;border:1px solid #e8dfc9;border-radius:8px;padding:8px 12px">示意图，非产品实拍；实拍图待补。</div>
     </div>
     <div>
       <span id="pCat" class="pill eco">产品</span>
@@ -60,11 +58,11 @@
         <table class="table" style="margin-top:12px;font-size:13px">
           <tbody id="pSpecs"></tbody>
         </table>
-        <p style="margin-top:12px;font-size:12px;color:var(--muted)">以上为常规生产范围，非逐款实测值； stricter 公差与精确承重请索取规格书与样品确认。</p>
+        <p id="pSpecNote" style="margin-top:12px;font-size:12px;color:var(--muted)"></p>
       </div>
       <p style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
         <a class="btn primary" id="pInquiry" href="contact.html">询价此款 →</a>
-        <a class="btn ghost" href="sample.html">申请样品</a>
+        <a class="btn ghost" id="pSample" href="sample.html">Request a sample</a>
       </p>
       <p style="margin-top:12px;font-size:13px;color:var(--muted)">或直接 WhatsApp：+86 155 1560 1979 ｜ 邮箱：1450920332@qq.com</p>
     </div>
@@ -84,45 +82,7 @@
 </footer>
 
 <script src="../assets/products-data.js"></script>
-<script>
-(function(){
-  var P = window.PH_PRODUCTS; if(!P) return;
-  var sku = new URLSearchParams(location.search).get('sku') || 'H01';
-  var d = P.skus[sku]; if(!d) d = P.skus.H01;
-  var dl=(document.documentElement.lang||'zh').toLowerCase();
-  var L = dl.indexOf('en')===0?'en' : dl.indexOf('ru')===0?'ru' : dl.indexOf('ar')===0?'ar' : 'zh';
-  var c = P.common;
-  var t = function(x){ return (x&&typeof x==='object')?(x[L]||x.en):x; };
-  document.getElementById('crumbSku').textContent = sku;
-  document.title = d.name[L] + ' | KALOZEN';
-  document.getElementById('pName').textContent = d.name[L];
-  document.getElementById('pCat').textContent = (P.cats[d.cat]||{})[L] || d.cat;
-  var useLabel = {zh:'推荐应用：',en:'Recommended for: ',ru:'Применение: ',ar:'الاستخدام الموصى به: '}[L] || 'Recommended for: ';
-  document.getElementById('pUse').textContent = useLabel + t(d.use);
-  var img = document.getElementById('pImg');
-  img.src = '../assets/img/' + d.img; img.alt = d.name[L] + '（概念图）';
-  if(!d.concept) document.getElementById('conceptNote').style.display='none';
-  var specs = [
-    ['规格性质', t(c.specNature || c.lead)],
-    ['SKU', sku],
-    ['尺寸', c.dimensions || 'Custom / per drawing'],
-    ['起订量 (MOQ)', t(c.moq)],
-    ['打样交期', t(c.sampleLead)],
-    ['量产交期', c.lead],
-    ['材质', t(c.material)],
-    ['厚度', c.thickness],
-    ['克重', c.gsm],
-    ['孔径', c.hole],
-    ['钩口宽度', c.mouth],
-    ['承重（静态/干燥）', c.load],
-    ['印刷', t(c.printing)],
-    ['表面工艺', t(c.finish)],
-    ['包装', c.pack]
-  ];
-  document.getElementById('pSpecs').innerHTML = specs.map(function(r){return '<tr><td><b>'+r[0]+'</b></td><td>'+r[1]+'</td></tr>';}).join('');
-  document.getElementById('pInquiry').href = 'contact.html?sku=' + sku;
-})();
-</script>
+<script src="../assets/product-detail.js"></script>
 <script src="../assets/config.js"></script>
 <script src="../assets/contact.js"></script>
 <script src="../assets/main.js"></script>
