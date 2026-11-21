@@ -93,12 +93,12 @@
 <section style="padding-top:0">
   <div class="wrap">
     <div class="grid-2">
-      <div class="figure reveal"><img src="../assets/img/retail-shelf.jpg" alt="Retail shelf" loading="eager" fetchpriority="high" decoding="async" width="1500" height="907"></div>
+      <div class="figure reveal"><img id="heroSceneImg" src="../assets/img/retail-shelf.jpg" alt="Retail shelf" loading="eager" fetchpriority="high" decoding="async" width="1500" height="907"></div>
       <div class="reveal">
-        <div class="kicker" style="font-size:11px;letter-spacing:.22em;color:var(--kraft);font-weight:600;margin-bottom:10px">السيناريو الرئيسي</div>
-        <h2 style="font-size:clamp(22px,2.5vw,30px)">الجوارب: الأكثر شيوعًا والأكثر تطلبًا</h2>
-        <p style="margin-top:14px;font-size:14px;color:var(--ink-2)">الجوارب خفيفة ومتعددة الأصناف وتُعاد تعبئتها باستمرار. ثلاثة متطلبات تحكم: سرعة التعليق، ودقة الفتحة، وطباعة تميّز المقاس والطراز. الورق يلبي الثلاثة — وتغيير الصنف يعني تغيير الطباعة لا القالب.</p>
-        <ul class="list check" style="margin-top:16px"><li>جوارب قصيرة وطويلة: 1.5 مم كافٍ</li><li>رياضية وعبوات متعددة: يُنصح 1.8–2.0 مم</li><li>علب الهدايا: رقائق معدنية وشكل مخصص</li></ul>
+        <div class="kicker" id="heroSceneKicker" style="font-size:11px;letter-spacing:.22em;color:var(--kraft);font-weight:600;margin-bottom:10px">السيناريو الرئيسي</div>
+        <h2 id="heroSceneTitle" style="font-size:clamp(22px,2.5vw,30px)">الجوارب: الأكثر شيوعًا والأكثر تطلبًا</h2>
+        <p id="heroSceneDesc" style="margin-top:14px;font-size:14px;color:var(--ink-2)">الجوارب خفيفة ومتعددة الأصناف وتُعاد تعبئتها باستمرار. ثلاثة متطلبات تحكم: سرعة التعليق، ودقة الفتحة، وطباعة تميّز المقاس والطراز. الورق يلبي الثلاثة — وتغيير الصنف يعني تغيير الطباعة لا القالب.</p>
+        <ul class="list check" id="heroSceneList" style="margin-top:16px"><li>جوارب قصيرة وطويلة: 1.5 مم كافٍ</li><li>رياضية وعبوات متعددة: يُنصح 1.8–2.0 مم</li><li>علب الهدايا: رقائق معدنية وشكل مخصص</li></ul>
       </div>
     </div>
   </div>
@@ -196,6 +196,7 @@
 if(b&&m){b.addEventListener('click',function(){var c=getComputedStyle(m).display;m.style.display=(c==='none')?'block':'none';});}})();
 </script>
 <script src="../assets/main.js"></script>
+<script src="../assets/scene.js"></script>
 <script src="../assets/popup.js"></script>
 </body>
 </html>

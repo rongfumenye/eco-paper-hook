@@ -93,12 +93,12 @@
 <section style="padding-top:0">
   <div class="wrap">
     <div class="grid-2">
-      <div class="figure reveal"><img src="../assets/img/retail-shelf.jpg" alt="Retail shelf" loading="eager" fetchpriority="high" decoding="async" width="1500" height="907"></div>
+      <div class="figure reveal"><img id="heroSceneImg" src="../assets/img/retail-shelf.jpg" alt="Retail shelf" loading="eager" fetchpriority="high" decoding="async" width="1500" height="907"></div>
       <div class="reveal">
-        <div class="kicker" style="font-size:11px;letter-spacing:.22em;color:var(--kraft);font-weight:600;margin-bottom:10px">MAIN SCENARIO</div>
-        <h2 style="font-size:clamp(22px,2.5vw,30px)">Socks: the most typical, and the most demanding</h2>
-        <p style="margin-top:14px;font-size:14px;color:var(--ink-2)">Socks are light, high-SKU and restocked constantly. Three requirements dominate: fast loading, correct hole size, and printing that distinguishes size and style. Paper meets all three — and changing a SKU means changing the print, not the tooling.</p>
-        <ul class="list check" style="margin-top:16px"><li>Ankle and crew socks: 1.5 mm is sufficient</li><li>Sports and multi-packs: 1.8–2.0 mm recommended</li><li>Gift boxed: foil stamping and custom silhouette</li></ul>
+        <div class="kicker" id="heroSceneKicker" style="font-size:11px;letter-spacing:.22em;color:var(--kraft);font-weight:600;margin-bottom:10px">MAIN SCENARIO</div>
+        <h2 id="heroSceneTitle" style="font-size:clamp(22px,2.5vw,30px)">Socks: the most typical, and the most demanding</h2>
+        <p id="heroSceneDesc" style="margin-top:14px;font-size:14px;color:var(--ink-2)">Socks are light, high-SKU and restocked constantly. Three requirements dominate: fast loading, correct hole size, and printing that distinguishes size and style. Paper meets all three — and changing a SKU means changing the print, not the tooling.</p>
+        <ul class="list check" id="heroSceneList" style="margin-top:16px"><li>Ankle and crew socks: 1.5 mm is sufficient</li><li>Sports and multi-packs: 1.8–2.0 mm recommended</li><li>Gift boxed: foil stamping and custom silhouette</li></ul>
       </div>
     </div>
   </div>
@@ -196,6 +196,7 @@
 if(b&&m){b.addEventListener('click',function(){var c=getComputedStyle(m).display;m.style.display=(c==='none')?'block':'none';});}})();
 </script>
 <script src="../assets/main.js"></script>
+<script src="../assets/scene.js"></script>
 <script src="../assets/popup.js"></script>
 </body>
 </html>
