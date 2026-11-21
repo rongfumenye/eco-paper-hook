@@ -123,10 +123,10 @@
 
 <div class="wrap">
   <div class="lp-band">
-    <div class="b-item"><b>100,000+</b><span>只已出货</span></div>
-    <div class="b-item"><b>100%</b><span>客户好评</span></div>
-    <div class="b-item"><b>22.9%</b><span>复购率</span></div>
-    <div class="b-item"><b>12+</b><span>标准钩型</span></div>
+    <div class="b-item" data-stat="shipped"><b>100,000+</b><span>累计出货（只）</span></div>
+    <div class="b-item" data-stat="rating"><b>5.0</b><span>商品体验评分（5分制）</span></div>
+    <div class="b-item" data-stat="repeat"><b>24.4%</b><span>客户回头率</span></div>
+    <div class="b-item" data-stat="styles"><b>20+</b><span>在售款式</span></div>
     <div class="b-item"><b>FSC®</b><span>产销监管链认证</span></div>
   </div>
 </div>
@@ -235,6 +235,7 @@
 </footer>
 
 <script src="assets/main.js"></script>
+<script src="assets/stats.js"></script>
 <script>
   var lpBurgerBtn=document.getElementById('lpBurger'), lpMobileNav=document.getElementById('lpMobile');
   if(lpBurgerBtn){lpBurgerBtn.addEventListener('click',function(){lpMobileNav.style.display=lpMobileNav.style.display==='none'?'block':'none';});}
