@@ -2,6 +2,16 @@
 <html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
+<script id="PD_REDIRECT_STATIC">
+(function(){
+  var m = location.search.match(/[?&]sku=([A-Za-z0-9]+)/i);
+  if(!m) return;
+  var sku = m[1].toUpperCase();
+  if(/^(H0[1-8]|B0[1-6])$/.test(sku)){
+    location.replace('/en/p/' + sku + '.html');
+  }
+})();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Product Details · Specs & Inquiry | KALOZEN</title>
 <meta name="description" content="Specifications, structure and inquiry for KALOZEN paper hooks and display boards. Exact parameters to be confirmed by sample and contract.">
