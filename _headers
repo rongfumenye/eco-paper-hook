@@ -1,0 +1,10 @@
+# KALOZEN · 缓存控制
+# 目标：确保访客每次都拿到最新的 HTML 与脚本，杜绝陈旧页面导致详情页
+# 停在默认占位符（Product / —）。脚本/样式用文件名版本号做缓存控制。
+#
+# Cloudflare Pages 会把 /xx/page.html 307 到 /xx/page，两条路径都覆盖到。
+
+/*
+  Cache-Control: no-store, no-cache, must-revalidate, max-age=0
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
