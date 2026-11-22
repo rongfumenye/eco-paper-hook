@@ -1,8 +1,10 @@
 /* ==================================================================
  * KALOZEN · 产品详情页渲染（数据驱动，唯一来源 products-data.js）
  * ------------------------------------------------------------------
- * 读取 ?sku=P01/P02/P03，渲染产品名、图、卖点、规格、询价链接。
- * 四语按 <html lang> 自动本地化。四语 product.html 共用此脚本。
+ * 读取 ?sku=XX（H01–H08 / B01–B06 / P01–P03），按当前语言渲染 12 字段：
+ *   SKU / 中英文名称 / 主图 / 结构特点 / 适用场景 / 尺寸 / 材质 /
+ *   厚度 / 孔位 / 印刷工艺 / 可定制内容 / 询价入口。
+ * 四语按 <html lang> 本地化；未确认参数由数据层标注「待确认」。
  * ================================================================== */
 (function () {
   'use strict';
@@ -18,83 +20,151 @@
     return 'en';
   }
   var L = currentLang();
-  function t(x) { return (x && typeof x === 'object') ? (x[L] || x.en) : x; }
-  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]; }); }
+  function t(x) { return (x && typeof x === 'object') ? (x[L] || x.en || x.zh) : x; }
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]; }); }
 
   var LBL = {
-    zh:{ use:'推荐应用：', tagline:'', bullets:'产品要点', inquire:'咨询这款产品 →', sample:'申请样品', whatsapp:'WhatsApp：', concept:'示意图，非产品实拍；实拍图待补。', specTitle:'常规规格（参考区间）', specNote:'以上为常规生产区间（参考值），非逐款实测数据；精确参数请索取规格书与样品。', back:'返回产品中心', notfound:'未找到该产品，已显示默认产品。' },
-    en:{ use:'Recommended for: ', bullets:'Key features', inquire:'Inquire about this item →', sample:'Request a sample', whatsapp:'WhatsApp:', concept:'Illustration, not a product photo. Real photo to be added.', specTitle:'Typical specifications (reference)', specNote:'Values are typical production ranges (reference), not per-item tested data; request a spec sheet and samples for exact figures.', back:'Back to products', notfound:'Product not found — showing the default item.' },
-    ru:{ use:'Применение: ', bullets:'Ключевые особенности', inquire:'Запросить этот товар →', sample:'Запросить образец', whatsapp:'WhatsApp:', concept:'Иллюстрация, не фото товара. Настоящее фото будет добавлено.', specTitle:'Типичные характеристики (справочно)', specNote:'Значения — отраслевые диапазоны (справочно), не измерения по каждой модели; запросите спецификацию и образцы.', back:'К продукции', notfound:'Товар не найден — показан стандартный.' },
-    ar:{ use:'الاستخدام الموصى به: ', bullets:'المزايا الرئيسية', inquire:'الاستفسار عن هذا المنتج →', sample:'طلب عينة', whatsapp:'واتساب:', concept:'رسم توضيحي، ليست صورة منتج. ستُضاف الصورة الحقيقية.', specTitle:'المواصفات المعتادة (إرشادية)', specNote:'القيم نطاقات إنتاج معتادة (إرشادية)، ليست قياسات لكل نوع؛ اطلب ورقة المواصفات والعينات.', back:'العودة للمنتجات', notfound:'لم يُعثر على المنتج — تم عرض المنتج الافتراضي.' }
+    zh:{
+      sku:'SKU 编号', nameZh:'中文名称', nameEn:'英文名称', features:'结构与特点', use:'适用场景',
+      dimensions:'产品尺寸', material:'纸张材质', thickness:'厚度', hole:'孔位 / 挂孔规格',
+      printing:'印刷及表面工艺', customizable:'可定制内容',
+      specTitle:'产品规格', concept:'示意图，非产品实拍；实拍图待补。',
+      inquire:'Request a Quote', back:'返回产品中心',
+      notfound:'未找到该 SKU，请从产品中心选择产品。',
+      inqTitle:'询价此款产品', inqIntro:'已自动带入以下产品信息，你只需补充需求：',
+      carryName:'产品名称', fQty:'Required Quantity · 需求数量', fMat:'Material · 材质', fThk:'Thickness · 厚度',
+      fDesign:'Custom Design · 定制设计', fPrint:'Printing Requirements · 印刷要求', fAdd:'Additional Requirements · 其他要求',
+      fName:'姓名', fEmail:'邮箱', fCompany:'公司', fSubmit:'发送询价', fNeed:'请填写：姓名、邮箱、需求数量。',
+      fOk:'说明：在线直投未启用，提交后将调起邮件客户端并预填内容，请在邮件中点击发送。',
+      source:'当前产品链接', privacy:'我已阅读并同意隐私政策，同意就本次询价与我联系。'
+    },
+    en:{
+      sku:'SKU', nameZh:'Chinese name', nameEn:'English name', features:'Structure & Features', use:'Applications',
+      dimensions:'Dimensions', material:'Board material', thickness:'Thickness', hole:'Hole / hanging spec',
+      printing:'Printing & finishing', customizable:'Customisation options',
+      specTitle:'Product specifications', concept:'Illustration, not a real product photo. Actual photo to be added.',
+      inquire:'Request a Quote', back:'Back to products',
+      notfound:'SKU not found. Please choose a product from the product centre.',
+      inqTitle:'Inquire about this item', inqIntro:'Product details are filled in for you — just add your requirements:',
+      carryName:'Product name', fQty:'Required Quantity', fMat:'Material', fThk:'Thickness',
+      fDesign:'Custom Design', fPrint:'Printing Requirements', fAdd:'Additional Requirements',
+      fName:'Name', fEmail:'Email', fCompany:'Company', fSubmit:'Send inquiry', fNeed:'Please fill in: name, email and quantity.',
+      fOk:'Note: online direct delivery is not enabled. Submitting opens your email client with the inquiry pre-filled — please press SEND.',
+      source:'Current product link', privacy:'I agree to the Privacy Policy and consent to being contacted about this inquiry.'
+    },
+    ru:{
+      sku:'Артикул', nameZh:'Китайское название', nameEn:'Английское название', features:'Структура и особенности', use:'Применение',
+      dimensions:'Размеры', material:'Материал картона', thickness:'Толщина', hole:'Отверстие / крепление',
+      printing:'Печать и отделка', customizable:'Варианты настройки',
+      specTitle:'Характеристики товара', concept:'Иллюстрация, не фото товара.',
+      inquire:'Request a Quote', back:'К продукции',
+      notfound:'Артикул не найден. Выберите товар в каталоге.',
+      inqTitle:'Запрос по товару', inqIntro:'Данные товара заполнены — добавьте свои требования:',
+      carryName:'Название товара', fQty:'Требуемое количество', fMat:'Материал', fThk:'Толщина',
+      fDesign:'Индивидуальный дизайн', fPrint:'Требования к печати', fAdd:'Дополнительные требования',
+      fName:'Имя', fEmail:'E-mail', fCompany:'Компания', fSubmit:'Отправить запрос', fNeed:'Заполните: имя, e-mail и количество.',
+      fOk:'Онлайн-отправка не включена — откроется почтовый клиент, нажмите ОТПРАВИТЬ.',
+      source:'Ссылка на товар', privacy:'Я согласен с политикой конфиденциальности.'
+    },
+    ar:{
+      sku:'SKU', nameZh:'الاسم الصيني', nameEn:'الاسم الإنجليزي', features:'الهيكل والمميزات', use:'أماكن الاستخدام',
+      dimensions:'الأبعاد', material:'مادة الورق', thickness:'السماكة', hole:'الفتحة / التعليق',
+      printing:'الطباعة والتشطيب', customizable:'خيارات التخصيص',
+      specTitle:'مواصفات المنتج', concept:'رسم توضيحي، ليس صورة منتج حقيقية.',
+      inquire:'Request a Quote', back:'العودة للمنتجات',
+      notfound:'لم يُعثر على SKU. اختر منتجًا من قائمة المنتجات.',
+      inqTitle:'استفسار عن هذا المنتج', inqIntro:'تم تعبئة بيانات المنتج — أضف متطلباتك فقط:',
+      carryName:'اسم المنتج', fQty:'الكمية المطلوبة', fMat:'المادة', fThk:'السماكة',
+      fDesign:'التصميم المخصص', fPrint:'متطلبات الطباعة', fAdd:'متطلبات إضافية',
+      fName:'الاسم', fEmail:'البريد الإلكتروني', fCompany:'الشركة', fSubmit:'إرسال الاستفسار', fNeed:'يرجى تعبئة: الاسم والبريد والكمية.',
+      fOk:'الإرسال المباشر غير مفعّل — سيفتح برنامج البريد، اضغط إرسال.',
+      source:'رابط المنتج الحالي', privacy:'أوافق على سياسة الخصوصية.'
+    }
   };
   var l = LBL[L] || LBL.en;
 
   function byId(id) { return document.getElementById(id); }
 
   function init() {
-    var sku = new URLSearchParams(location.search).get('sku') || 'P01';
+    var params = new URLSearchParams(location.search);
+    var sku = (params.get('sku') || '').toUpperCase();
     var d = P.skus[sku];
-    if (!d) { d = P.skus.P01; sku = 'P01'; }
+    if (!d) {
+      var nm = byId('pName'); if (nm) nm.textContent = l.notfound;
+      var im = byId('pImg'); if (im) im.style.display = 'none';
+      var note = byId('conceptNote'); if (note) note.style.display = 'none';
+      return;
+    }
     var c = P.common;
 
-    // 标题、面包屑
-    document.title = t(d.name) + ' | KALOZEN';
-    if (byId('crumbSku')) byId('crumbSku').textContent = t(d.name);
+    // 面包屑 / 标题
+    if (byId('crumbSku')) byId('crumbSku').textContent = sku + ' · ' + t(d.name);
     if (byId('pName')) byId('pName').textContent = t(d.name);
-    if (byId('pCat')) byId('pCat').textContent = t(d.code);
+    document.title = t(d.name) + ' (' + sku + ') | KALOZEN';
 
-    // 图片
+    // 主图
     var img = byId('pImg');
-    if (img) { img.src = '../assets/img/' + d.image; img.alt = t(d.name); }
-    var note = byId('conceptNote');
-    if (note) { if (d.concept) note.textContent = l.concept; else note.style.display = 'none'; }
+    if (img) { img.src = '../assets/img/' + d.image; img.alt = t(d.name) + ' (' + sku + '), illustrative image'; }
+    var note = byId('conceptNote'); if (note) note.textContent = t(c.conceptNote);
 
-    // 推荐应用 + tagline + 描述 + 卖点（插入到 pUse 之后）
-    var useEl = byId('pUse');
-    if (useEl) {
-      useEl.textContent = l.use + t(d.specs.use);
-      var extra = document.createElement('div');
-      extra.innerHTML = ''
-        + '<p style="margin-top:8px;font-size:14px;color:var(--forest-2);font-weight:600">' + esc(t(d.tagline)) + '</p>'
-        + '<p style="margin-top:8px;font-size:14px;color:var(--ink-2);line-height:1.75">' + esc(t(d.desc)) + '</p>'
-        + '<div style="margin-top:16px"><div class="kicker" style="font-size:11px;letter-spacing:.18em;color:var(--kraft);font-weight:600;margin-bottom:10px">' + l.bullets + '</div>'
-        + '<ul class="list check">' + (d.bullets && (d.bullets[L] || d.bullets.en) || []).map(function(b){return '<li>'+esc(b)+'</li>';}).join('') + '</ul></div>';
-      useEl.parentNode.insertBefore(extra, useEl.nextSibling);
+    // 介绍区
+    var intro = byId('pIntro');
+    if (intro) {
+      intro.innerHTML = ''
+        + '<div class="detail-sku"><span class="detail-sku-label">' + l.sku + '</span><b>' + esc(sku) + '</b></div>'
+        + '<div class="detail-nameline"><span class="kicker">' + l.nameZh + '</span><p>' + esc(d.name.zh) + '</p>'
+        + '<span class="kicker" style="margin-top:10px;display:block">' + l.nameEn + '</span><p>' + esc(d.name.en) + '</p></div>'
+        + '<div class="detail-block"><div class="kicker">' + l.features + '</div><p>' + esc(t(d.features)) + '</p></div>'
+        + '<div class="detail-block"><div class="kicker">' + l.use + '</div><p>' + esc(t(d.use)) + '</p></div>';
     }
 
     // 规格表
-    var specs = [
-      [ {zh:'材质',en:'Material',ru:'Материал',ar:'الخامة'}[L], t(c.material) ],
-      [ {zh:'厚度',en:'Thickness',ru:'Толщина',ar:'السماكة'}[L], esc(d.specs.thickness) ],
-      [ {zh:'孔径',en:'Hole diameter',ru:'Диаметр отверстия',ar:'قطر الفتحة'}[L], t(d.specs.hole) ],
-      [ {zh:'克重',en:'Grammage',ru:'Плотность',ar:'الوزن'}[L], c.gsm ],
-      [ {zh:'承重（静态/干燥）',en:'Load (static/dry)',ru:'Нагрузка (стат./сухо)',ar:'الحمل (ساكن/جاف)'}[L], t(d.specs.load) ],
-      [ {zh:'起订量 (MOQ)',en:'MOQ',ru:'Мин. заказ',ar:'الحد الأدنى'}[L], t(c.moq) ],
-      [ {zh:'打样交期',en:'Sample lead time',ru:'Срок образца',ar:'مدة العينة'}[L], t(c.sampleLead) ],
-      [ {zh:'量产交期',en:'Production lead time',ru:'Срок производства',ar:'مدة الإنتاج'}[L], t(c.productionLead) ],
-      [ {zh:'印刷',en:'Printing',ru:'Печать',ar:'الطباعة'}[L], t(c.printing) ],
-      [ {zh:'表面工艺',en:'Finishing',ru:'Отделка',ar:'التشطيب'}[L], t(c.finish) ],
-      [ {zh:'包装',en:'Packaging',ru:'Упаковка',ar:'التغليف'}[L], c.pack ]
+    var rows = [
+      [l.sku, sku],
+      [l.nameZh, d.name.zh],
+      [l.nameEn, d.name.en],
+      [l.dimensions, t(d.dimensions)],
+      [l.material, t(d.material)],
+      [l.thickness, t(d.thickness)],
+      [l.hole, t(d.hole)],
+      [l.printing, t(d.printing)]
     ];
     var tb = byId('pSpecs');
-    if (tb) tb.innerHTML = specs.map(function(r){return '<tr><td><b>'+r[0]+'</b></td><td>'+r[1]+'</td></tr>';}).join('');
-    var specNote = byId('pSpecNote');
-    if (specNote) specNote.textContent = t(c.specNature);
+    if (tb) tb.innerHTML = rows.map(function (r) {
+      return '<tr><td><b>' + esc(r[0]) + '</b></td><td>' + esc(r[1]) + '</td></tr>';
+    }).join('');
+    var specNote = byId('pSpecNote'); if (specNote) specNote.textContent = t(c.specNature);
 
-    // 询价按钮带 SKU、文案本地化
+    // 可定制内容
+    var cust = byId('pCustom');
+    if (cust) cust.innerHTML = '<div class="kicker">' + l.customizable + '</div><p>' + esc(t(d.customizable)) + '</p>';
+
+    // 询价按钮带完整信息（SKU + 产品名称 + 当前链接）
+    var curUrl = location.href;
+    var qp = '?sku=' + encodeURIComponent(sku)
+      + '&name=' + encodeURIComponent(t(d.name))
+      + '&source=' + encodeURIComponent(curUrl);
     var inq = byId('pInquiry');
-    if (inq) { inq.href = 'contact.html?sku=' + sku; inq.innerHTML = esc(l.inquire) + ' <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'; }
-    var smp = byId('pSample');
-    if (smp) smp.textContent = l.sample;
+    if (inq) { inq.href = 'contact.html' + qp; inq.setAttribute('data-inq', '1'); }
 
-    // 返回链接
-    var back = byId('pBack');
-    if (back) { back.textContent = '← ' + l.back; back.href = 'products.html'; }
+    // 页内询价表单：自动带入只读产品信息
+    var fSku = byId('qSku'); if (fSku) fSku.value = sku;
+    var fName = byId('qName'); if (fName) fName.value = t(d.name);
+    var fSrc = byId('qSource'); if (fSrc) fSrc.value = curUrl;
+    var showSku = byId('showSku'); if (showSku) showSku.textContent = sku;
+    var showName = byId('showName'); if (showName) showName.textContent = t(d.name);
+    var showSrc = byId('showSource'); if (showSrc) { showSrc.textContent = curUrl; showSrc.href = curUrl; }
+    var map = {
+      qTitle:l.inqTitle, qIntro:l.inqIntro, lCarryName:l.carryName, lQty:l.fQty, lMat:l.fMat, lThk:l.fThk,
+      lDesign:l.fDesign, lPrint:l.fPrint, lAdd:l.fAdd, lName:l.fName, lEmail:l.fEmail,
+      lCompany:l.fCompany, lSource:l.source, lPrivacy:l.privacy, qSubmit:l.fSubmit, qNeed:l.fNeed, qOk:l.fOk,
+      pSpecTitle:l.specTitle, pConcept:l.concept, pBackLabel:l.back
+    };
+    Object.keys(map).forEach(function (id) { var el = byId(id); if (el) el.textContent = map[id]; });
+
+    var back = byId('pBack'); if (back) back.href = 'products.html';
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
 })();

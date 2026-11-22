@@ -1,113 +1,211 @@
 /* ==================================================================
  * KALOZEN · 产品数据（唯一来源）
  * ------------------------------------------------------------------
- * 全站只卖三种产品（三种钩型），数据驱动：
- *   - 产品列表页 products.html  读取本文件渲染三张产品卡
- *   - 详情页 product.html?sku=P01 读取本文件渲染规格与询价
- * 改这里 = 列表页 + 详情页 + 首页 同步生效。
+ * 详情页 product.html?sku=XX 读取本文件的 skus 映射渲染 12 项字段。
+ * 产品中心 products.html 读取 products 数组（P01–P03）渲染三张卡。
  *
- * 图片：使用站点现有示意图（concept=true）。拿到真实产品照片后，
- *       把 image 换成实拍路径、concept 改为 false 即可全站生效。
- * 规格：均为常规生产区间（reference），非逐款实测，最终以样品与图纸为准。
+ * 【数据原则 · 第三轮整改第三阶段】
+ *  - 14 款在售 SKU：H01–H08（纸质挂钩）、B01–B06（纸质挂板）。
+ *  - 名称：保留产品识别信息，去除未经确认的营销词（源头厂家/爆款/
+ *    FSC 认证/可降解/年份等），不虚构。
+ *  - 精确参数（尺寸/厚度/孔径/克重）：未经逐款实测，统一标注「待确认」，
+ *    不编造替代数值。材质/工艺给可选范围并注明待确认。
+ *  - 图片：均为原创示意图（concept=true），非实拍，不得冒充实物照片。
  * ================================================================== */
 (function () {
   'use strict';
 
-  // 通用规格区间（三款适用）
+  // 通用可选范围（非逐款实测，供参考；精确值一律「待确认」）
   var COMMON = {
-    material: { zh:'FSC® 牛皮卡 / 灰板', en:'FSC® kraft board / greyboard', ru:'Крафт / серый картон (FSC®)', ar:'كرافت / كرتون رمادي (FSC®)' },
-    gsm: '300–450 gsm',
-    printing: { zh:'1–4 色专色 · 大豆油墨', en:'1–4 spot colours · soy ink', ru:'1–4 цвета · соевые чернила', ar:'1–4 ألوان · حبر صويا' },
-    finish: { zh:'烫金 / 击凸 / 压凹', en:'Foil / emboss / deboss', ru:'Фольга / тиснение', ar:'رقائق / نقش بارز' },
-    pack: '1,000 / 5,000 pcs per carton',
-    sampleLead: { zh:'3–7 天（按款评估）', en:'3–7 days (per item)', ru:'3–7 дней (по item)', ar:'3–7 أيام (حسب النوع)' },
-    productionLead: { zh:'7–12 天（确认图稿与样品后起算）', en:'7–12 days (after artwork & sample approval)', ru:'7–12 дней (после утверждения макета и образца)', ar:'7–12 يومًا (بعد اعتماد التصميم والعينة)' },
-    moq: { zh:'常规 10,000 只 / 定制 30,000 只', en:'Standard 10,000 pcs / Custom 30,000 pcs', ru:'Стандарт 10 000 шт. / На заказ 30 000 шт.', ar:'قياسي 10٬000 / مخصص 30٬000' },
-    specNature: { zh:'以下为常规生产区间（参考值），非逐款实测数据；精确参数请索取规格书与样品。',
-      en:'Values below are typical production ranges (reference), not per-item tested data; request a spec sheet and samples for exact figures.',
-      ru:'Значения — отраслевые диапазоны (справочно), не измерения по каждой модели; запросите спецификацию и образцы.',
-      ar:'القيم نطاقات إنتاج معتادة (إرشادية)، ليست قياسات لكل نوع؛ اطلب ورقة المواصفات والعينات.' }
+    materialOptions: {
+      zh: '可选范围：牛皮卡纸 / 白卡纸 / 灰板（具体以样品与合同确认为准）',
+      en: 'Options: kraft board / white card / greyboard (confirmed by sample and contract)'
+    },
+    printingOptions: {
+      zh: '可选：专色印刷 / 四色印刷 / 烫金 / 击凸 / 压凹（待确认）',
+      en: 'Options: spot colour / CMYK / foil stamping / emboss / deboss (to be confirmed)'
+    },
+    specNature: {
+      zh: '尺寸、厚度、孔径等精确参数尚未逐款实测，标注为「待确认」；请索取规格书与样品后以书面确认为准。',
+      en: 'Exact dimensions, thickness and hole sizes are not per-item tested and are marked "To be confirmed". Request a spec sheet and samples for written confirmation.'
+    },
+    conceptNote: {
+      zh: '示意图，非产品实拍；实拍图待补。',
+      en: 'Illustration, not a real product photo. Actual photo to be added.'
+    }
   };
 
-  // 三种产品
+  // —— 产品中心三张卡（列表页专用，保持不变）——
   var PRODUCTS = [
     {
       sku: 'P01',
-      code: { zh:'01 / 日常通用', en:'01 / Everyday', ru:'01 / Повседневный', ar:'01 / يومي' },
-      name: { zh:'S 形标准钩', en:'S-Shape Standard Hook', ru:'S-крючок стандартный', ar:'خطاف S القياسي' },
-      tagline: { zh:'袜子、内衣及轻薄服饰的默认之选', en:'The default choice for socks, underwear and light apparel', ru:'Основной выбор для носков, белья и лёгкой одежды', ar:'الخيار الافتراضي للجوارب والملابس الداخلية الخفيفة' },
-      desc: { zh:'对称 S 形一体模切，5 mm 标准孔径，挂在洞洞板上不歪不转。1.5 mm FSC® 牛皮卡纸，轻薄包装里最稳妥的通用款。',
-        en:'Symmetrical S-shape die-cut in one piece, 5 mm standard hole — hangs straight and steady on pegboard. 1.5 mm FSC® kraft board, the most reliable all-rounder for light packaging.',
-        ru:'Симметричный S-крючок, вырубленный целиком, стандартное отверстие 5 мм — держится ровно на перфорированной доске. Крафт 1,5 мм FSC®, универсальный вариант для лёгкой упаковки.',
-        ar:'خطاف S متماثل مقطوع بالقالب، بفتحة قياسية 5 مم — يتعلق بشكل مستقر على اللوحة المثقبة. كرافت FSC® بسماكة 1.5 مم، الخيار الأكثر موثوقية للتغليف الخفيف.' },
-      image: 'hook-detail.jpg',
-      concept: true,
-      specs: {
-        thickness: '1.5 mm',
-        hole: '5 mm',
-        load: '≤ 300 g',
-        use: { zh:'袜子 / 船袜 / 内衣', en:'Socks / ankle socks / underwear', ru:'Носки / бельё', ar:'جوارب / ملابس داخلية' }
-      },
-      bullets: {
-        zh:['对称 S 形，通用挂杆','5 mm 标准孔径','1.5 mm FSC® 牛皮卡','10,000 只起订'],
-        en:['Symmetrical S-shape, universal','5 mm standard hole','1.5 mm FSC® kraft board','MOQ 10,000 pcs'],
-        ru:['Симметричная форма S','Отверстие 5 мм','Крафт 1,5 мм FSC®','От 10 000 шт.'],
-        ar:['شكل S متماثل','فتحة قياسية 5 مم','كرافت FSC® 1.5 مم','الحد الأدنى 10,000 قطعة']
-      }
+      code: { zh:'01 / 日常通用', en:'01 / Everyday' },
+      name: { zh:'S 形标准钩', en:'S-Shape Standard Hook' },
+      tagline: { zh:'袜子、内衣及轻薄服饰的通用款', en:'A versatile choice for socks, underwear and light apparel' },
+      desc: { zh:'对称 S 形一体模切，挂在洞洞板上不歪不转。适用于袜子、内衣及轻薄服饰包装。', en:'Symmetrical S-shape die-cut in one piece, hangs straight on pegboard. For socks, underwear and light apparel.' },
+      image: 'hook-detail.jpg', concept: true,
+      specs: { thickness:{zh:'待确认',en:'To be confirmed'}, hole:{zh:'待确认',en:'To be confirmed'}, use:{zh:'袜子 / 内衣',en:'Socks / underwear'} },
+      bullets: { zh:['对称 S 形，通用挂杆','一体模切成型','参数以样品为准'], en:['Symmetrical S-shape','One-piece die-cut','Specs confirmed by sample'] }
     },
     {
       sku: 'P02',
-      code: { zh:'02 / 加厚承重', en:'02 / Heavy duty', ru:'02 / Усиленный', ar:'02 / تقيل' },
-      name: { zh:'加厚承重钩', en:'Heavy-Duty Hook', ru:'Усиленный крючок', ar:'خطاف تقيل' },
-      tagline: { zh:'多件装与毛巾的承重方案', en:'The load-bearing option for multi-packs and towels', ru:'Вариант для мультиупаковок и полотенец', ar:'خيار التحميل للعبوات المتعددة والمناشف' },
-      desc: { zh:'2.0 mm 灰板，钩口加宽、肩部加固，长期承重不下垂。适合多双装、毛巾、文胸等偏重商品，静态承重可达 600 g。',
-        en:'2.0 mm greyboard with a widened throat and reinforced shoulder — holds its shape under sustained load. Built for heavier items such as multi-packs, towels and bras; static load up to 600 g.',
-        ru:'Серый картон 2,0 мм с расширенным зевом и укреплённым плечом — не провисает при длительной нагрузке. Для тяжёлых товаров: мультиупаковки, полотенца, бюстгальтеры; до 600 г.',
-        ar:'كرتون رمادي 2.0 مم بفم أوسع وكتف معزز — لا يتدلى تحت الحمل المستمر. للمنتجات الأثقل: عبوات متعددة، مناشف، حمالات صدر؛ حمل حتى 600 غ.' },
-      image: 'material-macro.jpg',
-      concept: true,
-      specs: {
-        thickness: '2.0 mm',
-        hole: '5 / 6 mm',
-        load: '≤ 600 g',
-        use: { zh:'多双装 / 毛巾 / 文胸', en:'Multi-packs / towels / bras', ru:'Мультиупаковки / полотенца', ar:'عبوات متعددة / مناشف' }
-      },
-      bullets: {
-        zh:['2.0 mm 加厚灰板','加宽钩口 · 加固肩部','静态承重 ≤ 600 g','长期陈列不下垂'],
-        en:['2.0 mm thick greyboard','Widened throat · reinforced shoulder','Static load ≤ 600 g','No sagging on long display'],
-        ru:['Серый картон 2,0 мм','Расширенный зев · укреплённое плечо','Нагрузка ≤ 600 г','Не провисает при долгой демонстрации'],
-        ar:['كرتون رمادي 2.0 مم','فم أوسع · كتف معزز','حمل ≤ 600 غ','لا يتدلى مع العرض الطويل']
-      }
+      code: { zh:'02 / 加厚承重', en:'02 / Heavy duty' },
+      name: { zh:'加厚承重钩', en:'Heavy-Duty Hook' },
+      tagline: { zh:'多件装与毛巾的承重方案', en:'A load-bearing option for multi-packs and towels' },
+      desc: { zh:'加厚纸板，钩口加宽、肩部加固，适合多双装、毛巾等偏重商品长期陈列。', en:'Thicker board with a widened throat and reinforced shoulder for multi-packs and towels on long display.' },
+      image: 'material-macro.jpg', concept: true,
+      specs: { thickness:{zh:'待确认',en:'To be confirmed'}, hole:{zh:'待确认',en:'To be confirmed'}, use:{zh:'多双装 / 毛巾',en:'Multi-packs / towels'} },
+      bullets: { zh:['加厚纸板','加宽钩口 · 加固肩部','参数以样品为准'], en:['Thicker board','Widened throat · reinforced shoulder','Specs confirmed by sample'] }
     },
     {
       sku: 'P03',
-      code: { zh:'03 / 品牌定制', en:'03 / Custom', ru:'03 / На заказ', ar:'03 / مخصص' },
-      name: { zh:'异形定制钩', en:'Custom Die-Cut Hook', ru:'Фигурный крючок на заказ', ar:'خطاف مقطوع حسب الطلب' },
-      tagline: { zh:'你的形状、你的印刷、你的品牌', en:'Your shape, your print, your brand', ru:'Ваша форма, ваша печать, ваш бренд', ar:'شكلتك، طباعتك، علامتك' },
-      desc: { zh:'按你的轮廓开模，来图定制。可做专色印刷、烫金、击凸等后道工艺，是礼盒与高端产品线的品牌化选择。3–7 天打样，7–12 天量产。',
-        en:'Die-cut to your outline, made from your artwork. Add spot-colour printing, foil stamping or embossing — the branding choice for gift boxes and premium lines. 3–7 days sampling, 7–12 days production.',
-        ru:'Вырезается по вашему контуру, по вашему макету. Возможна печать, тиснение фольгой и рельеф — выбор для подарочных коробок и премиум-линий. Образец 3–7 дней, производство 7–12 дней.',
-        ar:'يُقطع حسب مخططك. يمكن إضافة طباعة الألوان ورقائق النقش — الخيار للعلب الهدايا والخطوط الفاخرة. عينة 3–7 أيام، إنتاج 7–12 يومًا.' },
-      image: 'gold-foil.jpg',
-      concept: true,
-      specs: {
-        thickness: '1.5–2.0 mm',
-        hole: { zh:'按图定制', en:'Per drawing', ru:'По чертежу', ar:'حسب المخطط' },
-        load: { zh:'按结构评估', en:'Per structure', ru:'По конструкции', ar:'حسب الهيكل' },
-        use: { zh:'礼盒 / 高端产品线', en:'Gift boxes / premium lines', ru:'Подарки / премиум', ar:'علب هدايا / خطوط فاخرة' }
-      },
-      bullets: {
-        zh:['来图开模，形状自由','专色印刷 / 烫金 / 击凸','30,000 只起订','3–7 天打样'],
-        en:['Custom die-cut from your artwork','Spot print / foil / emboss','MOQ 30,000 pcs','3–7 days sampling'],
-        ru:['Вырубка по вашему макету','Печать / фольга / тиснение','От 30 000 шт.','Образец 3–7 дней'],
-        ar:['قطع حسب مخططك','طباعة / رقائق / نقش','الحد الأدنى 30,000 قطعة','عينة 3–7 أيام']
-      }
+      code: { zh:'03 / 品牌定制', en:'03 / Custom' },
+      name: { zh:'异形定制钩', en:'Custom Die-Cut Hook' },
+      tagline: { zh:'你的形状、你的印刷、你的品牌', en:'Your shape, your print, your brand' },
+      desc: { zh:'按你的轮廓开模，来图定制。可做专色印刷、烫金、击凸等后道工艺，适合礼盒与高端产品线。', en:'Die-cut to your outline from your artwork, with spot print, foil or emboss options for gift boxes and premium lines.' },
+      image: 'gold-foil.jpg', concept: true,
+      specs: { thickness:{zh:'待确认',en:'To be confirmed'}, hole:{zh:'按图定制',en:'Per drawing'}, use:{zh:'礼盒 / 高端产品线',en:'Gift boxes / premium lines'} },
+      bullets: { zh:['来图开模，形状自由','专色印刷 / 烫金 / 击凸','参数以图纸与样品为准'], en:['Custom die-cut from artwork','Spot print / foil / emboss','Specs per drawing and sample'] }
     }
   ];
+
+  var TBC = { zh:'待确认', en:'To be confirmed' };
+  var NA_BOARD = { zh:'不适用（挂板类产品）', en:'N/A (display board type)' };
+  var CUSTOM_ALL = {
+    zh:'可定制：外形结构、尺寸、挂孔、纸张材质、印刷图案与表面工艺（具体以图纸与样品确认为准）。',
+    en:'Customisable: shape/structure, dimensions, hanging hole, board material, print artwork and finishing (confirmed by drawing and sample).'
+  };
+
+  // —— 14 款在售 SKU ——
+  var SKUS = {
+    H01: {
+      sku:'H01', type:'hook', image:'packaged-sock.jpg', concept:true,
+      name:{ zh:'环保纸质袜钩', en:'Eco Paper Sock Hook' },
+      features:{ zh:'一体模切的纸质挂钩，用于替代袜子包装上的塑料挂钩；可与吊卡配合悬挂陈列。', en:'A one-piece die-cut paper hook that replaces plastic hangers on sock packaging and works with header cards for display.' },
+      use:{ zh:'袜子 / 船袜零售包装', en:'Socks / ankle socks retail packaging' },
+      dimensions:TBC, material:COMMON.materialOptions, thickness:TBC, hole:TBC,
+      printing:COMMON.printingOptions, customizable:CUSTOM_ALL
+    },
+    H02: {
+      sku:'H02', type:'hook', image:'home/hero-paper-hooks.jpg', concept:true,
+      name:{ zh:'外贸环保纸钩', en:'Export Eco Paper Hook' },
+      features:{ zh:'面向出口包装的纸质挂钩，结构简洁，便于印刷品牌信息；适合批量包装配装。', en:'A paper hook for export packaging, simple in structure and easy to print brand information on; suited to bulk packing.' },
+      use:{ zh:'出口袜子及服饰包装', en:'Export sock and apparel packaging' },
+      dimensions:TBC, material:COMMON.materialOptions, thickness:TBC, hole:TBC,
+      printing:COMMON.printingOptions, customizable:CUSTOM_ALL
+    },
+    H03: {
+      sku:'H03', type:'hook', image:'home/hook-structures.jpg', concept:true,
+      name:{ zh:'问号形纸袜钩', en:'Question-Mark Paper Hook' },
+      features:{ zh:'问号形轮廓的纸质挂钩，钩部便于快速挂取，适合需要频繁上货补货的零售场景。', en:'A question-mark shaped paper hook whose open throat allows quick hanging and re-stocking in fast-turn retail.' },
+      use:{ zh:'便利店 / 药妆店 / 快速补货陈列', en:'Convenience stores / pharmacies / fast restock displays' },
+      dimensions:TBC, material:COMMON.materialOptions, thickness:TBC, hole:TBC,
+      printing:COMMON.printingOptions, customizable:CUSTOM_ALL
+    },
+    H04: {
+      sku:'H04', type:'hook', image:'hook-detail.jpg', concept:true,
+      name:{ zh:'环保纸质挂钩', en:'Eco Paper Hook' },
+      features:{ zh:'通用型纸质挂卡钩，一体成型，可与各类吊牌、挂卡组合使用。', en:'A general-purpose paper hang card hook, formed in one piece for use with a range of tags and header cards.' },
+      use:{ zh:'通用商品挂卡', en:'General hang-card applications' },
+      dimensions:TBC, material:COMMON.materialOptions, thickness:TBC, hole:TBC,
+      printing:COMMON.printingOptions, customizable:CUSTOM_ALL
+    },
+    H05: {
+      sku:'H05', type:'hook', image:'material-macro.jpg', concept:true,
+      name:{ zh:'2 字形纸袜钩', en:'2-Shape Paper Sock Hook' },
+      features:{ zh:'2 字形轮廓的纸质挂钩，肩部区域更宽，适合对挺括度有要求的陈列。', en:'A 2-shaped paper hook with a wider shoulder area for displays that need extra stiffness.' },
+      use:{ zh:'需要挺括肩部的袜品陈列', en:'Sock displays requiring a stiffer shoulder' },
+      dimensions:TBC, material:COMMON.materialOptions, thickness:TBC, hole:TBC,
+      printing:COMMON.printingOptions, customizable:CUSTOM_ALL
+    },
+    H06: {
+      sku:'H06', type:'hook', image:'gold-foil.jpg', concept:true,
+      name:{ zh:'牛皮纸问号钩', en:'Kraft Paper Question-Mark Hook' },
+      features:{ zh:'牛皮纸质感的问号形纸钩，可做印刷与烫金等表面工艺，兼顾实用与品牌呈现。', en:'A kraft-textured question-mark paper hook that supports printing and foil finishing for both function and branding.' },
+      use:{ zh:'多双装 / 运动袜包装', en:'Multi-pack / sports sock packaging' },
+      dimensions:TBC, material:COMMON.materialOptions, thickness:TBC, hole:TBC,
+      printing:COMMON.printingOptions, customizable:CUSTOM_ALL
+    },
+    H07: {
+      sku:'H07', type:'hook', image:'paper-material.jpg', concept:true,
+      name:{ zh:'多用途纸钩', en:'Multi-Purpose Paper Hook' },
+      features:{ zh:'多用途纸质挂钩，可按不同场景调整结构与尺寸，适用于衣架、帽挂、宠物用品悬挂等。', en:'A multi-purpose paper hook whose structure and size can be adapted for hangers, hat hooks, pet product hanging and more.' },
+      use:{ zh:'衣架 / 帽子 / 宠物用品', en:'Hangers / hats / pet accessories' },
+      dimensions:TBC, material:COMMON.materialOptions, thickness:TBC, hole:TBC,
+      printing:COMMON.printingOptions, customizable:CUSTOM_ALL
+    },
+    H08: {
+      sku:'H08', type:'hook', image:'color-range.jpg', concept:true,
+      name:{ zh:'牛皮纸问号钩（零售款）', en:'Kraft Paper Question-Mark Hook (Retail)' },
+      features:{ zh:'面向通用零售陈列的问号形纸钩，可做多色印刷，便于统一门店视觉。', en:'A question-mark paper hook for general retail display, available with multi-colour printing for consistent in-store visuals.' },
+      use:{ zh:'通用零售陈列', en:'General retail display' },
+      dimensions:TBC, material:COMMON.materialOptions, thickness:TBC, hole:TBC,
+      printing:COMMON.printingOptions, customizable:CUSTOM_ALL
+    },
+    B01: {
+      sku:'B01', type:'board', image:'home/sock-display-cards.jpg', concept:true,
+      name:{ zh:'袜子展示挂板', en:'Sock Display Board' },
+      features:{ zh:'纸质袜子展示挂板，可印刷品牌与尺码信息，配合纸钩或直接悬挂进行零售陈列。', en:'A paper sock display board that can carry brand and size printing, used with paper hooks or hung directly for retail display.' },
+      use:{ zh:'袜子陈列 / 门店挂板', en:'Sock display / in-store hanging board' },
+      dimensions:TBC, material:COMMON.materialOptions, thickness:TBC, hole:NA_BOARD,
+      printing:COMMON.printingOptions, customizable:CUSTOM_ALL
+    },
+    B02: {
+      sku:'B02', type:'board', image:'retail-shelf.jpg', concept:true,
+      name:{ zh:'袜子展示纸板', en:'Sock Display Card' },
+      features:{ zh:'展示用纸板，适合直播间、展会等场景集中陈列袜品，可定制印刷面。', en:'A display card suited to live-streaming and trade-show settings for grouped sock presentation, with a customisable print surface.' },
+      use:{ zh:'直播间 / 展会陈列', en:'Live streaming / trade show display' },
+      dimensions:TBC, material:COMMON.materialOptions, thickness:TBC, hole:NA_BOARD,
+      printing:COMMON.printingOptions, customizable:CUSTOM_ALL
+    },
+    B03: {
+      sku:'B03', type:'board', image:'paper-roll.jpg', concept:true,
+      name:{ zh:'袜子陈列挂板', en:'Sock Merchandising Board' },
+      features:{ zh:'用于门店陈列的纸质挂板，可承载多双袜子展示，支持品牌视觉印刷。', en:'A paper board for in-store merchandising that can present multiple pairs of socks and carry brand visuals.' },
+      use:{ zh:'门店 / 工厂店陈列', en:'Store / factory-outlet display' },
+      dimensions:TBC, material:COMMON.materialOptions, thickness:TBC, hole:NA_BOARD,
+      printing:COMMON.printingOptions, customizable:CUSTOM_ALL
+    },
+    B04: {
+      sku:'B04', type:'board', image:'home/socks-application.jpg', concept:true,
+      name:{ zh:'直播展示挂板', en:'Live-Stream Display Board' },
+      features:{ zh:'便于集中展示多款袜品的纸质挂板，适合直播、短视频等线上销售场景。', en:'A paper board for presenting multiple sock styles together, suited to live-streaming and short-video selling.' },
+      use:{ zh:'直播 / 线上销售展示', en:'Live streaming / online sales display' },
+      dimensions:TBC, material:COMMON.materialOptions, thickness:TBC, hole:NA_BOARD,
+      printing:COMMON.printingOptions, customizable:CUSTOM_ALL
+    },
+    B05: {
+      sku:'B05', type:'board', image:'product-grid.jpg', concept:true,
+      name:{ zh:'长短款纸质袜板', en:'Paper Sock Board (Long / Short)' },
+      features:{ zh:'提供长款与短款两种展示形态的纸质袜板，适配不同长度袜品与陈列位。', en:'A paper sock board available in long and short formats to suit different sock lengths and display spaces.' },
+      use:{ zh:'长款 / 短款袜品展示', en:'Long / short sock presentation' },
+      dimensions:TBC, material:COMMON.materialOptions, thickness:TBC, hole:NA_BOARD,
+      printing:COMMON.printingOptions, customizable:CUSTOM_ALL
+    },
+    B06: {
+      sku:'B06', type:'board', image:'home/custom-packaging.jpg', concept:true,
+      name:{ zh:'多场景袜子挂板', en:'Multi-Scene Sock Display Board' },
+      features:{ zh:'可适配多种陈列场景的袜子挂板，结构可定制，便于统一品牌展示效果。', en:'A sock display board adaptable to multiple retail scenarios, with customisable structure for consistent brand presentation.' },
+      use:{ zh:'多场景零售陈列', en:'Multi-scene retail display' },
+      dimensions:TBC, material:COMMON.materialOptions, thickness:TBC, hole:NA_BOARD,
+      printing:COMMON.printingOptions, customizable:CUSTOM_ALL
+    }
+  };
+
+  // P01–P03 也并入 skus，详情页 ?sku=P0x 仍可用（产品中心点击进入）
+  PRODUCTS.forEach(function (p) {
+    SKUS[p.sku] = {
+      sku: p.sku, type: 'hook', image: p.image, concept: true,
+      name: p.name, features: p.desc, use: p.specs.use,
+      dimensions: TBC, material: COMMON.materialOptions,
+      thickness: p.specs.thickness, hole: p.specs.hole,
+      printing: COMMON.printingOptions, customizable: CUSTOM_ALL
+    };
+  });
 
   window.PH_PRODUCTS = {
     common: COMMON,
     products: PRODUCTS,
-    skus: (function () { var m = {}; PRODUCTS.forEach(function (p) { m[p.sku] = p; }); return m; })()
+    skus: SKUS
   };
 })();
