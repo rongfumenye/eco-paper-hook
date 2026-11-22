@@ -155,11 +155,11 @@
       [l.sku, sku],
       [l.nameZh, (d.name && d.name.zh) || ''],
       [l.nameEn, (d.name && d.name.en) || ''],
-      [l.dimensions || tbc[L], d.dimensions || tbc[L]],
-      [l.material || tbc[L], d.material || tbc[L]],
-      [l.thickness || tbc[L], d.thickness || tbc[L]],
-      [l.hole || tbc[L], d.hole || tbc[L]],
-      [l.printing || tbc[L], d.printing || tbc[L]]
+      [l.dimensions, t(d.dimensions) || tbc[L]],
+      [l.material, t(d.material) || tbc[L]],
+      [l.thickness, t(d.thickness) || tbc[L]],
+      [l.hole, t(d.hole) || tbc[L]],
+      [l.printing, t(d.printing) || tbc[L]]
     ];
     var tb = byId('pSpecs');
     if (tb) tb.innerHTML = rows.map(function (r) {
