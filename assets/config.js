@@ -15,7 +15,7 @@
 
   var CONFIG = {
     // —— 联系方式发布开关（未验证请设为 false）——
-    verified: true,
+    verified: false,
 
     // —— 在线询盘投递开关 ——
     // false = 在线直投未启用：表单走邮件客户端（mailto），并显示明确的临时限制说明。
