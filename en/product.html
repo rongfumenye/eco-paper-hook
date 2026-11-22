@@ -69,66 +69,63 @@
 
 <main class="main">
 <section class="wrap" style="padding-top:30px;padding-bottom:10px">
-  <div style="font-size:12.5px;color:var(--muted)"><a id="pBack" href="products.html">Products</a> / <span id="crumbSku">SKU</span></div>
-  <h1 id="pName" style="font-size:clamp(24px,3vw,34px);line-height:1.2;margin-top:12px">Product</h1>
+  <div style="font-size:12.5px;color:var(--muted)"><a href="../products.html">Products</a> / H03 · Paper hook</div>
+  <h1 id="pName" style="font-size:clamp(24px,3vw,34px);line-height:1.2;margin-top:12px">Question-Mark Paper Hook</h1>
 </section>
-
 <section class="wrap" style="padding-bottom:40px">
   <div class="detail-grid">
     <div>
-      <div class="detail-figure"><img id="pImg" src="../assets/img/product-grid.jpg" alt="illustrative image" style="object-fit:cover"></div>
-      <div id="conceptNote" style="margin-top:10px;font-size:12px;color:var(--kraft);background:#faf6ec;border:1px solid #e8dfc9;border-radius:8px;padding:8px 12px">illustrative image</div>
+      <div class="detail-figure"><img id="pImg" src="../../assets/img/home/hook-structures.jpg" alt="Question-Mark Paper Hook (H03)" style="object-fit:cover"></div>
+      <div style="margin-top:10px;font-size:12px;color:var(--kraft);background:#faf6ec;border:1px solid #e8dfc9;border-radius:8px;padding:8px 12px">Illustration, not a real product photo. Actual photo to be added.</div>
     </div>
     <div>
-      <div id="pIntro"></div>
-      <p style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
-        <a class="btn primary" id="pInquiry" href="contact.html">Send inquiry</a>
-        <a class="btn ghost" id="pSample" href="sample.html">Request a sample</a>
-      </p>
+      <div class="detail-sku"><span class="detail-sku-label">SKU</span><b>H03</b></div>
+      <div class="detail-nameline"><span class="kicker">Chinese name</span><p>问号形纸袜钩</p>
+      <span class="kicker" style="margin-top:10px;display:block">English name</span><p>Question-Mark Paper Hook</p></div>
+      <div class="detail-block"><div class="kicker">Structure & Features</div><p>A question-mark shaped paper hook whose open throat allows quick hanging and re-stocking in fast-turn retail.</p></div>
+      <div class="detail-block"><div class="kicker">Applications</div><p>Convenience stores / pharmacies / fast restock displays</p></div>
     </div>
   </div>
-
   <div class="detail-sub">
     <div class="detail-panel">
-      <h3 id="pSpecTitle">Product specifications</h3>
-      <table class="table" style="margin-top:6px;font-size:13px"><tbody id="pSpecs"></tbody></table>
-      <p id="pSpecNote" style="margin-top:12px;font-size:12px;color:var(--muted)"></p>
+      <h3>Product specifications</h3>
+      <table class="table"><tbody><tr><td><b>SKU</b></td><td>H03</td></tr><tr><td><b>Chinese name</b></td><td>问号形纸袜钩</td></tr><tr><td><b>English name</b></td><td>Question-Mark Paper Hook</td></tr><tr><td><b>Dimensions</b></td><td>To be confirmed</td></tr><tr><td><b>Board material</b></td><td>Options: kraft board / white card / greyboard (confirmed by sample and contract)</td></tr><tr><td><b>Thickness</b></td><td>To be confirmed</td></tr><tr><td><b>Hole / hanging spec</b></td><td>To be confirmed</td></tr><tr><td><b>Printing &amp; finishing</b></td><td>Options: spot colour / CMYK / foil stamping / emboss / deboss (to be confirmed)</td></tr></tbody></table>
+      <p style="margin-top:12px;font-size:12px;color:var(--muted)">Exact dimensions, thickness and hole sizes are not per-item tested and are marked "To be confirmed". Request a spec sheet and samples for written confirmation.</p>
     </div>
-    <div class="detail-panel" id="pCustom"></div>
+    <div class="detail-panel"><div class="kicker">Customisation options</div><p style="font-size:14px;line-height:1.8;color:var(--ink-2);margin:8px 0 0">Customisable: shape/structure, dimensions, hanging hole, board material, print artwork and finishing (confirmed by drawing and sample).</p></div>
   </div>
-
-  <!-- 询价区：自动带入产品信息，客户只填需求 -->
-  <div class="inquiry-box" id="inquiry">
+  <div class="inquiry-box">
     <div class="kicker">INQUIRY</div>
-    <h2 id="qTitle">Request a Quote</h2>
-    <p class="q-intro" id="qIntro"></p>
+    <h2>Inquire about this item</h2><p class="q-intro">Product details are filled in for you — just add your requirements:</p>
     <div class="carry-grid">
-      <div class="carry-item"><span id="lSku">SKU</span><b id="showSku">—</b></div>
-      <div class="carry-item"><span id="lCarryName">Product name</span><b id="showName">—</b></div>
-      <div class="carry-item"><span id="lSource">Current product link</span><a id="showSource" href="#" target="_blank" rel="noopener">—</a></div>
+      <div class="carry-item"><span>SKU</span><b id="showSku">H03</b></div>
+      <div class="carry-item"><span>Product name</span><b id="showName">Question-Mark Paper Hook</b></div>
+      <div class="carry-item"><span>Current product link</span><a id="showSource" href="https://kalozen.com/en/product.html?sku=H03" target="_blank" rel="noopener">https://kalozen.com/en/product.html?sku=H03</a></div>
     </div>
-    <form class="inq-form" onsubmit="return detailInquiry(event)">
-      <input type="hidden" name="productSku" id="qSku" value="">
-      <input type="hidden" name="productName" id="qName" value="">
-      <input type="hidden" name="sourceUrl" id="qSource" value="">
-      <div style="position:absolute;left:-9999px" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
-      <div class="field"><label id="lQty">Required Quantity</label><input name="qty" type="text" required placeholder="e.g. 20000"></div>
-      <div class="field"><label id="lMat">Material</label><input name="material" type="text" placeholder="e.g. kraft board"></div>
-      <div class="field"><label id="lThk">Thickness</label><input name="thickness" type="text" placeholder="e.g. 1.5 mm"></div>
-      <div class="field"><label id="lDesign">Custom Design</label><select name="category"><option value="">—</option><option value="custom shape">Custom shape</option><option value="standard">Standard</option><option value="per drawing">Per drawing</option></select></div>
-      <div class="field full"><label id="lPrint">Printing Requirements</label><input name="printing" type="text" placeholder="e.g. 1-colour print + foil"></div>
-      <div class="field full"><label id="lAdd">Additional Requirements</label><textarea name="notes" rows="3" placeholder="Target market, lead time, certifications..."></textarea></div>
-      <div class="field"><label id="lName">Name</label><input name="name" type="text" required placeholder="Name"></div>
-      <div class="field"><label id="lEmail">Email</label><input name="email" type="email" required placeholder="you@company.com"></div>
-      <div class="field full"><label id="lCompany">Company</label><input name="company" type="text" placeholder="Company"></div>
-      <label class="privacy-line"><input type="checkbox" name="privacy" style="margin-top:2px" required> <span id="lPrivacy">Privacy</span></label>
-      <button class="btn primary" type="submit" id="qSubmit">Send inquiry</button>
+    <form class="inq-form" action="../contact.html" method="get">
+      <input type="hidden" name="productSku" id="qSku" value="H03">
+      <input type="hidden" name="productName" id="qName" value="Question-Mark Paper Hook">
+      <input type="hidden" name="sourceUrl" id="qSource" value="https://kalozen.com/en/product.html?sku=H03">
+      <div class="field"><label>Required Quantity</label><input name="qty" type="text" required placeholder="e.g. 20000"></div>
+      <div class="field"><label>Material</label><input name="material" type="text"></div>
+      <div class="field"><label>Thickness</label><input name="thickness" type="text"></div>
+      <div class="field"><label>Custom Design</label><select name="category"><option value="">—</option><option value="custom shape">Custom shape</option><option value="standard">Standard</option><option value="per drawing">Per drawing</option></select></div>
+      <div class="field full"><label>Printing Requirements</label><input name="printing" type="text"></div>
+      <div class="field full"><label>Additional Requirements</label><textarea name="notes" rows="3"></textarea></div>
+      <div class="field"><label>Name</label><input name="name" type="text" required></div>
+      <div class="field"><label>Email</label><input name="email" type="email" required></div>
+      <div class="field"><label>Company</label><input name="company" type="text"></div>
+      <label class="privacy-line"><input type="checkbox" name="privacy" required> <span>I agree to the Privacy Policy and consent to being contacted about this inquiry.</span></label>
+      <button class="btn primary" type="submit">Send inquiry</button>
     </form>
-    <div id="formTip" class="inq-note" style="display:none" role="status" aria-live="polite"></div>
-    <div class="inq-note" id="qNeed" style="display:none"></div>
-    <div class="inq-note" id="qOk"></div>
+    <div class="inq-note">Online delivery is not enabled; submitting opens your email client with the inquiry pre-filled.</div>
   </div>
 </section>
+<noscript><section class="wrap" style="padding:20px 0 60px">
+<div style="background:#faf6ec;border:1px solid #e8dfc9;border-radius:12px;padding:20px">
+<h2 style="font-size:18px;margin:0 0 12px">Product list (use these links if scripts are disabled)</h2>
+<ul style="columns:2;line-height:2;font-size:14px"><li><a href="p/H01.html">H01 · Eco Paper Sock Hook</a></li><li><a href="p/H02.html">H02 · Export Eco Paper Hook</a></li><li><a href="p/H03.html">H03 · Question-Mark Paper Hook</a></li><li><a href="p/H04.html">H04 · Eco Paper Hook</a></li><li><a href="p/H05.html">H05 · 2-Shape Paper Sock Hook</a></li><li><a href="p/H06.html">H06 · Kraft Paper Question-Mark Hook</a></li><li><a href="p/H07.html">H07 · Multi-Purpose Paper Hook</a></li><li><a href="p/H08.html">H08 · Kraft Paper Question-Mark Hook (Retail)</a></li><li><a href="p/B01.html">B01 · Sock Display Board</a></li><li><a href="p/B02.html">B02 · Sock Display Card</a></li><li><a href="p/B03.html">B03 · Sock Merchandising Board</a></li><li><a href="p/B04.html">B04 · Live-Stream Display Board</a></li><li><a href="p/B05.html">B05 · Paper Sock Board (Long / Short)</a></li><li><a href="p/B06.html">B06 · Multi-Scene Sock Display Board</a></li></ul>
+</div></section></noscript>
 </main>
 
 <footer class="footer">
