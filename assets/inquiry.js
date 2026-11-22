@@ -15,8 +15,8 @@
   // —— 真后端接入点（留空 = 使用 mailto 兜底）——
   var WEB3FORMS_KEY = '';            // 例：'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
   var CFG = window.PH_CONFIG || {};
-  var RECV_EMAIL = CFG.email || '1450920332@qq.com';
-  var WHATSAPP = (CFG.whatsapp && CFG.whatsapp.url ? CFG.whatsapp.url : 'https://wa.me/8615515601979') + '?text=';
+  var RECV_EMAIL = CFG.email || '';
+  var WHATSAPP = (CFG.whatsapp && CFG.whatsapp.url ? CFG.whatsapp.url : '') + '?text=';
 
   var L = (document.documentElement.lang || 'en').toLowerCase();
   var LANG = L.indexOf('zh') === 0 ? 'zh' : L.indexOf('ru') === 0 ? 'ru'

@@ -79,14 +79,14 @@
         var txt = wa[i].textContent;
         if (txt.indexOf('+86') >= 0 || /whatsapp/i.test(txt) || /واتساب/.test(txt)) {
           // 若含前缀词（如 "WhatsApp "），只替换号码部分
-          wa[i].innerHTML = wa[i].innerHTML.replace(/\+86\s?155\s?1560\s?1979/g, C.whatsapp.number);
+          wa[i].innerHTML = wa[i].innerHTML.replace(/(?:\+?86[\s-]?)?155[\s-]?1560[\s-]?1979/g, (C.whatsapp.number || ''));
         }
       }
       // 覆盖所有 mailto
       var ml = document.querySelectorAll('a[href^="mailto:"]');
       for (var j = 0; j < ml.length; j++) {
         ml[j].setAttribute('href', 'mailto:' + C.email);
-        ml[j].innerHTML = ml[j].innerHTML.replace(/1450920332@qq\.com/g, C.email);
+        ml[j].innerHTML = ml[j].innerHTML.replace(/[\w.+-]+@[\w-]+\.[\w.-]+/g, (C.email || ''));
       }
       // 覆盖非链接的纯文本号码/邮箱
       var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
@@ -94,8 +94,8 @@
       while ((node = walker.nextNode())) {
         if (node.nodeValue && node.parentElement && node.parentElement.tagName !== 'A') {
           var v = node.nodeValue
-            .replace(/\+86\s?155\s?1560\s?1979/g, C.whatsapp.number)
-            .replace(/1450920332@qq\.com/g, C.email);
+            .replace(/(?:\+?86[\s-]?)?155[\s-]?1560[\s-]?1979/g, (C.whatsapp.number || ''))
+            .replace(/[\w.+-]+@[\w-]+\.[\w.-]+/g, (C.email || ''));
           if (v !== node.nodeValue) node.nodeValue = v;
         }
       }

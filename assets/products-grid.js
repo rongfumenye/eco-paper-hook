@@ -1,9 +1,10 @@
 /* ==================================================================
- * KALOZEN · 产品列表渲染（数据驱动，唯一来源 products-data.js）
+ * KALOZEN · 产品中心列表渲染（数据驱动，唯一来源 products-data.js）
  * ------------------------------------------------------------------
- * 页面只需放置一个 <div id="productGrid"></div>，本脚本自动把
- * 三种产品渲染成三张「整块可点击」的卡片，点击进入对应详情页。
- * 四语按 <html lang> 自动本地化。
+ * 统一口径：展示 14 款在售 SKU（H01–H08 纸质挂钩 + B01–B06 纸质挂板），
+ * 与产品详情页完全一致。每张卡片整块可点击，进入对应 SKU 详情页。
+ * 四语按 <html lang> 自动本地化；缺语种回退英文。
+ * 图片均为示意图，非实拍。
  * ================================================================== */
 (function () {
   'use strict';
@@ -19,43 +20,62 @@
     return 'en';
   }
   var L = currentLang();
-  function t(x) { return (x && typeof x === 'object') ? (x[L] || x.en) : x; }
+  function t(x) { return (x && typeof x === 'object') ? (x[L] || x.en || x.zh) : x; }
 
-  // 本地化标签
   var LBL = {
-    zh: { view:'查看规格与询价', sample:'申请样品', concept:'示意图，非产品实拍；实拍图待补。', spec:'常规参数（参考）', thickness:'厚度', hole:'孔径', load:'承重', use:'适用', from:'起订', intro:'我们只做三种钩型。选型的关键只有两件事：单件克重，和挂杆孔径——下面三款覆盖从轻薄袜品到品牌定制的全部场景。' },
-    en: { view:'View specs & inquire', sample:'Request a sample', concept:'Illustration, not a product photo. Real photo to be added.', spec:'Typical specs (reference)', thickness:'Thickness', hole:'Hole', load:'Load', use:'For', from:'MOQ', intro:'We make just three hook profiles. Choosing between them comes down to two things: item weight and bar diameter — the three below cover everything from light socks to branded custom work.' },
-    ru: { view:'Характеристики и запрос', sample:'Запросить образец', concept:'Иллюстрация, не фото товара. Настоящее фото будет добавлено.', spec:'Типичные параметры (справочно)', thickness:'Толщина', hole:'Отверстие', load:'Нагрузка', use:'Для', from:'От', intro:'Мы делаем всего три типа крючков. Выбор определяется двумя параметрами: весом изделия и диаметром крюка — три варианта ниже покрывают всё: от лёгких носков до брендированных заказов.' },
-    ar: { view:'المواصفات والاستفسار', sample:'طلب عينة', concept:'رسم توضيحي، ليست صورة منتج. ستُضاف الصورة الحقيقية.', spec:'المواصفات المعتادة (إرشادية)', thickness:'السماكة', hole:'الفتحة', load:'الحمل', use:'لـ', from:'الحد الأدنى', intro:'نصنع ثلاثة أشكال فقط. يعتمد الاختيار على أمرين: وزن القطعة وقطر العلّاقة — تغطي الثلاثة أدناه كل شيء من الجوارب الخفيفة إلى الطلبات المخصصة.' }
+    zh: {
+      view: '查看规格与询价',
+      concept: '示意图，非产品实拍；实拍图待补。',
+      typeHook: '纸质挂钩', typeBoard: '纸质挂板',
+      spec: '结构与适用', use: '适用场景',
+      intro: '以下为 14 款在售 SKU：H01–H08 为纸质挂钩，B01–B06 为纸质挂板。尺寸、厚度、孔径等精确参数标注「待确认」，请以规格书与样品为准。'
+    },
+    en: {
+      view: 'View specs & inquire',
+      concept: 'Illustration, not a product photo. Real photo to be added.',
+      typeHook: 'Paper hook', typeBoard: 'Display board',
+      spec: 'Structure & use', use: 'Applications',
+      intro: 'Below are 14 SKUs currently available: H01–H08 paper hooks and B01–B06 display boards. Exact dimensions, thickness and hole sizes are marked "To be confirmed" — please refer to the spec sheet and samples.'
+    },
+    ru: {
+      view: 'Характеристики и запрос',
+      concept: 'Иллюстрация, не фото товара. Настоящее фото будет добавлено.',
+      typeHook: 'Бумажный крючок', typeBoard: 'Дисплейная пластина',
+      spec: 'Структура и применение', use: 'Применение',
+      intro: 'Ниже 14 артикулов в наличии: H01–H08 бумажные крючки, B01–B06 дисплейные пластины. Точные размеры, толщина и диаметр отверстия обозначены «уточняется» — ориентируйтесь на спецификацию и образцы.'
+    },
+    ar: {
+      view: 'المواصفات والاستفسار',
+      concept: 'رسم توضيحي، ليست صورة منتج. ستُضاف الصورة الحقيقية.',
+      typeHook: 'خطاف ورقي', typeBoard: 'لوحة عرض',
+      spec: 'الهيكل والاستخدام', use: 'أماكن الاستخدام',
+      intro: 'فيما يلي 14 منتجًا متاحًا: H01–H08 خطافات ورقية، B01–B06 لوحات عرض. الأبعاد والسماكة وقطر الفتحة الدقيقة موسومة بـ«قيد التحقق» — يُرجى الرجوع إلى المواصفات والعينات.'
+    }
   };
   var l = LBL[L] || LBL.en;
 
-  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]; }); }
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]; }); }
   function tval(x) { return esc(t(x)); }
 
-  function cardMarkup(p) {
-    var s = p.specs || {};
-    var href = 'product.html?sku=' + encodeURIComponent(p.sku);
-    var bullets = (p.bullets && p.bullets[L]) ? p.bullets[L] : (p.bullets && p.bullets.en) || [];
-    var imgPath = 'img-' + p.sku + '.jpg'; // 预留未来独立图；当前用公共图兜底（见 onerror）
-    var commonImg = '../assets/img/' + p.image;
+  function cardMarkup(d) {
+    var sku = d.sku;
+    var href = 'product.html?sku=' + encodeURIComponent(sku);
+    var typeLabel = d.type === 'board' ? l.typeBoard : l.typeHook;
+    var use = d.use ? tval(d.use) : '—';
+    var feat = d.features ? tval(d.features) : '';
+    var commonImg = '../assets/img/' + d.image;
     return ''
       + '<article class="card reveal prod-card">'
-      + '  <a class="prod-link" href="' + href + '" aria-label="' + tval(p.name) + '">'
-      + '    <div class="card-media"><img src="' + commonImg + '" alt="' + tval(p.name) + '" loading="lazy" decoding="async"></div>'
+      + '  <a class="prod-link" href="' + href + '" aria-label="' + tval(d.name) + '">'
+      + '    <div class="card-media"><img src="' + commonImg + '" alt="' + tval(d.name) + ' (' + sku + '), illustrative image" loading="lazy" decoding="async"></div>'
       + '    <div class="prod-body">'
-      + '      <div class="num">' + tval(p.code) + '</div>'
-      + '      <h3>' + tval(p.name) + '</h3>'
-      + '      <p class="prod-tag">' + tval(p.tagline) + '</p>'
-      + '      <p class="prod-desc">' + tval(p.desc) + '</p>'
-      + '      <ul class="prod-bullets">' + bullets.map(function (b) { return '<li>' + esc(b) + '</li>'; }).join('') + '</ul>'
+      + '      <div class="num">' + esc(sku) + ' · ' + esc(typeLabel) + '</div>'
+      + '      <h3>' + tval(d.name) + '</h3>'
+      + '      <p class="prod-desc" style="font-size:13px;line-height:1.6">' + feat + '</p>'
       + '      <div class="prod-specs">'
-      + '        <span><b>' + l.thickness + ':</b> ' + esc(s.thickness || '—') + '</span>'
-      + '        <span><b>' + l.hole + ':</b> ' + tval(s.hole) + '</span>'
-      + '        <span><b>' + l.load + ':</b> ' + tval(s.load) + '</span>'
-      + '        <span><b>' + l.use + ':</b> ' + tval(s.use) + '</span>'
+      + '        <span><b>' + l.use + ':</b> ' + use + '</span>'
       + '      </div>'
-      + '      ' + (p.concept ? '<p class="prod-concept">' + l.concept + '</p>' : '')
+      + '      ' + (d.concept ? '<p class="prod-concept">' + l.concept + '</p>' : '')
       + '      <span class="btn primary prod-cta">' + l.view + ' <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>'
       + '    </div>'
       + '  </a>'
@@ -65,7 +85,14 @@
   function init() {
     var grid = document.getElementById('productGrid');
     if (!grid) return;
-    grid.innerHTML = '<div class="prod-intro reveal">' + l.intro + '</div><div class="grid-3 prod-grid">' + (P.products || []).map(cardMarkup).join('') + '</div>';
+    // 取 14 款在售 SKU（H01–H08 + B01–B06），按编号排序；P01–P03 仅兼容旧链接，不展示
+    var all = P.skus || {};
+    var list = Object.keys(all)
+      .filter(function (k) { return /^(H0[1-8]|B0[1-6])$/.test(k); })
+      .sort()
+      .map(function (k) { return all[k]; });
+    grid.innerHTML = '<div class="prod-intro reveal">' + l.intro + '</div>'
+      + '<div class="grid-3 prod-grid">' + list.map(cardMarkup).join('') + '</div>';
   }
 
   if (document.readyState === 'loading') {
