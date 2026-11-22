@@ -77,6 +77,22 @@
     }
   };
 
+  // 来源应用场景提示（由应用场景页询价入口 ?scene=... 带入）
+  var SCENE_LABEL = {
+    zh: '来源应用场景：', en: 'From application scenario: ',
+    ru: 'Сценарий применения: ', ar: 'من سيناريو التطبيق: '
+  };
+  var SCENE_RELATED = {
+    zh: '（关联型号：', en: ' (related SKUs: ',
+    ru: ' (связанные модели: ', ar: ' (الطرازات ذات الصلة: '
+  };
+  var SCENE_CLOSE = { zh: '）', en: ')', ru: ')', ar: ')' };
+
+  function getSceneFromUrl() {
+    var m = location.search.match(/[?&]scene=([^&]+)/);
+    return m ? decodeURIComponent(m[1]) : '';
+  }
+
   function q(sel, root) { return (root || document).querySelector(sel); }
   function val(form, name) { var e = form.elements[name]; return e ? String(e.value || '').trim() : ''; }
   function showTip(msg, isErr) {
@@ -132,6 +148,8 @@
     ];
     var lines = [];
     pairs.forEach(function (p) { var v = val(form, p[0]); if (v) lines.push(t[p[0]] + ': ' + v); });
+    var sceneName = getSceneFromUrl();
+    if (sceneName) lines.push((SCENE_LABEL[LANG] || SCENE_LABEL.en) + sceneName);
     lines.push('', t.notes + ':', val(form, 'notes'));
     var body = lines.join('\n');
     var subject = t.subject + ' — ' + (val(form, 'category') || 'Paper hooks') + ' — ' + name;
@@ -187,7 +205,30 @@
     var skuField = document.getElementById('productSku');
     if (skuField) {
       var m = location.search.match(/[?&]sku=([^&]+)/);
-      if (m) skuField.value = decodeURIComponent(m[1]);
+      if (m) {
+        // 支持多 SKU（逗号分隔），去重去空
+        var raw = decodeURIComponent(m[1]);
+        var seen = {}, list = [];
+        raw.split(',').forEach(function (x) {
+          x = x.trim();
+          if (x && !seen[x]) { seen[x] = 1; list.push(x); }
+        });
+        skuField.value = list.join(', ');
+      }
+    }
+    // 在询价表单上方显示来源应用场景与关联 SKU
+    var sceneName = getSceneFromUrl();
+    if (sceneName) {
+      var form = q('.form');
+      if (form && !document.getElementById('sceneNotice')) {
+        var notice = document.createElement('div');
+        notice.id = 'sceneNotice';
+        notice.setAttribute('role', 'note');
+        notice.style.cssText = 'margin:0 0 18px;padding:12px 16px;border:1px solid var(--line);border-radius:10px;background:#f1f5ef;color:var(--forest);font-size:13px;line-height:1.7';
+        var rel = skuField && skuField.value ? (SCENE_RELATED[LANG] || SCENE_RELATED.en) + skuField.value + (SCENE_CLOSE[LANG] || SCENE_CLOSE.en) : '';
+        notice.textContent = (SCENE_LABEL[LANG] || SCENE_LABEL.en) + sceneName + rel;
+        form.parentNode.insertBefore(notice, form);
+      }
     }
     var btn = q('.form button[type=submit]');
     if (btn) btn.textContent = t.submit;
