@@ -24,7 +24,7 @@
 
   var T = {
     en: {
-      subject: 'Website inquiry', sku: 'Product SKU', name: 'Name', company: 'Company', email: 'Email',
+      subject: 'Website inquiry', scene_name: 'Scene name', sku: 'Product SKU', name: 'Name', company: 'Company', email: 'Email',
       country: 'Country / Market', category: 'Product category', material: 'Material',
       thickness: 'Thickness (mm)', hole: 'Hole diameter (mm)', qty: 'Quantity (pcs)',
       printing: 'Printing / finishing', artwork: 'Artwork upload', photo: 'Product / shelf photo',
@@ -37,7 +37,7 @@
       wa: 'WhatsApp:', email: 'Email:', file: 'File attached:'
     },
     zh: {
-      subject: '官网询价', sku: '产品型号 (SKU)', name: '姓名', company: '公司', email: '邮箱',
+      subject: '官网询价', scene_name: '场景名称', sku: '产品型号 (SKU)', name: '姓名', company: '公司', email: '邮箱',
       country: '国家 / 市场', category: '需求产品', material: '纸张材质',
       thickness: '纸板厚度 (mm)', hole: '挂钩孔径 (mm)', qty: '预计数量（只）',
       printing: '印刷 / 后道工艺', artwork: '设计稿上传', photo: '产品或货架照片',
@@ -50,7 +50,7 @@
       wa: 'WhatsApp：', email: '邮箱：', file: '附件：'
     },
     ru: {
-      subject: 'Запрос с сайта', sku: 'Артикул (SKU)', name: 'Имя', company: 'Компания', email: 'E-mail',
+      subject: 'Запрос с сайта', scene_name: 'Название сценария', sku: 'Артикул (SKU)', name: 'Имя', company: 'Компания', email: 'E-mail',
       country: 'Страна / рынок', category: 'Категория продукта', material: 'Материал',
       thickness: 'Толщина (мм)', hole: 'Диаметр отверстия (мм)', qty: 'Количество, шт.',
       printing: 'Печать / отделка', artwork: 'Загрузка макета', photo: 'Фото товара / полки',
@@ -63,7 +63,7 @@
       wa: 'WhatsApp:', email: 'E-mail:', file: 'Файл:'
     },
     ar: {
-      subject: 'استفسار من الموقع', sku: 'رقم المنتج (SKU)', name: 'الاسم', company: 'الشركة', email: 'البريد الإلكتروني',
+      subject: 'استفسار من الموقع', scene_name: 'اسم السيناريو', sku: 'رقم المنتج (SKU)', name: 'الاسم', company: 'الشركة', email: 'البريد الإلكتروني',
       country: 'البلد / السوق', category: 'فئة المنتج', material: 'الخامة',
       thickness: 'السماكة (مم)', hole: 'قطر الفتحة (مم)', qty: 'الكمية (قطعة)',
       printing: 'الطباعة / التشطيب', artwork: 'رفع التصميم', photo: 'صورة المنتج / الرف',
@@ -89,7 +89,7 @@
   var SCENE_CLOSE = { zh: '）', en: ')', ru: ')', ar: ')' };
 
   function getSceneFromUrl() {
-    var m = location.search.match(/[?&]scene=([^&]+)/);
+    var m = location.search.match(/[?&]scene(?:_name)?=([^&]+)/);
     return m ? decodeURIComponent(m[1]) : '';
   }
 
@@ -144,12 +144,10 @@
     var pairs = [
       ['name', t.name], ['company', t.company], ['email', t.email], ['country', t.country],
       ['productSku', t.sku], ['category', t.category], ['material', t.material], ['thickness', t.thickness],
-      ['hole', t.hole], ['qty', t.qty], ['printing', t.printing]
+      ['hole', t.hole], ['qty', t.qty], ['printing', t.printing], ['scene_name', t.scene_name]
     ];
     var lines = [];
     pairs.forEach(function (p) { var v = val(form, p[0]); if (v) lines.push(t[p[0]] + ': ' + v); });
-    var sceneName = getSceneFromUrl();
-    if (sceneName) lines.push((SCENE_LABEL[LANG] || SCENE_LABEL.en) + sceneName);
     lines.push('', t.notes + ':', val(form, 'notes'));
     var body = lines.join('\n');
     var subject = t.subject + ' — ' + (val(form, 'category') || 'Paper hooks') + ' — ' + name;
@@ -215,6 +213,12 @@
         });
         skuField.value = list.join(', ');
       }
+    }
+    // 回填来源应用场景到隐藏字段 scene_name
+    var sceneField = document.getElementById('scene_name');
+    if (sceneField) {
+      var sn = getSceneFromUrl();
+      if (sn) sceneField.value = sn;
     }
     // 在询价表单上方显示来源应用场景与关联 SKU
     var sceneName = getSceneFromUrl();

@@ -122,6 +122,7 @@
         <p style="margin-top:12px;font-size:14px;color:var(--ink-2)">填写下方信息，我们会尽快为你配型报价。若设备不支持在线发送，请通过本页询价表单留言。</p>
         <form class="form reveal" onsubmit="return sendInquiry(event)" style="margin-top:22px">
           <input type="hidden" name="productSku" id="productSku" value="">
+          <input type="hidden" name="scene_name" id="scene_name" value="">
           <div style="position:absolute;left:-9999px" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
           <div class="field"><label>姓名</label><input name="name" type="text" placeholder="张三" required></div>
           <div class="field"><label>公司</label><input name="company" type="text" placeholder="公司名称"></div>
@@ -129,9 +130,9 @@
           <div class="field"><label>国家 / 市场</label><input name="country" type="text" placeholder="例如：德国"></div>
           <div class="field"><label>需求产品</label><select name="category"><option>袜子</option><option>内衣</option><option>家纺</option><option>母婴</option><option>宠物</option><option>美妆</option><option>礼品</option><option>其他</option></select></div>
           <div class="field"><label>纸张材质</label><select name="material"><option>牛皮纸</option><option>白卡纸</option><option>黑卡纸</option><option>灰板</option><option>其他</option></select></div>
-          <div class="field"><label>纸板厚度 (mm)</label><input name="thickness" type="text" placeholder="例如：1.5"></div>
-          <div class="field"><label>挂钩孔径 (mm)</label><input name="hole" type="text" placeholder="例如：5"></div>
-          <div class="field"><label>数量（只）</label><input name="qty" type="text" placeholder="例如：20000" required></div>
+          <div class="field"><label>纸板厚度 (mm)</label><input name="thickness" type="text" placeholder="请填写实际厚度"></div>
+          <div class="field"><label>挂钩孔径 (mm)</label><input name="hole" type="text" placeholder="请填写实际孔径"></div>
+          <div class="field"><label>数量（只）</label><input name="qty" type="text" placeholder="请填写预计数量" required></div>
           <div class="field full"><label>印刷 / 后道工艺</label><input name="printing" type="text" placeholder="例如：单色印刷 + 烫金"></div>
           <div class="field"><label>设计稿上传（AI/PDF/EPS）</label><input name="artwork" type="file" accept=".ai,.pdf,.eps,.png,.jpg,.jpeg"></div>
           <div class="field"><label>产品 / 货架照片</label><input name="photo" type="file" accept="image/*"></div>

@@ -122,6 +122,7 @@
         <p style="margin-top:12px;font-size:14px;color:var(--ink-2)">Fill in the details below and we will quote shortly. If online sending is unavailable, please leave your request via the form on this page or try again later.</p>
         <form class="form reveal" onsubmit="return sendInquiry(event)" style="margin-top:22px">
           <input type="hidden" name="productSku" id="productSku" value="">
+          <input type="hidden" name="scene_name" id="scene_name" value="">
           <div style="position:absolute;left:-9999px" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
           <div class="field"><label>Name</label><input name="name" type="text" placeholder="John Smith" required></div>
           <div class="field"><label>Company</label><input name="company" type="text" placeholder="Company name"></div>
@@ -129,9 +130,9 @@
           <div class="field"><label>Country / Market</label><input name="country" type="text" placeholder="e.g. Germany"></div>
           <div class="field"><label>Product category</label><select name="category"><option>Socks</option><option>Underwear</option><option>Home textiles</option><option>Baby products</option><option>Pet products</option><option>Beauty</option><option>Gift packaging</option><option>Other</option></select></div>
           <div class="field"><label>Paper material</label><select name="material"><option>Kraft paper</option><option>White card</option><option>Black card</option><option>Greyboard</option><option>Other</option></select></div>
-          <div class="field"><label>Board thickness (mm)</label><input name="thickness" type="text" placeholder="e.g. 1.5"></div>
-          <div class="field"><label>Hole diameter (mm)</label><input name="hole" type="text" placeholder="e.g. 5"></div>
-          <div class="field"><label>Quantity (pcs)</label><input name="qty" type="text" placeholder="e.g. 20000" required></div>
+          <div class="field"><label>Board thickness (mm)</label><input name="thickness" type="text" placeholder="Enter board thickness"></div>
+          <div class="field"><label>Hole diameter (mm)</label><input name="hole" type="text" placeholder="Enter hole diameter"></div>
+          <div class="field"><label>Quantity (pcs)</label><input name="qty" type="text" placeholder="Enter estimated quantity" required></div>
           <div class="field full"><label>Printing / finishing</label><input name="printing" type="text" placeholder="e.g. 1-color print + foil stamping"></div>
           <div class="field"><label>Artwork upload (AI/PDF/EPS)</label><input name="artwork" type="file" accept=".ai,.pdf,.eps,.png,.jpg,.jpeg"></div>
           <div class="field"><label>Product / shelf photo</label><input name="photo" type="file" accept="image/*"></div>
