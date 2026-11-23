@@ -19,21 +19,22 @@
     // WhatsApp 为已确认联系方式，其入口由 whatsapp.published 单独控制。
     verified: false,
 
-    // —— 在线询盘投递开关 ——
-    // false = 在线直投未启用：表单走邮件客户端（mailto），并显示明确的临时限制说明。
-    // true  = 需先在 inquiry.js 顶部填写 WEB3FORMS_KEY 并配置收件邮箱。
-    // 简报 §6：投递服务未确认前不启用，且不显示"提交成功"假象。
-    // 【InquiryDeliveryEnabled】必须同时满足以下三项才允许置 true：
-    //   1) WEB3FORMS_ACCESS_KEY 填入所有者提供的真实 Access Key；
-    //   2) 收件邮箱已由所有者核实准确；
-    //   3) 真实提交测试成功，且所有者确认 Gmail 收到邮件。
-    // 当前三条均未满足，保持 false，绝不显示"提交成功"假象。
+    // —— 在线询盘后端接口（第一阶段整改） ——
+    // 表单统一 POST 到此真实后端：functions/api/inquiry.js（Cloudflare Function）。
+    // 后端是否真正投递由其服务端环境变量决定，前端不再持有任何密钥。
+    // 前端仅根据后端返回的 success 字段显示成功/失败，绝不谎报成功。
+    inquiryEndpoint: '/api/inquiry',
+
+    // —— 在线询盘投递状态（只读镜像，由后端健康检查结果驱动）——
+    // 注意：真正的门控在服务端（收件邮箱 + 邮件凭据 + KV 存储三者齐备）。
+    // 此值仅供前端在后端尚未配置时选择 mailto 兜底，保留字段以兼容旧逻辑。
+    // 当前服务端三项配置均未提供，保持 false，绝不显示"提交成功"假象。
     inquiryDeliveryEnabled: false,
 
-    // —— Web3Forms Access Key（第一阶段仅预留位置，严禁伪造）——
-    // 所有者将提供真实 Access Key；提供前必须保持空字符串。
-    // 即使填入，仍需 inquiryDeliveryEnabled=true 才会真正走在线提交。
-    WEB3FORMS_ACCESS_KEY: '',
+    // 【重要·安全】密钥不存前端：
+    // 旧版 WEB3FORMS_ACCESS_KEY 已从前端移除。所有密钥现只存于服务端环境变量：
+    //   INQUIRY_TO_EMAIL / MAIL_API_KEY / MAIL_FROM / INQUIRY_WEBHOOK_URL / INQUIRY_DB(KV)
+    // 详见 docs/INQUIRY-BACKEND-SETUP.md。前端代码与仓库中不存在任何真实密钥。
 
     // —— 业务联系方式 ——
     // WhatsApp 已由所有者确认为真实联系方式，入口单独发布。

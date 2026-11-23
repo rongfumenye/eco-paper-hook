@@ -1,0 +1,7 @@
+INQUIRY_TO_EMAIL=your-confirmed-inbox@example.com
+MAIL_API_KEY=re_your_resend_key
+MAIL_FROM=KALOZEN Website <inquiry@your-domain.com>
+MAIL_API_ENDPOINT=https://api.resend.com/emails
+INQUIRY_ADMIN_TOKEN=your-long-random-admin-token
+# 或改用自建转发：
+# INQUIRY_WEBHOOK_URL=https://your-server.example.com/inquiry
