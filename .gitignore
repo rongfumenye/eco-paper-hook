@@ -10,3 +10,9 @@
 
 # 临时文件
 tmp/
+
+# 本地密钥文件（严禁入库）
+.dev.vars
+
+# Wrangler 本地状态
+.wrangler/

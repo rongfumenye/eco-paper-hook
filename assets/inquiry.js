@@ -230,8 +230,8 @@
           return;
         }
         unlock();
-        // 后端尚未配置 → mailto 兜底 + 明确说明
-        if (j.code === 'NOT_CONFIGURED') {
+        // 后端尚未配置，或后端接口暂未部署(404/无JSON响应) → mailto 兜底 + 明确说明
+        if (j.code === 'NOT_CONFIGURED' || res.status === 404 || (!res.j && !res.ok)) {
           mailtoFallback(form, payload, t);
           return;
         }

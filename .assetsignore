@@ -5,3 +5,8 @@ README.md
 DEPLOY-GUIDE.md
 wrangler.toml
 .assetsignore
+.de.vars
+.dev.vars.example
+worker.js
+functions
+docs
