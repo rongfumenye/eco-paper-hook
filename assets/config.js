@@ -14,10 +14,12 @@
   'use strict';
 
   var CONFIG = {
-    // —— 联系方式发布开关（未验证请设为 false）——
-    // 邮箱 www.777910@gmail.com 保留原始拼写，等待所有者核实后再置 true。
-    // WhatsApp 为已确认联系方式，其入口由 whatsapp.published 单独控制。
-    verified: false,
+    // —— 联系方式发布开关 ——
+    // 所有者已明确确认业务邮箱 www.777910@gmail.com 与 WhatsApp +8615515631079，
+    // 因此置 true：在中英等语言联系页与页脚发布可点击的邮箱与 WhatsApp 入口。
+    // 注意：verified 只控制“联系方式展示”，与在线投递是否启用无关；
+    // 在线投递仍由服务端收件邮箱/邮件凭据/存储三项决定（见 inquiryDeliveryEnabled）。
+    verified: true,
 
     // —— 在线询盘后端接口（第一阶段整改） ——
     // 表单统一 POST 到此真实后端：functions/api/inquiry.js（Cloudflare Function）。
@@ -26,14 +28,15 @@
     inquiryEndpoint: '/api/inquiry',
 
     // —— 在线询盘投递状态（只读镜像，由后端健康检查结果驱动）——
-    // 注意：真正的门控在服务端（收件邮箱 + 邮件凭据 + KV 存储三者齐备）。
-    // 此值仅供前端在后端尚未配置时选择 mailto 兜底，保留字段以兼容旧逻辑。
-    // 当前服务端三项配置均未提供，保持 false，绝不显示"提交成功"假象。
+    // 真正的门控在服务端。目前尚未提供 Web3Forms Access Key / 收件邮箱 / KV 存储，
+    // 后端 POST /api/inquiry 仍返回 503 NOT_CONFIGURED，前端因此显示 mailto 兜底，
+    // 绝不谎报"提交成功"。提供真实凭据并测试送达前，此值必须保持 false。
     inquiryDeliveryEnabled: false,
 
     // 【重要·安全】密钥不存前端：
-    // 旧版 WEB3FORMS_ACCESS_KEY 已从前端移除。所有密钥现只存于服务端环境变量：
-    //   INQUIRY_TO_EMAIL / MAIL_API_KEY / MAIL_FROM / INQUIRY_WEBHOOK_URL / INQUIRY_DB(KV)
+    // 旧版 WEB3FORMS_ACCESS_KEY 已从前端移除。所有密钥只存于服务端环境变量：
+    //   WEB3FORMS_ACCESS_KEY（推荐）/ INQUIRY_TO_EMAIL / MAIL_API_KEY / MAIL_FROM
+    //   / INQUIRY_WEBHOOK_URL / INQUIRY_DB(KV)
     // 详见 docs/INQUIRY-BACKEND-SETUP.md。前端代码与仓库中不存在任何真实密钥。
 
     // —— 业务联系方式 ——
@@ -43,7 +46,7 @@
       url: 'https://wa.me/8615515631079',
       published: true   // 已确认，允许在页面显示 WhatsApp 入口
     },
-    // 邮箱保留所有者提供的原始拼写，发布前等待核实；verified=false 时不显示。
+    // 邮箱已由所有者确认（verified=true），在联系页与页脚发布为 mailto 链接。
     email: 'www.777910@gmail.com',
 
     // —— 公司信息 ——

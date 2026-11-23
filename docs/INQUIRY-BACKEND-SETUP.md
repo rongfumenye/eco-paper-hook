@@ -18,7 +18,18 @@
 
 ## 二、上线前必须配置的三项（缺一不可，否则接口以 503 NOT_CONFIGURED 明确拒绝，绝不谎报成功）
 
-在 Cloudflare 控制台 → 你的 Pages 项目 → **Settings → Environment variables**，添加：
+在 Cloudflare 控制台 → 你的项目 → **Settings → Environment variables**，添加。
+
+**方案 A（推荐，最简单）：Web3Forms** —— 只需一个 Access Key，无需 SMTP / 发信域名：
+
+| 变量名 | 说明 | 示例 |
+|--------|------|------|
+| `WEB3FORMS_ACCESS_KEY` | 在 https://web3forms.com 用你的收件邮箱注册后获得的 Access Key（绑定该邮箱收信） | `xxxxxxxx-xxxx-xxxx` |
+
+获取步骤：打开 https://web3forms.com → 输入你要收信的邮箱（应为所有者确认的 `www.777910@gmail.com`）→ 查收 Web3Forms 发来的邮件，复制其中的 Access Key → 填入上方环境变量。
+> 该 Key 只存服务端，**绝不写入前端或仓库**。
+
+**方案 B：Resend / 自建转发**（不用 Web3Forms 时）
 
 | 变量名 | 说明 | 示例 |
 |--------|------|------|
@@ -38,7 +49,12 @@
    - KV namespace：选刚建的 `kalozen-inquiries`
 
 > 配置完成后，访问 `https://kalozen.com/api/inquiry`（GET）应返回
-> `"deliveryEnabled": true`。在此之前接口返回 `false` 并拒绝提交，前端走邮件客户端兜底。
+> `"deliveryEnabled": true`（用 Web3Forms 时还会显示 `"web3formsConfigured": true`）。
+> 在此之前接口返回 `false` 并以 503 拒绝提交，前端走邮件客户端兜底，**绝不谎报成功**。
+
+> **邮箱说明**：`www.777910@gmail.com` 已由所有者确认作为业务联系邮箱并公开发布；
+> 它同时也是 Web3Forms 应绑定的收件邮箱。邮箱格式含 `www.` 前缀较特殊，
+> 请以你实际能收信的 Gmail 为准注册 Web3Forms；如需改用其它收信邮箱请告知。
 
 ## 三、查看询盘记录
 

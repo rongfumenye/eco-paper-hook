@@ -5,8 +5,11 @@
  * ------------------------------------------------------------------
  * 设计原则（对应网站体检整改要求）：
  *  1. 真实后端：服务端接收、校验、存储、发信，前端不再直接接触任何密钥。
- *  2. 密钥只在服务端环境变量(context.env)：MAIL_API_KEY / INQUIRY_WEBHOOK_URL /
- *     INQUIRY_TO_EMAIL。前端代码与仓库中不存在任何真实密钥。
+ *  2. 密钥只在服务端环境变量(context.env)：WEB3FORMS_ACCESS_KEY（推荐）/
+ *     MAIL_API_KEY / INQUIRY_WEBHOOK_URL / INQUIRY_TO_EMAIL。
+ *     前端代码与仓库中不存在任何真实密钥。
+ *  2b. Web3Forms 通道：设置 WEB3FORMS_ACCESS_KEY 后，服务端 POST
+ *     https://api.web3forms.com/submit，由该 Key 绑定的邮箱收信；无需 SMTP。
  *  3. 记录留存：写入 Cloudflare KV 绑定 INQUIRY_DB（键 inquiry:<id>），
  *     便于后续查看跟进；KV 未绑定时明确报错，绝不谎报成功。
  *  4. 校验：必填字段 + 邮箱格式 + honeypot + 长度上限。
@@ -63,11 +66,15 @@ function clientIp(request) {
 function configState(env) {
   var toEmail = clean(env.INQUIRY_TO_EMAIL, 200);
   var apiKey = clean(env.MAIL_API_KEY, 200);
+  var w3fKey = clean(env.WEB3FORMS_ACCESS_KEY, 200);
   var webhook = clean(env.INQUIRY_WEBHOOK_URL, 500);
   var hasKv = !!(env.INQUIRY_DB && typeof env.INQUIRY_DB.put === 'function');
-  var hasRecipient = EMAIL_RE.test(toEmail);
-  var hasSender = !!(apiKey || /^https:\/\//i.test(webhook));
+  // Web3Forms 的 Key 已绑定收件邮箱，故有 Key 即视为“收件邮箱已配置”；
+  // 否则要求显式 INQUIRY_TO_EMAIL。任一发信通道齐备即视为“邮件服务已配置”。
+  var hasRecipient = !!(w3fKey || EMAIL_RE.test(toEmail));
+  var hasSender = !!(w3fKey || apiKey || /^https:\/\//i.test(webhook));
   return {
+    web3formsConfigured: !!w3fKey,
     recipientConfigured: hasRecipient,
     mailServiceConfigured: hasSender,
     storageConfigured: hasKv,
@@ -177,6 +184,36 @@ function buildText(fields, meta) {
 }
 
 async function sendEmail(env, subject, text, replyTo) {
+  // 路径 W：Web3Forms（推荐）——密钥仅存服务端，POST 官方 submit 接口，
+  // 由该 Access Key 绑定的邮箱（应为所有者确认的 www.777910@gmail.com）收信。
+  var w3fKey = clean(env.WEB3FORMS_ACCESS_KEY, 200);
+  if (w3fKey) {
+    var wEndpoint = clean(env.WEB3FORMS_ENDPOINT, 300) || 'https://api.web3forms.com/submit';
+    var wBody = {
+      access_key: w3fKey,
+      subject: subject,
+      message: text,
+      from_name: 'KALOZEN Website Inquiry',
+      botcheck: ''
+    };
+    // 把客户邮箱作为 reply_to / email，方便直接回复
+    if (EMAIL_RE.test(replyTo || '')) {
+      wBody.replyto = replyTo;
+      wBody.email = replyTo;
+    }
+    var wr = await fetch(wEndpoint, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', accept: 'application/json' },
+      body: JSON.stringify(wBody)
+    });
+    var wResult = null;
+    try { wResult = await wr.json(); } catch (e) {}
+    if (!wr.ok || !wResult || wResult.success !== true) {
+      var wDetail = (wResult && (wResult.message || wResult.detail)) || ('HTTP ' + wr.status);
+      throw new Error('web3forms ' + wDetail);
+    }
+    return 'web3forms';
+  }
   // 路径 A：自建转发 webhook（可对接任意邮件服务，密钥留在服务端）
   var webhook = clean(env.INQUIRY_WEBHOOK_URL, 500);
   if (/^https:\/\//i.test(webhook)) {
