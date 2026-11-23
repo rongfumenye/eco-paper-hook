@@ -2,21 +2,25 @@
  * PAPERHOOK · B2B 询价表单增强
  * ------------------------------------------------------------------
  * 双轨提交：
- *   1) 配置了 WEB3FORMS_KEY  → 走 Web3Forms 真后端（网站直接提交 + 邮件通知，无需服务器）
- *   2) 未配置                → 自动降级为 mailto（打开邮件客户端，兜底可用）
- * 统一：前端验证 / 成功提示 / WhatsApp 备用 / 隐私同意 / 文件上传
+ *   1) inquiryDeliveryEnabled=true 且 WEB3FORMS_ACCESS_KEY 已配置
+ *                          → 走 Web3Forms 官方 API（网站直接提交 + 邮件通知，无需服务器）
+ *   2) 否则                 → 自动降级为 mailto（打开邮件客户端，兜底可用）
+ * 统一：前端验证 / 成功提示 / WhatsApp 备用 / 隐私同意 / 文件上传 / 元数据附加
  *
- * 【启用真后端】到 https://web3forms.com 用收件邮箱免费申请 Access Key，
- * 填入下方 WEB3FORMS_KEY 即可。申请说明见 DEPLOY-GUIDE.md。
+ * 【Access Key】只在 assets/config.js 的 WEB3FORMS_ACCESS_KEY 中维护，严禁伪造或硬编码。
+ * 【启用条件】key 已填 + 邮箱已核实 + 真实提交测试成功，才可将 inquiryDeliveryEnabled 置 true。
  * ================================================================== */
 (function () {
   'use strict';
 
-  // —— 真后端接入点（留空 = 使用 mailto 兜底）——
-  var WEB3FORMS_KEY = '';            // 例：'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
   var CFG = window.PH_CONFIG || {};
+  // Access Key 只从中央配置读取，代码内绝不伪造或写死。
+  var WEB3FORMS_KEY = CFG.WEB3FORMS_ACCESS_KEY || '';
+  // 真后端门控：开关开启“且”key 存在才走在线提交；否则一律 mailto 兜底。
+  var DELIVERY_ON = (CFG.inquiryDeliveryEnabled === true) && !!WEB3FORMS_KEY;
   var RECV_EMAIL = CFG.email || '';
   var WHATSAPP = (CFG.whatsapp && CFG.whatsapp.url ? CFG.whatsapp.url : '') + '?text=';
+  var submitting = false;   // 防重复提交锁
 
   var L = (document.documentElement.lang || 'en').toLowerCase();
   var LANG = L.indexOf('zh') === 0 ? 'zh' : L.indexOf('ru') === 0 ? 'ru'
@@ -33,7 +37,7 @@
       okBackend: 'Thank you! Your inquiry has been sent — we will reply by email shortly.',
       fileType: 'Only AI, PDF, EPS, PNG, JPG files are allowed.', fileSize: 'Each file must be under 5 MB.', bot: 'Submission blocked.',
       okMailto: 'Online delivery is not yet enabled. We have prepared your inquiry in your email client — please press SEND there. If it does not open, email {MAIL} or WhatsApp {WA}. Your inquiry is only received once the email is actually sent.',
-      err: 'Sending failed. Please contact us via WhatsApp {WA} or email {MAIL}.',
+      err: 'Sending failed. Please contact us via WhatsApp {WA} or email {MAIL}.', errReal: 'Server message:',
       wa: 'WhatsApp:', email: 'Email:', file: 'File attached:'
     },
     zh: {
@@ -46,7 +50,7 @@
       okBackend: '提交成功！我们已收到你的询价，将尽快通过邮件回复。',
       fileType: '仅支持 AI / PDF / EPS / PNG / JPG 文件。', fileSize: '单个文件不得超过 5 MB。', bot: '提交被拦截。',
       okMailto: '在线投递尚未启用。我们已在你的邮件客户端填好询价内容，请在邮件中点击发送；若未自动打开，请发送至 {MAIL} 或通过 WhatsApp {WA} 联系。只有邮件真正发出后，询价才算送达。',
-      err: '提交失败，请改用 WhatsApp {WA} 或邮件 {MAIL} 联系我们。',
+      err: '提交失败，请改用 WhatsApp {WA} 或邮件 {MAIL} 联系我们。', errReal: '服务器返回：',
       wa: 'WhatsApp：', email: '邮箱：', file: '附件：'
     },
     ru: {
@@ -59,7 +63,7 @@
       okBackend: 'Спасибо! Ваш запрос отправлен — мы ответим по e-mail в ближайшее время.',
       fileType: 'Разрешены только AI, PDF, EPS, PNG, JPG.', fileSize: 'Размер файла — до 5 МБ.', bot: 'Отправка заблокирована.',
       okMailto: 'Онлайн-отправка пока не включена. Мы подготовили письмо в почтовом клиенте — нажмите ОТПРАВИТЬ. Если клиент не открылся, напишите на {MAIL} или в WhatsApp {WA}. Запрос считается полученным только после фактической отправки.',
-      err: 'Не удалось отправить. Свяжитесь через WhatsApp {WA} или e-mail {MAIL}.',
+      err: 'Не удалось отправить. Свяжитесь через WhatsApp {WA} или e-mail {MAIL}.', errReal: 'Сообщение сервера:',
       wa: 'WhatsApp:', email: 'E-mail:', file: 'Файл:'
     },
     ar: {
@@ -72,7 +76,7 @@
       okBackend: 'شكرًا! تم إرسال طلبك — سنرد عبر البريد قريبًا.',
       fileType: 'يُسمح بملفات AI وPDF وEPS وPNG وJPG فقط.', fileSize: 'حجم الملف أقل من 5 ميجابايت.', bot: 'تم حظر الإرسال.',
       okMailto: 'الإرسال الأونلاين غير مفعّل بعد. جهّزنا رسالتك في برنامج البريد — اضغط إرسال. إن لم يفتح، راسلنا على {MAIL} أو واتساب {WA}. يُعد الطلب مستلمًا فقط بعد إرسال البريد فعليًا.',
-      err: 'فشل الإرسال. تواصل عبر واتساب {WA} أو البريد {MAIL}.',
+      err: 'فشل الإرسال. تواصل عبر واتساب {WA} أو البريد {MAIL}.', errReal: 'رسالة الخادم:',
       wa: 'واتساب:', email: 'البريد:', file: 'مرفق:'
     }
   };
@@ -94,6 +98,7 @@
   }
 
   function q(sel, root) { return (root || document).querySelector(sel); }
+  function formById(name) { return document.getElementById(name) || q('[name="' + name + '"]'); }
   function val(form, name) { var e = form.elements[name]; return e ? String(e.value || '').trim() : ''; }
   function showTip(msg, isErr) {
     var tip = document.getElementById('formTip');
@@ -101,6 +106,8 @@
     // 占位符替换为中央配置中的真实联系方式（不硬编码）
     var wa = (CFG.whatsapp && CFG.whatsapp.number) ? CFG.whatsapp.number : '';
     msg = String(msg).replace(/\{WA\}/g, wa).replace(/\{MAIL\}/g, RECV_EMAIL);
+    if (isErr && arguments[2]) msg += '\n' + arguments[2];
+    tip.style.whiteSpace = 'pre-line';
     tip.style.display = 'block';
     tip.textContent = msg;
     tip.style.color = isErr ? '#b3261e' : 'var(--green)';
@@ -110,6 +117,7 @@
     if (ev && ev.preventDefault) ev.preventDefault();
     var form = (ev && ev.target) ? ev.target : q('.form');
     if (!form) return false;
+    if (submitting) return false;   // 提交中，忽略重复点击
     var t = T[LANG] || T.en;
 
     // 前端验证
@@ -146,36 +154,65 @@
       ['productSku', t.sku], ['category', t.category], ['material', t.material], ['thickness', t.thickness],
       ['hole', t.hole], ['qty', t.qty], ['printing', t.printing], ['scene_name', t.scene_name]
     ];
+    var skuNow = val(form, 'productSku') || val(form, 'sku') || val(form, 'productName') || '';
     var lines = [];
-    pairs.forEach(function (p) { var v = val(form, p[0]); if (v) lines.push(t[p[0]] + ': ' + v); });
+    pairs.forEach(function (p) { var v = val(form, p[0]); if (v) lines.push(p[1] + ': ' + v); });
     lines.push('', t.notes + ':', val(form, 'notes'));
+    // 产品详情上下文（客户从产品页带过来的型号/名称/来源链接）
+    var pn = val(form, 'productName'), su = val(form, 'sourceUrl');
+    if (pn) lines.push('Product: ' + pn);
+    if (su) lines.push('Product link: ' + su);
+    // 自动附加元数据：访问页面 / 语言 / 询盘时间 / 产品型号（两种提交路径都保留）
+    lines.push('', '--- Inquiry meta ---');
+    lines.push('Page: ' + location.href);
+    lines.push('Language: ' + LANG);
+    lines.push('Time: ' + new Date().toISOString());
+    lines.push('Product SKU: ' + skuNow);
     var body = lines.join('\n');
-    var subject = t.subject + ' — ' + (val(form, 'category') || 'Paper hooks') + ' — ' + name;
+    var subject = 'KALOZEN Website Inquiry — ' + name + ' — ' + (skuNow || val(form, 'category') || 'General');
 
     var btn = q('button[type=submit]', form);
     var oldLabel = btn ? btn.textContent : '';
 
-    // 走真后端
-    if (WEB3FORMS_KEY) {
+    // 走真后端（仅当开关开启且 key 存在）
+    if (DELIVERY_ON) {
       var fd = new FormData(form);
       fd.append('access_key', WEB3FORMS_KEY);
       fd.append('subject', subject);
+      // 用户邮箱作为 Reply-To，方便直接回复客户
+      fd.append('reply_to', email);
+      fd.append('from_name', name);
+      // 自动附加元数据：当前页面 / 页面语言 / 询盘时间 / 客户询问的产品型号
+      fd.append('page_url', location.href);
+      fd.append('page_language', LANG);
+      fd.append('inquiry_time', new Date().toISOString());
+      fd.append('product_sku', skuNow);
+      fd.append('inquiry_summary', body);
       // 只上传已选择的文件，避免空 File 被当作无效
       ['artwork', 'photo'].forEach(function (k) {
         var el = form.elements[k];
         if (el && el.files && el.files.length) fd.append(k, el.files[0]);
       });
-      if (btn) { btn.textContent = t.sending; btn.disabled = true; }
+      submitting = true;
+      if (btn) { btn.textContent = t.sending; btn.disabled = true; btn.setAttribute('aria-busy','true'); }
+      function unlock() {
+        submitting = false;
+        if (btn) { btn.textContent = oldLabel; btn.disabled = false; btn.removeAttribute('aria-busy'); }
+      }
       fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd })
-        .then(function (r) { return r.json(); })
-        .then(function (j) {
-          if (btn) { btn.textContent = oldLabel; btn.disabled = false; }
-          if (j && j.success) { form.reset(); showTip(t.okBackend, false); }
-          else showTip(t.err, true);
+        .then(function (r) { return r.json().catch(function () { return null; }).then(function (j) { return { ok: r.ok, j: j }; }); })
+        .then(function (res) {
+          unlock();
+          var j = res.j;
+          if (res.ok && j && j.success) { form.reset(); showTip(t.okBackend, false); }
+          else {
+            var real = (j && (j.message || j.error)) ? String(j.message || j.error) : '';
+            showTip(t.err, true, (t.errReal ? t.errReal + ' ' : '') + real);
+          }
         })
-        .catch(function () {
-          if (btn) { btn.textContent = oldLabel; btn.disabled = false; }
-          showTip(t.err, true);
+        .catch(function (e) {
+          unlock();
+          showTip(t.err, true, (t.errReal ? t.errReal + ' ' : '') + (e && e.message ? e.message : ''));
         });
       return false;
     }
@@ -199,6 +236,30 @@
   // 初始化：按语言替换按钮文案 + 给隐私标签补链接
   document.addEventListener('DOMContentLoaded', function () {
     var t = T[LANG] || T.en;
+    // —— 从 URL 查询参数回填所有字段（产品详情页 GET 跳转过来的 SKU/数量/备注等不丢失）——
+    // 字段别名：productSku 也接受 sku；productName 也接受 name 之外的来源
+    var backfillMap = {
+      productSku: ['productSku', 'sku'],
+      productName: ['productName'],
+      sourceUrl: ['sourceUrl'],
+      scene_name: ['scene_name', 'scene'],
+      qty: ['qty'], material: ['material'], thickness: ['thickness'], hole: ['hole'],
+      category: ['category'], printing: ['printing'], country: ['country'],
+      name: ['name'], email: ['email'], company: ['company'], notes: ['notes']
+    };
+    try {
+      var usp = new URLSearchParams(location.search);
+      Object.keys(backfillMap).forEach(function (field) {
+        var el = formById(field);
+        if (!el || (el.value && String(el.value).trim())) return; // 已有值不覆盖
+        var keys = backfillMap[field], found = '';
+        for (var i = 0; i < keys.length; i++) {
+          var v = usp.get(keys[i]);
+          if (v) { found = v; break; }
+        }
+        if (found) el.value = found;
+      });
+    } catch (e) {}
     // 从详情页 ?sku=XX 自动回填
     var skuField = document.getElementById('productSku');
     if (skuField) {

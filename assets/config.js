@@ -15,20 +15,35 @@
 
   var CONFIG = {
     // —— 联系方式发布开关（未验证请设为 false）——
+    // 邮箱 www.777910@gmail.com 保留原始拼写，等待所有者核实后再置 true。
+    // WhatsApp 为已确认联系方式，其入口由 whatsapp.published 单独控制。
     verified: false,
 
     // —— 在线询盘投递开关 ——
     // false = 在线直投未启用：表单走邮件客户端（mailto），并显示明确的临时限制说明。
     // true  = 需先在 inquiry.js 顶部填写 WEB3FORMS_KEY 并配置收件邮箱。
     // 简报 §6：投递服务未确认前不启用，且不显示"提交成功"假象。
+    // 【InquiryDeliveryEnabled】必须同时满足以下三项才允许置 true：
+    //   1) WEB3FORMS_ACCESS_KEY 填入所有者提供的真实 Access Key；
+    //   2) 收件邮箱已由所有者核实准确；
+    //   3) 真实提交测试成功，且所有者确认 Gmail 收到邮件。
+    // 当前三条均未满足，保持 false，绝不显示"提交成功"假象。
     inquiryDeliveryEnabled: false,
 
+    // —— Web3Forms Access Key（第一阶段仅预留位置，严禁伪造）——
+    // 所有者将提供真实 Access Key；提供前必须保持空字符串。
+    // 即使填入，仍需 inquiryDeliveryEnabled=true 才会真正走在线提交。
+    WEB3FORMS_ACCESS_KEY: '',
+
     // —— 业务联系方式 ——
+    // WhatsApp 已由所有者确认为真实联系方式，入口单独发布。
     whatsapp: {
-      number: '',   // 待核实：不发布号码
-      url: '' // 待核实：不发布跳转
+      number: '+8615515631079',
+      url: 'https://wa.me/8615515631079',
+      published: true   // 已确认，允许在页面显示 WhatsApp 入口
     },
-    email: '',
+    // 邮箱保留所有者提供的原始拼写，发布前等待核实；verified=false 时不显示。
+    email: 'www.777910@gmail.com',
 
     // —— 公司信息 ——
     company: 'KALOZEN',
