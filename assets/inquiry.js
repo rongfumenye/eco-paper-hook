@@ -135,7 +135,7 @@
   // 汇总所有客户填写字段（产品/数量/公司/联系人/邮箱/需求内容完整保留）
   function collect(form) {
     var keys = [
-      'name', 'company', 'email', 'country', 'category', 'material', 'thickness', 'hole',
+      'name', 'company', 'email', 'phone', 'whatsapp', 'country', 'category', 'material', 'thickness', 'hole',
       'qty', 'printing', 'notes', 'productSku', 'sku', 'productName', 'sourceUrl', 'scene_name', 'scene'
     ];
     var out = {};
@@ -149,7 +149,7 @@
   }
 
   function mailtoFallback(form, payload, t) {
-    var subject = 'KALOZEN Website Inquiry — ' + (payload.name || '') + ' — ' + (payload.productSku || payload.category || 'General');
+    var subject = 'New Inquiry - KALOZEN Website - ' + (payload.name || '') + ' - ' + (payload.productSku || payload.category || 'General');
     var lines = [];
     Object.keys(payload).forEach(function (k) {
       if (['privacy', 'page_url', 'page_language', 'inquiry_time'].indexOf(k) >= 0) return;
@@ -258,7 +258,8 @@
       scene_name: ['scene_name', 'scene'],
       qty: ['qty'], material: ['material'], thickness: ['thickness'], hole: ['hole'],
       category: ['category'], printing: ['printing'], country: ['country'],
-      name: ['name'], email: ['email'], company: ['company'], notes: ['notes']
+      name: ['name'], email: ['email'], company: ['company'], notes: ['notes'],
+      phone: ['phone', 'whatsapp'], whatsapp: ['whatsapp', 'phone']
     };
     try {
       var usp = new URLSearchParams(location.search);

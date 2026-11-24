@@ -33,7 +33,7 @@ const COLLECTIONS = {
     'name', 'company', 'email', 'country', 'category', 'material',
     'thickness', 'hole', 'qty', 'printing', 'notes', 'productSku',
     'sku', 'productName', 'sourceUrl', 'scene_name', 'scene', 'page_url',
-    'page_language', 'inquiry_time'
+    'page_language', 'inquiry_time', 'phone', 'whatsapp'
   ],
   MAX: { notes: 4000 }
 };
@@ -168,6 +168,7 @@ function newId() {
 function buildText(fields, meta) {
   var labelMap = {
     name: 'Name / 姓名', company: 'Company / 公司', email: 'Email / 邮箱',
+    phone: 'Phone / WhatsApp / 电话', whatsapp: 'WhatsApp / 电话',
     country: 'Country / 国家', category: 'Category / 产品类别', material: 'Material / 材质',
     thickness: 'Thickness / 厚度', hole: 'Hole / 孔径', qty: 'Quantity / 数量',
     printing: 'Printing / 印刷', productSku: 'Product SKU / 型号',
@@ -307,7 +308,7 @@ async function handlePost(request, env) {
   }
 
   // 2) 发信（服务端，密钥不出服务端）
-  var subject = 'KALOZEN Website Inquiry — ' + v.name + ' — ' + (fields.productSku || fields.category || 'General');
+  var subject = 'New Inquiry - KALOZEN Website - ' + v.name + ' - ' + (fields.productSku || fields.category || 'General');
   var text = buildText(fields, record.meta);
   try {
     await sendEmail(env, subject, text, v.email);
