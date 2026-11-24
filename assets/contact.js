@@ -75,6 +75,22 @@
     return frag;
   }
 
+  // 填充“Email / 邮箱”卡片中原本为空的 <p dir="ltr"> 槽位。
+  // 仅在 verified=true 且有邮箱时填入可点击 mailto；不新增节点、不改布局。
+  function fillEmailCard() {
+    if (C.verified !== true || !C.email) return;
+    var slots = document.querySelectorAll('p[dir="ltr"]');
+    for (var i = 0; i < slots.length; i++) {
+      var p = slots[i];
+      if (p.textContent.trim() !== '') continue; // 只填空槽
+      var a = document.createElement('a');
+      a.setAttribute('href', 'mailto:' + C.email);
+      a.style.cssText = 'color:var(--green);text-decoration:none;font-weight:600';
+      a.textContent = C.email;
+      p.appendChild(a);
+    }
+  }
+
   // 投递未启用说明（保持原有行为，不谎称提交成功）
   function addInquiryNotice() {
     var form = document.querySelector('.form, .inq-form');
@@ -146,6 +162,7 @@
   function apply() {
     addInquiryNotice();
     injectContactSlots();
+    fillEmailCard();
     overrideAnchors();
     syncStructuredData();
   }
