@@ -7,6 +7,13 @@ compatibility_date = "2024-09-01"
 [assets]
 directory = "."
 
+# —— 已确认的询盘收件邮箱（非密钥，可入库）——
+# 所有者最终确认：www.777910@gmail.com —— 必须保留 www. 前缀，不得删改。
+# 重要：Web3Forms 的收件人由 Access Key 注册邮箱决定，注册时必须使用这个地址；
+#       INQUIRY_TO_EMAIL 供 Resend/webhook 通道使用，Web3Forms 通道按 Key 绑定邮箱收信。
+[vars]
+INQUIRY_TO_EMAIL = "www.777910@gmail.com"
+
 # —— 询盘后端所需绑定（需在 Cloudflare 控制台创建后取消注释并填写）——
 # 【KV 记录存储】先创建命名空间再填 id：
 # [[kv_namespaces]]
