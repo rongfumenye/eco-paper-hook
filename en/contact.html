@@ -2,6 +2,10 @@
 <html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
+<!-- KALOZEN en/contact build=20261124-1145 contact links/honeypot/no-upload/footer all current; hard-refresh (Ctrl+F5) if you see old content -->
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate, max-age=0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact KALOZEN</title>
 <meta name="description" content="Request paper hook samples, specifications and matching advice. Please use the inquiry form and we will reply shortly.">
@@ -22,6 +26,10 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230e2c24'/%3E%3Cpath d='M12 20c0-5 2.6-8 6.6-9.6C18 14.4 15.6 17 12 20z' fill='none' stroke='%237ea878' stroke-width='1.6'/%3E%3Cpath d='M12 20c0-5-2.6-8-6.6-9.6C6 14.4 8.4 17 12 20z' fill='none' stroke='%237ea878' stroke-width='1.6'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../assets/style.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://kalozen.com/#organization","name":"KALOZEN","alternateName":"Eco Paper Hook","url":"https://kalozen.com/","logo":{"@type":"ImageObject","url":"https://kalozen.com/assets/img/product-grid.jpg"},"description":"KALOZEN produces through reliable partner factories and a coordinated supply chain, with verified information only.","address":{"@type":"PostalAddress","addressLocality":"Zhengzhou","addressRegion":"Henan","addressCountry":"CN"},"contactPoint":{"@type":"ContactPoint","contactType":"sales","availableLanguage":["en","zh-Hans","ru","ar"]}},{"@type":"WebSite","@id":"https://kalozen.com/#website","url":"https://kalozen.com/en/","name":"KALOZEN","inLanguage":"en"},{"@type":"WebPage","@id":"https://kalozen.com/en/contact.html","url":"https://kalozen.com/en/contact.html","name":"Contact KALOZEN | WhatsApp","description":"Request paper hook samples, specifications and matching advice. Please use the inquiry form and we will reply shortly.","inLanguage":"en","isPartOf":{"@id":"https://kalozen.com/#website"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://kalozen.com/en/index.html"},{"@type":"ListItem","position":2,"name":"Tell us the peg size.We will tell you the hook.","item":"https://kalozen.com/en/contact.html"}]}]}</script>
+<style>
+/* 本页：回填字段与防垃圾字段始终隐藏，普通用户不可见、无需填写 */
+input[name="productSku"],input[name="scene_name"],input[name="website"]{display:none!important}
+</style>
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body class="tn">
@@ -122,10 +130,11 @@
         <div class="kicker" style="font-size:11px;letter-spacing:.22em;color:var(--kraft);font-weight:600;margin-bottom:10px">INQUIRY FORM</div>
         <h2 style="font-size:clamp(22px,2.5vw,30px)">Send the details, get a spec</h2>
         <p style="margin-top:12px;font-size:14px;color:var(--ink-2)">Fill in the details below and we will quote shortly. For a faster reply, you can also reach us directly via WhatsApp or email above.</p>
-        <form class="form reveal" onsubmit="return sendInquiry(event)" style="margin-top:22px">
-          <input type="hidden" name="productSku" id="productSku" value="">
-          <input type="hidden" name="scene_name" id="scene_name" value="">
-          <div style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+        <form class="form reveal" onsubmit="return sendInquiry(event)" novalidate style="margin-top:22px">
+          <input type="hidden" name="productSku" id="productSku" value="" aria-label="Product SKU, auto-filled by the system, no need to fill in">
+          <input type="hidden" name="scene_name" id="scene_name" value="" aria-label="Scene name, auto-filled by the system, no need to fill in">
+          <!-- Website is a spam-trap honeypot: hidden, invisible to normal users, not to be filled in -->
+          <div style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off" aria-label="Spam-trap field, please do not fill in"></label></div>
           <div class="field"><label>Name</label><input name="name" type="text" placeholder="John Smith" required></div>
           <div class="field"><label>Company</label><input name="company" type="text" placeholder="Company name"></div>
           <div class="field"><label>Email</label><input name="email" type="email" placeholder="you@company.com" required></div>
@@ -137,8 +146,6 @@
           <div class="field"><label>Hole diameter (mm)</label><input name="hole" type="text" placeholder="Enter hole diameter"></div>
           <div class="field"><label>Quantity (pcs)</label><input name="qty" type="text" placeholder="Enter estimated quantity" required></div>
           <div class="field full"><label>Printing / finishing</label><input name="printing" type="text" placeholder="e.g. 1-color print + foil stamping"></div>
-          <div class="field"><label>Artwork upload (AI/PDF/EPS)</label><input name="artwork" type="file" accept=".ai,.pdf,.eps,.png,.jpg,.jpeg"></div>
-          <div class="field"><label>Product / shelf photo</label><input name="photo" type="file" accept="image/*"></div>
           <div class="field full"><p style="font-size:12.5px;color:var(--muted);margin:0">Note: artwork (AI/PDF/EPS) and product photos are not attached to this online form. After submitting, please send these files separately via <a href="https://wa.me/8615515631079" target="_blank" rel="noopener" style="color:var(--green)">WhatsApp</a> or <a href="mailto:www.777910@gmail.com" style="color:var(--green)">email</a> — files are not delivered with the inquiry itself.</p></div>
           <div class="field full"><label>Notes</label><textarea name="notes" rows="4" placeholder="Target delivery, certification needs, special structure…"></textarea></div>
           <div class="field full"><label class="privacy-label" style="display:flex;gap:8px;align-items:flex-start;font-size:12.5px;color:var(--muted)"><input type="checkbox" name="privacy" style="margin-top:3px" required>I have read and agree to the <a href="privacy.html">Privacy Policy</a>, and consent to being contacted about this inquiry.</label></div>
@@ -172,7 +179,7 @@
           <span style="width:28px;height:28px;border-radius:8px;background:var(--forest);display:grid;place-items:center"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c0-6.4 3.2-10.4 8.4-12.4C19.2 15.8 16.2 19.2 12 21z"/><path d="M12 21c0-6.4-3.2-10.4-8.4-12.4C4.8 15.8 7.8 19.2 12 21z"/><path d="M12 21v-5"/></svg></span>
           <b style="letter-spacing:.14em;font-size:13px">KALOZEN</b>
         </div>
-        <p>Eco paper hooks · Export-grade packaging components<br>Materials and certifications subject to confirmation</p>
+        <p>Eco Paper Hooks · Sock Display Cards · Custom Paper Packaging<br>Materials and certifications subject to confirmation</p>
       </div>
       <div>
         <h4>Quick links</h4>
