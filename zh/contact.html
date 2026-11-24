@@ -127,9 +127,11 @@ input[name="productSku"],input[name="scene_name"],input[name="website"]{display:
         <h2 style="font-size:clamp(22px,2.5vw,30px)">把细节发过来，换一份配型方案</h2>
         <p style="margin-top:12px;font-size:14px;color:var(--ink-2)">填写下方信息，我们会尽快为你配型报价。如需更快沟通，也可通过上方 WhatsApp 或邮箱直接联系我们。</p>
         <form class="form reveal" onsubmit="return sendInquiry(event)" novalidate style="margin-top:22px">
-          <input type="hidden" name="productSku" id="productSku" value="">
-          <input type="hidden" name="scene_name" id="scene_name" value="">
-          <div style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+          <!-- 以下两个为隐藏回填字段（非用户填写项）：从产品页/场景页带入型号与场景，普通用户不可见、无需填写 -->
+          <input type="hidden" name="productSku" id="productSku" value="" aria-label="产品型号，系统自动回填，用户无需填写">
+          <input type="hidden" name="scene_name" id="scene_name" value="" aria-label="应用场景，系统自动回填，用户无需填写">
+          <!-- Website 为防垃圾 honeypot：隐藏，普通用户不可见、不可填写 -->
+          <div style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off" aria-label="防垃圾字段，普通用户请勿填写"></label></div>
           <div class="field"><label>姓名</label><input name="name" type="text" placeholder="张三" required></div>
           <div class="field"><label>公司</label><input name="company" type="text" placeholder="公司名称"></div>
           <div class="field"><label>邮箱</label><input name="email" type="email" placeholder="you@company.com" required></div>
