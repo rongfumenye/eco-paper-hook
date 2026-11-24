@@ -203,9 +203,100 @@
     };
   });
 
+
+  // —— 9 款环保食品包装及餐饮用品（Custom Paper Packaging 体系下新增）——
+  // 说明：均为通用产品示意图（concept=true），非实拍；精确尺寸/材料/颜色/印刷/包装等参数
+  //      未经逐款确认，统一标注「待确认 / Custom Specifications」，不编造认证或检测数据。
+  var FOOD_SPEC = {
+    dimensions: { zh:'Custom Specifications（尺寸待确认）', en:'Custom Specifications (dimensions to be confirmed)' },
+    material: { zh:'Custom Specifications（材质待确认；可选范围以样品与合同为准）', en:'Custom Specifications (material to be confirmed; options subject to sample and contract)' },
+    thickness: { zh:'Custom Specifications（厚度待确认）', en:'Custom Specifications (thickness to be confirmed)' },
+    hole: { zh:'不适用（食品包装类产品）', en:'N/A (food packaging type)' },
+    printing: { zh:'Custom Specifications（印刷方案待确认）', en:'Custom Specifications (printing to be confirmed)' },
+    customizable: { zh:'可定制：尺寸、材质、颜色、印刷、包装与结构（具体以图纸与样品确认为准）。', en:'Customisable: dimensions, material, colour, printing, packing and structure (confirmed by drawing and sample).' }
+  };
+  var FOODS = {
+    F01: {
+      sku:'F01', type:'food', image:'sku/F01_kraft_bag.webp', concept:true,
+      name:{ zh:'牛皮纸购物袋', en:'Kraft Paper Bags' },
+      features:{ zh:'适合零售购物、礼品与外带的牛皮纸手提袋，可印刷品牌信息。', en:'Plain kraft paper shopping bags with handles for retail, gifts and takeaway, suitable for brand printing.' },
+      use:{ zh:'零售购物 / 礼品 / 外带', en:'Retail / gifts / takeaway' },
+      dimensions:FOOD_SPEC.dimensions, material:FOOD_SPEC.material, thickness:FOOD_SPEC.thickness, hole:FOOD_SPEC.hole,
+      printing:FOOD_SPEC.printing, customizable:FOOD_SPEC.customizable
+    },
+    F02: {
+      sku:'F02', type:'food', image:'sku/F02_food_box.webp', concept:true,
+      name:{ zh:'外卖餐盒', en:'Takeaway Food Boxes' },
+      features:{ zh:'用于外卖与堂食打包的纸质餐盒，结构可按需定制。', en:'Paper takeaway food boxes for delivery and takeout, with customisable structure.' },
+      use:{ zh:'外卖 / 堂食打包', en:'Takeaway / dine-in takeout' },
+      dimensions:FOOD_SPEC.dimensions, material:FOOD_SPEC.material, thickness:FOOD_SPEC.thickness, hole:FOOD_SPEC.hole,
+      printing:FOOD_SPEC.printing, customizable:FOOD_SPEC.customizable
+    },
+    F03: {
+      sku:'F03', type:'food', image:'sku/F03_paper_bowl.webp', concept:true,
+      name:{ zh:'纸碗', en:'Paper Bowls' },
+      features:{ zh:'一次性纸质碗，适合汤品、沙拉与轻食盛装。', en:'Disposable paper bowls for soups, salads and light meals.' },
+      use:{ zh:'汤品 / 沙拉 / 轻食', en:'Soup / salad / light meals' },
+      dimensions:FOOD_SPEC.dimensions, material:FOOD_SPEC.material, thickness:FOOD_SPEC.thickness, hole:FOOD_SPEC.hole,
+      printing:FOOD_SPEC.printing, customizable:FOOD_SPEC.customizable
+    },
+    F04: {
+      sku:'F04', type:'food', image:'sku/F04_paper_cup.webp', concept:true,
+      name:{ zh:'纸杯', en:'Paper Cups' },
+      features:{ zh:'用于热饮与冷饮的纸质杯，杯口与杯身规格可定制。', en:'Paper cups for hot and cold drinks, with customisable rim and body specs.' },
+      use:{ zh:'热饮 / 冷饮', en:'Hot / cold beverages' },
+      dimensions:FOOD_SPEC.dimensions, material:FOOD_SPEC.material, thickness:FOOD_SPEC.thickness, hole:FOOD_SPEC.hole,
+      printing:FOOD_SPEC.printing, customizable:FOOD_SPEC.customizable
+    },
+    F05: {
+      sku:'F05', type:'food', image:'sku/F05_soup_container.webp', concept:true,
+      name:{ zh:'纸质汤碗', en:'Paper Soup Containers' },
+      features:{ zh:'带盖纸质汤碗，适合汤品与流质食品的打包运输。', en:'Paper soup containers with lids for soups and liquid foods, suitable for takeaway.' },
+      use:{ zh:'汤品 / 流质食品打包', en:'Soup / liquid food takeaway' },
+      dimensions:FOOD_SPEC.dimensions, material:FOOD_SPEC.material, thickness:FOOD_SPEC.thickness, hole:FOOD_SPEC.hole,
+      printing:FOOD_SPEC.printing, customizable:FOOD_SPEC.customizable
+    },
+    F06: {
+      sku:'F06', type:'food', image:'sku/F06_food_tray.webp', concept:true,
+      name:{ zh:'纸托盘', en:'Paper Food Trays' },
+      features:{ zh:'浅型纸质托盘，适合烘焙、小吃与生鲜陈列。', en:'Shallow paper food trays for bakery, snacks and fresh food display.' },
+      use:{ zh:'烘焙 / 小吃 / 生鲜', en:'Bakery / snacks / fresh food' },
+      dimensions:FOOD_SPEC.dimensions, material:FOOD_SPEC.material, thickness:FOOD_SPEC.thickness, hole:FOOD_SPEC.hole,
+      printing:FOOD_SPEC.printing, customizable:FOOD_SPEC.customizable
+    },
+    F07: {
+      sku:'F07', type:'food', image:'sku/F07_paper_straw.webp', concept:true,
+      name:{ zh:'纸吸管', en:'Paper Straws' },
+      features:{ zh:'可定制长度与直径的纸质饮用吸管。', en:'Paper drinking straws with customisable length and diameter.' },
+      use:{ zh:'饮品搭配', en:'Beverage pairing' },
+      dimensions:FOOD_SPEC.dimensions, material:FOOD_SPEC.material, thickness:FOOD_SPEC.thickness, hole:FOOD_SPEC.hole,
+      printing:FOOD_SPEC.printing, customizable:FOOD_SPEC.customizable
+    },
+    F08: {
+      sku:'F08', type:'food', image:'sku/F08_napkin.webp', concept:true,
+      name:{ zh:'纸巾', en:'Paper Napkins' },
+      features:{ zh:'餐饮用纸质纸巾，可印刷品牌图案。', en:'Paper napkins for food service, suitable for brand printing.' },
+      use:{ zh:'餐饮 / 餐桌', en:'Food service / table' },
+      dimensions:FOOD_SPEC.dimensions, material:FOOD_SPEC.material, thickness:FOOD_SPEC.thickness, hole:FOOD_SPEC.hole,
+      printing:FOOD_SPEC.printing, customizable:FOOD_SPEC.customizable
+    },
+    F09: {
+      sku:'F09', type:'food', image:'sku/F09_wooden_cutlery.webp', concept:true,
+      name:{ zh:'木质餐具', en:'Wooden Cutlery' },
+      features:{ zh:'木质叉、刀、勺等一次性餐具，适合外带与餐饮配套。', en:'Wooden disposable cutlery (fork, knife, spoon) for takeaway and catering.' },
+      use:{ zh:'外带 / 餐饮配套', en:'Takeaway / catering' },
+      dimensions:FOOD_SPEC.dimensions, material:FOOD_SPEC.material, thickness:FOOD_SPEC.thickness, hole:FOOD_SPEC.hole,
+      printing:FOOD_SPEC.printing, customizable:FOOD_SPEC.customizable
+    },
+  };
+
+  // 合并 F01–F09 到 skus，供 ?sku=F0x 详情页读取
+  Object.keys(FOODS).forEach(function (k) { SKUS[k] = FOODS[k]; });
+
   window.PH_PRODUCTS = {
     common: COMMON,
     products: PRODUCTS,
-    skus: SKUS
+    skus: SKUS,
+    foods: FOODS
   };
 })();
