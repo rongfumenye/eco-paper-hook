@@ -130,27 +130,93 @@ input[name="productSku"],input[name="scene_name"],input[name="website"]{display:
         <div class="kicker" style="font-size:11px;letter-spacing:.22em;color:var(--kraft);font-weight:600;margin-bottom:10px">INQUIRY FORM</div>
         <h2 style="font-size:clamp(22px,2.5vw,30px)">Send the details, get a spec</h2>
         <p style="margin-top:12px;font-size:14px;color:var(--ink-2)">Fill in the details below and we will quote shortly. For a faster reply, you can also reach us directly via WhatsApp or email above.</p>
-        <form class="form reveal" onsubmit="return sendInquiry(event)" novalidate style="margin-top:22px">
+        <form class="form reveal" onsubmit="return sendInquiry(event)" novalidate data-inquiry-form style="margin-top:22px">
           <input type="hidden" name="productSku" id="productSku" value="" aria-label="Product SKU, auto-filled by the system, no need to fill in">
           <input type="hidden" name="scene_name" id="scene_name" value="" aria-label="Scene name, auto-filled by the system, no need to fill in">
-          <!-- Website is a spam-trap honeypot: hidden, invisible to normal users, not to be filled in -->
           <div style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off" aria-label="Spam-trap field, please do not fill in"></label></div>
+          <div class="field full"><label>Product <span style="color:var(--muted);font-size:12px">(related fields will appear after selection)</span></label><select name="productType" id="productType">
+        <option value="">Select product type (related fields will appear)</option>
+        <optgroup label="Retail Display Packaging">
+        <option value="hook">Eco Paper Hooks</option>
+        <option value="sock-board">Sock Display Cards</option>
+        </optgroup>
+        <optgroup label="Food &amp; Beverage Packaging (additional product categories)">
+        <option value="F01">Kraft Paper Bags</option>
+        <option value="F02">Takeaway Food Boxes</option>
+        <option value="F03">Paper Bowls</option>
+        <option value="F04">Paper Cups</option>
+        <option value="F05">Paper Soup Containers</option>
+        <option value="F06">Paper Food Trays</option>
+        <option value="F07">Paper Straws</option>
+        <option value="F08">Paper Napkins</option>
+        <option value="F09">Wooden Cutlery</option>
+        </optgroup>
+        <option value="other">Other</option>
+          </select></div>
           <div class="field"><label>Name</label><input name="name" type="text" placeholder="John Smith" required></div>
           <div class="field"><label>Company</label><input name="company" type="text" placeholder="Company name"></div>
           <div class="field"><label>Email</label><input name="email" type="email" placeholder="you@company.com" required></div>
           <div class="field"><label>WhatsApp / Phone (optional)</label><input name="phone" type="tel" placeholder="e.g. +86 155 0000 0000"></div>
           <div class="field"><label>Country / Market</label><input name="country" type="text" placeholder="e.g. Germany"></div>
-          <div class="field"><label>Product category</label><select name="category"><option>Socks</option><option>Underwear</option><option>Home textiles</option><option>Baby products</option><option>Pet products</option><option>Beauty</option><option>Gift packaging</option><option>Other</option></select></div>
-          <div class="field"><label>Paper material</label><select name="material"><option>Kraft paper</option><option>White card</option><option>Black card</option><option>Greyboard</option><option>Other</option></select></div>
-          <div class="field"><label>Board thickness (mm)</label><input name="thickness" type="text" placeholder="Enter board thickness"></div>
-          <div class="field"><label>Hole diameter (mm)</label><input name="hole" type="text" placeholder="Enter hole diameter"></div>
-          <div class="field"><label>Quantity (pcs)</label><input name="qty" type="text" placeholder="Enter estimated quantity" required></div>
-          <div class="field full"><label>Printing / finishing</label><input name="printing" type="text" placeholder="e.g. 1-color print + foil stamping"></div>
-          <div class="field full"><p style="font-size:12.5px;color:var(--muted);margin:0">Note: artwork (AI/PDF/EPS) and product photos are not attached to this online form. After submitting, please send these files separately via <a href="https://wa.me/8615515631079" target="_blank" rel="noopener" style="color:var(--green)">WhatsApp</a> or <a href="mailto:www.777910@gmail.com" style="color:var(--green)">email</a> — files are not delivered with the inquiry itself.</p></div>
-          <div class="field full"><label>Notes</label><textarea name="notes" rows="4" placeholder="Target delivery, certification needs, special structure…"></textarea></div>
+          <div class="field"><label>Material</label><select name="material"><option value="">To be confirmed</option><option>Kraft paper</option><option>White card</option><option>Black card</option><option>Greyboard</option><option>Other</option></select></div>
+          <div class="field"><label>Quantity</label><input name="qty" type="text" placeholder="Enter estimated quantity" required></div>
+          <div class="field"><label>Printing / finishing</label><input name="printing" type="text" placeholder="e.g. 1-color print + foil stamping"></div>
+
+          <div data-group="hook" style="display:none">
+            <div class="field"><label>Application</label><select name="category"><option>Socks</option><option>Underwear</option><option>Home textiles</option><option>Baby products</option><option>Pet products</option><option>Beauty</option><option>Gift packaging</option><option>Other</option></select></div>
+            <div class="field"><label>Bar diameter (mm)</label><input name="barDiameter" type="text" placeholder="For paper hooks: display bar diameter"></div>
+            <div class="field"><label>Item weight (g)</label><input name="itemWeight" type="text" placeholder="For paper hooks: single item weight"></div>
+            <div class="field"><label>Board thickness (mm)</label><input name="thickness" type="text" placeholder="For paper hooks: board thickness"></div>
+            <div class="field"><label>Hole diameter (mm)</label><input name="hole" type="text" placeholder="For paper hooks: hole diameter"></div>
+          </div>
+          <div data-group="food" style="display:none">
+            <div class="field"><label>Size / Capacity</label><input name="sizeCapacity" type="text" placeholder="For food packaging: capacity or dimensions"></div>
+            <div class="field"><label>Lid Type</label><input name="lidType" type="text" placeholder="For food packaging: e.g. flat lid / anti-leak lid"></div>
+            <div class="field full"><label>Packaging Requirements</label><input name="packReq" type="text" placeholder="For food packaging: units per pack, carton requirements"></div>
+          </div>
+
+          <div class="field full"><p style="font-size:12.5px;color:var(--muted);margin:0">Note: artwork and product photos are not attached to this online form. Please send them separately via <a href="https://wa.me/8615515631079" target="_blank" rel="noopener" style="color:var(--green)">WhatsApp</a> or <a href="mailto:www.777910@gmail.com" style="color:var(--green)">email</a>.</p></div>
+          <div class="field full"><label>Requirements</label><textarea name="notes" rows="4" placeholder="Target delivery, special structure, other requirements…"></textarea></div>
           <div class="field full"><label class="privacy-label" style="display:flex;gap:8px;align-items:flex-start;font-size:12.5px;color:var(--muted)"><input type="checkbox" name="privacy" style="margin-top:3px" required>I have read and agree to the <a href="privacy.html">Privacy Policy</a>, and consent to being contacted about this inquiry.</label></div>
           <button class="btn primary" type="submit" style="grid-column:1/-1;justify-self:start;padding:14px 38px">Send inquiry</button>
         </form>
+          <script>
+(function(){
+  var form = document.querySelector('form[data-inquiry-form]');
+  if(!form) return;
+  var sel = form.querySelector('#productType');
+  if(!sel) return;
+  var groups = form.querySelectorAll('[data-group]');
+  function apply(){
+    var v = (sel.value || '').trim();
+    var isFood = v.indexOf('F') === 0;
+    var isHook = (v === 'hook' || v === 'sock-board');
+    for(var i=0;i<groups.length;i++){
+      var g = groups[i], kind = g.getAttribute('data-group');
+      var show = (kind === 'food' && isFood) || (kind === 'hook' && isHook);
+      g.style.display = show ? 'contents' : 'none';
+      var els = g.querySelectorAll('input,select,textarea');
+      for(var j=0;j<els.length;j++){
+        els[j].disabled = !show;
+      }
+    }
+  }
+  // 从产品详情页带入的 SKU 自动选中对应产品类型
+  try{
+    var usp = new URLSearchParams(location.search);
+    var sku = (usp.get('productSku') || usp.get('sku') || '').trim();
+    if(sku){
+      var first = sku.split(',')[0].trim().toUpperCase();
+      for(var k=0;k<sel.options.length;k++){
+        if(sel.options[k].value.toUpperCase() === first){ sel.value = sel.options[k].value; break; }
+      }
+    }
+  }catch(e){}
+  sel.addEventListener('change', apply);
+  apply();
+})();
+</script>
+
           <div id="formTip" class="form-tip" style="display:none" role="status" aria-live="polite"></div>
       </div>
       <div class="reveal">

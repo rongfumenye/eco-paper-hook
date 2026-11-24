@@ -106,6 +106,7 @@
   function val(form, name) {
     var el = form.elements[name];
     if (!el) return '';
+    if (el.disabled) return '';   // 未选产品类型时对应的专用字段不收集
     return String(el.value || '').trim();
   }
   function showTip(msg, isErr) {
@@ -135,7 +136,8 @@
   // 汇总所有客户填写字段（产品/数量/公司/联系人/邮箱/需求内容完整保留）
   function collect(form) {
     var keys = [
-      'name', 'company', 'email', 'phone', 'whatsapp', 'country', 'category', 'material', 'thickness', 'hole',
+      'name', 'company', 'email', 'phone', 'whatsapp', 'country', 'productType', 'category', 'material',
+      'thickness', 'hole', 'barDiameter', 'itemWeight', 'sizeCapacity', 'lidType', 'packReq',
       'qty', 'printing', 'notes', 'productSku', 'sku', 'productName', 'sourceUrl', 'scene_name', 'scene'
     ];
     var out = {};
@@ -148,12 +150,25 @@
     return out;
   }
 
+  var FIELD_LABEL = {
+    zh: { name:'姓名', company:'公司', email:'邮箱', phone:'WhatsApp/电话', country:'国家/市场',
+      productType:'产品类型', category:'应用行业', material:'材质', thickness:'纸板厚度(mm)',
+      hole:'挂钩孔径(mm)', barDiameter:'挂杆直径(mm)', itemWeight:'商品重量(g)',
+      sizeCapacity:'尺寸/容量', lidType:'盖型', packReq:'包装要求', qty:'数量',
+      printing:'印刷/后道工艺', notes:'需求说明', productSku:'产品型号' },
+    en: { name:'Name', company:'Company', email:'Email', phone:'WhatsApp/Phone', country:'Country/Market',
+      productType:'Product type', category:'Application', material:'Material', thickness:'Board thickness (mm)',
+      hole:'Hole diameter (mm)', barDiameter:'Bar diameter (mm)', itemWeight:'Item weight (g)',
+      sizeCapacity:'Size/Capacity', lidType:'Lid type', packReq:'Packaging requirements', qty:'Quantity',
+      printing:'Printing/finishing', notes:'Requirements', productSku:'Product SKU' }
+  };
   function mailtoFallback(form, payload, t) {
-    var subject = 'New Inquiry - KALOZEN Website - ' + (payload.name || '') + ' - ' + (payload.productSku || payload.category || 'General');
+    var subject = 'New Inquiry - KALOZEN Website - ' + (payload.name || '') + ' - ' + (payload.productType || payload.productSku || payload.category || 'General');
     var lines = [];
+    var LABEL = FIELD_LABEL[LANG] || FIELD_LABEL.en;
     Object.keys(payload).forEach(function (k) {
       if (['privacy', 'page_url', 'page_language', 'inquiry_time'].indexOf(k) >= 0) return;
-      if (payload[k]) lines.push(k + ': ' + payload[k]);
+      if (payload[k]) lines.push((LABEL[k] || k) + ': ' + payload[k]);
     });
     lines.push('', 'Page: ' + payload.page_url, 'Language: ' + payload.page_language, 'Time: ' + payload.inquiry_time);
     if (RECV_EMAIL) {

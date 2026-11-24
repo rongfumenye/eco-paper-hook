@@ -26,10 +26,10 @@
     ar: { label: 'واتساب: ', hint: ' — أو عبر نموذج الاستفسار' }
   };
   var PENDING = {
-    en: 'Contact details pending verification — please use the inquiry form.',
-    zh: '联系信息待核实，请通过页面询价表单留言。',
-    ru: 'Контакты уточняются — используйте форму запроса.',
-    ar: 'بيانات التواصل قيد التحقق — استخدم نموذج الاستفسار.'
+    en: 'Please contact us via WhatsApp or email.',
+    zh: '请通过 WhatsApp 或邮箱联系我们。',
+    ru: 'Свяжитесь с нами через WhatsApp или e-mail.',
+    ar: 'تواصل معنا عبر واتساب أو البريد الإلكتروني.'
   };
   // 匹配页面各处“联系信息待核实”占位文案（含带地址变体）
   var PLACEHOLDER_RE = /^(Contact details pending verification|联系信息待核实|Контакты уточняются|بيانات التواصل قيد التحقق)/;
