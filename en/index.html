@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
-<!-- KALOZEN en home build=20261125-v4-home food-packaging line added (F01-F09), design unchanged -->
+<!-- KALOZEN en home build=20261126-v5-home food-packaging line added (F01-F09), design unchanged -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Eco-friendly Packaging Solutions · Retail Display & Food & Beverage | KALOZEN</title>
 <meta name="description" content="Eco-friendly packaging solutions for global businesses across two directions: Retail Display Packaging (paper hooks, sock display cards) and Food & Beverage Packaging (bags, boxes, bowls, cups and more). KALOZEN works on a partner supply chain model, coordinating development, specification confirmation, quality inspection and delivery.">
@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://kalozen.com/../assets/img/home/hero-paper-hooks.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../assets/style.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://kalozen.com/#organization","name":"KALOZEN","url":"https://kalozen.com/","logo":{"@type":"ImageObject","url":"https://kalozen.com/../assets/img/home/hero-paper-hooks.jpg"},"description":"Eco-friendly packaging solutions for global businesses across two directions: Retail Display Packaging (paper hooks, sock display cards) and Food & Beverage Packaging (bags, boxes, bowls, cups and more). KALOZEN works on a partner supply chain model, coordinating development, specification confirmation, quality inspection and delivery."},{"@type":"WebSite","@id":"https://kalozen.com/#website","url":"https://kalozen.com/","name":"KALOZEN","inLanguage":"en"},{"@type":"WebPage","url":"https://kalozen.com/en/index.html","name":"Eco-Friendly Paper Hooks & Custom Paper Packaging Solutions | KALOZEN","description":"Eco-friendly packaging solutions for global businesses across two directions: Retail Display Packaging (paper hooks, sock display cards) and Food & Beverage Packaging (bags, boxes, bowls, cups and more). KALOZEN works on a partner supply chain model, coordinating development, specification confirmation, quality inspection and delivery.","inLanguage":"en","isPartOf":{"@id":"https://kalozen.com/#website"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://kalozen.com/#organization","name":"KALOZEN","url":"https://kalozen.com/","logo":{"@type":"ImageObject","url":"https://kalozen.com/../assets/img/home/hero-paper-hooks.jpg"},"description":"Eco-friendly packaging solutions for global businesses across two directions: Retail Display Packaging (paper hooks, sock display cards) and Food & Beverage Packaging (bags, boxes, bowls, cups and more). KALOZEN works on a partner supply chain model, coordinating development, specification confirmation, quality inspection and delivery."},{"@type":"WebSite","@id":"https://kalozen.com/#website","url":"https://kalozen.com/","name":"KALOZEN","inLanguage":"en"},{"@type":"WebPage","url":"https://kalozen.com/en/index.html","name":"Eco-friendly Packaging Solutions · Retail Display & Food & Beverage | KALOZEN","description":"Eco-friendly packaging solutions for global businesses across two directions: Retail Display Packaging (paper hooks, sock display cards) and Food & Beverage Packaging (bags, boxes, bowls, cups and more). KALOZEN works on a partner supply chain model, coordinating development, specification confirmation, quality inspection and delivery.","inLanguage":"en","isPartOf":{"@id":"https://kalozen.com/#website"}}]}</script>
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 
 <style>
@@ -54,6 +54,31 @@
     .hero-adv span{font-size:11px}
     .gal-grid{grid-template-columns:1fr}
     .cat-body p{min-height:0}
+  }
+
+  /* v5 unified positioning */
+  .hero-duo{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .hero-duo figure{margin:0;position:relative;overflow:hidden;border-radius:var(--r-l);box-shadow:var(--shadow-l)}
+  .hero-duo img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+  .hero-duo figcaption{position:absolute;left:0;right:0;bottom:0;padding:9px 11px;background:linear-gradient(transparent,rgba(8,30,22,.86));color:#fff;font-size:11.5px;font-weight:600;line-height:1.3}
+  .hero-note{margin-top:12px;color:var(--ink-2);font-size:14px;line-height:1.7;max-width:620px}
+  .flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:26px}
+  .flow-step{flex:1 1 148px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 10px;text-align:center}
+  .flow-step b{display:block;color:var(--green);font-size:12px;margin-bottom:6px;letter-spacing:.06em}
+  .flow-step span{font-size:13px;color:var(--ink-2);line-height:1.45;display:block}
+  .flow-step small{display:block;font-size:11px;color:var(--muted);margin-top:3px}
+  .flow-sep{align-self:center;color:var(--green);font-weight:700;font-size:16px}
+  .scn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .scn-item{margin:0;background:#fff;border:1px solid var(--line);border-radius:var(--r-l);overflow:hidden}
+  .scn-item img{width:100%;height:190px;object-fit:cover;display:block}
+  .scn-item figcaption{padding:12px 14px;font-size:12.5px;color:var(--ink-2);line-height:1.55}
+  .scn-item b{color:var(--green)}
+  @media(max-width:900px){
+    .hero-duo{gap:8px}
+    .hero-duo figcaption{font-size:10px;padding:7px 8px}
+    .flow-sep{display:none}
+    .flow-step{flex:1 1 44%}
+    .scn-grid{grid-template-columns:1fr}
   }
 </style>
 </head>
@@ -97,24 +122,29 @@
     <div class="hero-copy">
       <div class="eyebrow"><i></i>KALOZEN · ECO-FRIENDLY PACKAGING</div>
       <h1>Eco-friendly Packaging Solutions<br>for Global Businesses</h1>
-      <p class="lede">Retail Display Packaging &amp; Food and Beverage Packaging Solutions. Eco-friendly packaging solutions from China for global businesses.</p>
+      <p class="lede">Retail Display Packaging &amp; Food and Beverage Packaging Solutions.</p>
+      <p class="hero-note">KALOZEN coordinates customized packaging development, specifications, manufacturing partners, quality checks and delivery for global buyers.</p>
       <div class="hero-adv"><span>Retail Display Packaging</span><span>Food &amp; Beverage Packaging</span><span>Custom Specifications</span><span>Partner Supply Chain</span><span>Quality Inspection &amp; Delivery</span></div>
       <div class="btns" style="margin-top:26px">
         <a class="btn primary" href="products.html">Explore Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="btn ghost" href="contact.html">Request a Quote</a>
       </div>
     </div>
-    <div class="figure wide"><img src="../assets/img/home/hero-paper-hooks.jpg" alt="Illustrative image of eco-friendly kraft paper hang hooks with rolled kraft paper" loading="eager" fetchpriority="high" decoding="async" width="1280" height="853"></div>
+    <div class="hero-duo">
+      <figure><img src="../assets/img/home/socks-application.jpg" alt="Retail display packaging: paper hooks and sock display cards (AI illustration)" loading="eager" fetchpriority="high" decoding="async"><figcaption>A · Retail Display Packaging (AI illustration)</figcaption></figure>
+      <figure><img src="../assets/img/sku/F02_food_box.webp" alt="Food & beverage packaging: kraft takeaway food box (AI illustration)" loading="eager" fetchpriority="high" decoding="async"><figcaption>B · Food &amp; Beverage Packaging (AI illustration)</figcaption></figure>
+    </div>
   </div>
 </header>
 
 <section class="hn-intro" style="padding-top:16px">
   <div class="wrap grid-2">
-    <div class="figure"><img src="../assets/img/home/socks-application.jpg" alt="Illustrative image of paper hooks holding socks on a retail display rail" loading="lazy" decoding="async"></div>
+    <div class="figure"><img src="../assets/img/home/custom-packaging.jpg" alt="Eco-friendly paper packaging (AI illustration)" loading="lazy" decoding="async"></div>
     <div>
-      <div class="sec-head reveal" style="text-align:left"><div class="kicker">ABOUT KALOZEN</div><h2>Your Eco-friendly Packaging Partner for Global Business</h2></div>
-      <p class="reveal">KALOZEN serves global brands, wholesalers and retailers with eco-friendly packaging across two directions: Retail Display Packaging (paper hooks, sock display cards) and Food &amp; Beverage Packaging (bags, boxes, bowls, cups and more). We coordinate product development, specification confirmation, quality inspection and delivery.</p>
-      <p class="reveal">KALOZEN operates on a partner supply chain model — Zhengzhou is our business coordination location, not a self-owned factory. We work with manufacturing partners to coordinate die-cutting, printing and finishing, turning designs and requirements into deliverable products.</p>
+      <div class="sec-head reveal" style="text-align:left"><div class="kicker">ABOUT KALOZEN</div><h2>Your Packaging Solutions Partner</h2></div>
+      <p class="reveal">KALOZEN supports global buyers with customized retail display and food &amp; beverage packaging solutions.</p>
+      <p class="reveal">From paper hooks and sock display cards to food packaging products, we coordinate product development, specifications, manufacturing partners, quality checks and delivery arrangements.</p>
+      <p class="reveal">We work with manufacturing partners to coordinate production according to confirmed product requirements. Zhengzhou is our business coordination location, not a self-owned factory.</p>
     </div>
   </div>
 </section>
@@ -124,29 +154,26 @@
     <div class="sec-head reveal"><div class="kicker">TWO BUSINESS DIRECTIONS</div><h2>Two Packaging Directions, One Coordinated Partner</h2><p>From retail shelf display to food &amp; beverage packaging, KALOZEN coordinates product development, specification confirmation, quality inspection and delivery through a partner supply chain. All images are AI illustrations, not real product photos.</p></div>
     <div class="grid-2">
       <div class="card reveal cat-card"><a class="cat-link" href="#retail-display">
-        <div class="cat-body"><div class="num">A</div><h3>Retail Display Packaging</h3><p>Eco paper hooks, sock display cards and custom paper packaging that help retail products sit neatly on shelf.</p><span class="cat-cta">View retail display products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a></div>
+        <div class="cat-body"><div class="num">A</div><h3>Retail Display Packaging</h3><p>Eco paper hooks and sock display cards that help retail products sit neatly on shelf.</p><span class="cat-cta">View retail display products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a></div>
       <div class="card reveal cat-card"><a class="cat-link" href="food-beverage.html">
-        <div class="cat-body"><div class="num">B</div><h3>Food &amp; Beverage Packaging</h3><p>Kraft bags, takeaway boxes, paper bowls, cups and more — 9 additional product categories under Custom Paper Packaging.</p><span class="cat-cta">View food packaging collection <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a></div>
+        <div class="cat-body"><div class="num">B</div><h3>Food &amp; Beverage Packaging</h3><p>Kraft bags, takeaway boxes, paper bowls, cups and more — 9 product entries under the Custom Paper Packaging line.</p><span class="cat-cta">View food packaging collection <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a></div>
     </div>
   </div>
 </section>
 
 <section id="retail-display" style="padding-top:52px">
   <div class="wrap">
-    <div class="sec-head reveal"><div class="kicker">BUSINESS DIRECTION A · RETAIL DISPLAY PACKAGING</div><h2>Retail Display Packaging · Three Categories</h2><p>Paper hooks, sock display cards and custom paper packaging — developed and coordinated to fit your retail products.</p></div>
-    <div class="grid-3"><div class="card reveal cat-card"><a class="cat-link" href="products.html">
-        <div class="card-media"><img src="../assets/img/home/hook-structures.jpg" alt="Illustrative image of different structural designs of kraft paper hooks" loading="lazy" decoding="async"></div>
-        <div class="cat-body"><div class="num">01</div><h3>Paper Hooks</h3><p>Die-cut kraft paper hooks for socks, apparel and multi-packs, in standard and reinforced structures.</p>
-        <span class="cat-cta">View Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
-        </a></div><div class="card reveal cat-card"><a class="cat-link" href="products.html">
-        <div class="card-media"><img src="../assets/img/home/sock-display-cards.jpg" alt="Illustrative image of kraft paper sock display cards on a retail shelf" loading="lazy" decoding="async"></div>
-        <div class="cat-body"><div class="num">02</div><h3>Sock Display Cards</h3><p>Printed header cards and display cards that pair with paper hooks for a neat, retail-ready presentation.</p>
-        <span class="cat-cta">View Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
-        </a></div><div class="card reveal cat-card"><a class="cat-link" href="custom.html">
-        <div class="card-media"><img src="../assets/img/home/custom-packaging.jpg" alt="Illustrative image of custom printed kraft paper packaging with foil stamping" loading="lazy" decoding="async"></div>
-        <div class="cat-body"><div class="num">03</div><h3>Custom Paper Packaging</h3><p>Custom-shaped die-cuts, printing and finishing developed around your brand and product.</p>
-        <span class="cat-cta">View Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
-        </a></div></div>
+    <div class="sec-head reveal"><div class="kicker">BUSINESS DIRECTION A · RETAIL DISPLAY PACKAGING</div><h2>Retail Display Packaging</h2><p>Eco paper hooks and sock display cards, developed and coordinated to fit your retail products.</p></div>
+    <div class="grid-2">
+      <div class="card reveal cat-card"><a class="cat-link" href="products.html">
+        <div class="card-media"><img src="../assets/img/home/hook-structures.jpg" alt="Eco paper hooks, AI illustration" loading="lazy" decoding="async"></div>
+        <div class="cat-body"><div class="num">A1</div><h3>Eco Paper Hooks</h3><p>Die-cut kraft paper hooks for socks, apparel and multi-packs, in standard and reinforced structures.</p><span class="cat-cta">View Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        </a></div>
+      <div class="card reveal cat-card"><a class="cat-link" href="products.html">
+        <div class="card-media"><img src="../assets/img/home/sock-display-cards.jpg" alt="Sock display cards, AI illustration" loading="lazy" decoding="async"></div>
+        <div class="cat-body"><div class="num">A2</div><h3>Sock Display Cards</h3><p>Printed header cards and display cards that pair with paper hooks for a neat, retail-ready presentation.</p><span class="cat-cta">View Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        </a></div>
+    </div>
   </div>
 </section>
 
@@ -201,17 +228,48 @@
 </div>
 </div></section>
 
-<section style="padding-top:44px">
+<section id="supply-chain" style="padding-top:52px">
   <div class="wrap">
-    <div class="sec-head reveal"><div class="kicker">FROM DESIGN TO DELIVERY</div><h2>Coordinated at every step</h2><p>From product development to shipment, we connect each step. The images below are illustrative, not real product photos.</p></div>
-    <div class="gal-grid"><figure class="gal-item reveal"><div class="gal-media"><img src="../assets/img/home/socks-application.jpg" alt="Paper hooks and sock display cards in a retail display application" loading="lazy" decoding="async"></div><figcaption>Retail display application: paper hooks and sock display cards (AI illustration, not a real product photo).</figcaption></figure><figure class="gal-item reveal"><div class="gal-media"><img src="../assets/img/sku/F02_food_box.webp" alt="Food & beverage packaging application: kraft takeaway food box" loading="lazy" decoding="async"></div><figcaption>Food &amp; beverage packaging example: takeaway food box (AI illustration, not a real product photo).</figcaption></figure><figure class="gal-item reveal"><div class="gal-media"><img src="../assets/img/home/partner-production.jpg" alt="Die-cutting and printing coordinated through the partner supply chain" loading="lazy" decoding="async"></div><figcaption>Die-cutting, printing and finishing coordinated with manufacturing partners (AI illustration; not a KALOZEN-owned factory).</figcaption></figure></div>
+    <div class="sec-head reveal"><div class="kicker">SUPPLY CHAIN COORDINATION</div><h2>From Requirements to Delivery</h2><p>KALOZEN coordinates the process and quality management; actual production is completed by our manufacturing partners.</p></div>
+    <div class="flow reveal">
+    <div class="flow-step"><b>01</b><span>Customer Requirements</span></div>
+    <div class="flow-sep">→</div>
+    <div class="flow-step"><b>02</b><span>Product Specifications</span></div>
+    <div class="flow-sep">→</div>
+    <div class="flow-step"><b>03</b><span>Sample Confirmation</span></div>
+    <div class="flow-sep">→</div>
+    <div class="flow-step"><b>04</b><span>Partner Manufacturing</span></div>
+    <div class="flow-sep">→</div>
+    <div class="flow-step"><b>05</b><span>Quality Checks</span></div>
+    <div class="flow-sep">→</div>
+    <div class="flow-step"><b>06</b><span>Packing & Delivery</span></div>
+    </div>
+    <div class="foot-note reveal">KALOZEN does not own factories or production lines. Manufacturing is carried out by partner factories according to confirmed product specifications; Zhengzhou is a business coordination location.</div>
+  </div>
+</section>
+<section id="applications" style="padding-top:52px">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="kicker">APPLICATIONS</div><h2>Where Our Packaging Is Used</h2><p>Application scenarios below are illustrative. All images are AI illustrations, not real customer cases or product photos.</p></div>
+    <div class="scn-grid">
+    <figure class="scn-item reveal"><img src="../assets/img/home/socks-application.jpg" alt="Socks and Apparel Retail (AI illustration)" loading="lazy" decoding="async"><figcaption><b>Retail</b><br>Socks &amp; Apparel Retail<br><small>AI illustration, not a real customer case</small></figcaption></figure>
+<figure class="scn-item reveal"><img src="../assets/img/retail-shelf.jpg" alt="Supermarkets and Retail Displays (AI illustration)" loading="lazy" decoding="async"><figcaption><b>Retail</b><br>Supermarkets &amp; Retail Displays<br><small>AI illustration, not a real customer case</small></figcaption></figure>
+<figure class="scn-item reveal"><img src="../assets/img/home/custom-packaging.jpg" alt="Brand Packaging (AI illustration)" loading="lazy" decoding="async"><figcaption><b>Retail</b><br>Brand Packaging<br><small>AI illustration, not a real customer case</small></figcaption></figure>
+<figure class="scn-item reveal"><img src="../assets/img/sku/F02_food_box.webp" alt="Takeaway and Food Delivery (AI illustration)" loading="lazy" decoding="async"><figcaption><b>Food &amp; Beverage</b><br>Takeaway &amp; Food Delivery<br><small>AI illustration, not a real customer case</small></figcaption></figure>
+<figure class="scn-item reveal"><img src="../assets/img/sku/F04_paper_cup.webp" alt="Coffee Shops and Beverage Brands (AI illustration)" loading="lazy" decoding="async"><figcaption><b>Food &amp; Beverage</b><br>Coffee Shops &amp; Beverage Brands<br><small>AI illustration, not a real customer case</small></figcaption></figure>
+<figure class="scn-item reveal"><img src="../assets/img/sku/F01_kraft_bag.webp" alt="Bakery and Food Retail (AI illustration)" loading="lazy" decoding="async"><figcaption><b>Food &amp; Beverage</b><br>Bakery &amp; Food Retail<br><small>AI illustration, not a real customer case</small></figcaption></figure>
+    </div>
   </div>
 </section>
 
 <section style="padding-top:52px">
   <div class="wrap">
-    <div class="sec-head reveal"><div class="kicker">OUR SERVICES</div><h2>What we coordinate for your order</h2><p>From product development and specification confirmation to production coordination and order delivery — we help buyers turn an idea into a retail-ready package.</p></div>
-    <div class="grid-3"><div class="card reveal svc-item"><div class="num">01</div><h3>Custom Structure & Development</h3><p>Hook structures, sock display cards and food packaging box / bag formats developed to fit your product.</p></div><div class="card reveal svc-item"><div class="num">02</div><h3>Specification Confirmation</h3><p>Retail: bar diameter, hole size and board thickness. Food: capacity, rim diameter, dimensions and lid type.</p></div><div class="card reveal svc-item"><div class="num">03</div><h3>Material Coordination</h3><p>Coordinate kraft paper, white card, greyboard and other options, confirmed by intended use.</p></div><div class="card reveal svc-item"><div class="num">04</div><h3>Printing & Branding</h3><p>Coordinate logo and artwork printing plus foil stamping and other finishing options.</p></div><div class="card reveal svc-item"><div class="num">05</div><h3>Food Packaging Customisation</h3><p>Bag / box style, capacity, cup shape, matching lids and leak-resistance requirements confirmed per category.</p></div><div class="card reveal svc-item"><div class="num">06</div><h3>Partner Supply Chain Coordination</h3><p>Coordinate die-cutting, printing and scheduling with manufacturing partners; Zhengzhou is a coordination office, not a self-owned factory.</p></div><div class="card reveal svc-item"><div class="num">07</div><h3>Quality Inspection</h3><p>Arrange quality checks and pre-shipment confirmation, subject to samples and written confirmation.</p></div><div class="card reveal svc-item"><div class="num">08</div><h3>Export Packaging & Delivery Coordination</h3><p>Coordinate export packing, carton arrangements and delivery.</p></div></div>
+    <div class="sec-head reveal"><div class="kicker">OUR SERVICES</div><h2>What We Coordinate for Your Order</h2><p>Six coordination services that apply to both retail display packaging and food &amp; beverage packaging — helping buyers turn an idea into a retail-ready package.</p></div>
+    <div class="grid-3"><div class="card reveal svc-item"><div class="num">01</div><h3>Product Development &amp; Design Coordination</h3><p>Coordinate product structure and design development for both retail display and food &amp; beverage packaging.</p></div>
+<div class="card reveal svc-item"><div class="num">02</div><h3>Custom Sizes &amp; Materials</h3><p>Confirm sizes, capacities and suitable material options by product type, across retail display and food packaging.</p></div>
+<div class="card reveal svc-item"><div class="num">03</div><h3>Printing &amp; Finishing Coordination</h3><p>Coordinate logo and artwork printing plus finishing options for display cards and food packaging.</p></div>
+<div class="card reveal svc-item"><div class="num">04</div><h3>Manufacturing Partner Coordination</h3><p>Coordinate production scheduling with partner factories based on confirmed specifications; Zhengzhou is a coordination office, not a self-owned factory.</p></div>
+<div class="card reveal svc-item"><div class="num">05</div><h3>Quality Inspection Coordination</h3><p>Arrange quality checks against confirmed samples and written specifications before shipment.</p></div>
+<div class="card reveal svc-item"><div class="num">06</div><h3>Export Packaging &amp; Delivery Support</h3><p>Coordinate export packing, carton arrangements and delivery for global buyers.</p></div></div>
   </div>
 </section>
 
@@ -220,10 +278,10 @@
     <div class="cta-band reveal">
       <div>
         <div class="kicker" style="color:var(--leaf-2)">LET US WORK TOGETHER</div>
-        <h2>Looking for Retail Display or Food Packaging Solutions?</h2>
-        <p>Tell us your product type, specifications and estimated quantity — whether paper hooks, sock display cards, or food packaging such as bags, boxes and cups, we will help coordinate a suitable solution.</p>
+        <h2>Looking for Custom Packaging Solutions?</h2>
+        <p>Tell us your product type, specifications and estimated order quantity. KALOZEN will help coordinate a suitable packaging solution through its manufacturing partner network.</p>
       </div>
-      <div class="btns"><a class="btn primary" href="contact.html">Request a Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn ghost" href="food-beverage.html">View Food Packaging <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <div class="btns"><a class="btn primary" href="products.html">Explore Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn ghost" href="contact.html">Request a Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
     </div>
   </div>
 </section>
@@ -236,7 +294,7 @@
           <span style="width:28px;height:28px;border-radius:8px;background:var(--forest);display:grid;place-items:center"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c0-6.4 3.2-10.4 8.4-12.4C19.2 15.8 16.2 19.2 12 21z"/><path d="M12 21c0-6.4-3.2-10.4-8.4-12.4C4.8 15.8 7.8 19.2 12 21z"/><path d="M12 21v-5"/></svg></span>
           <b style="letter-spacing:.14em;font-size:13px">KALOZEN</b>
         </div>
-        <p>Eco-friendly Packaging Solutions · Retail Display Packaging · Food &amp; Beverage Packaging<br>Partner supply chain model · Zhengzhou coordination office</p>
+        <p>Eco-friendly Packaging Solutions<br>Retail Display Packaging | Food &amp; Beverage Packaging<br>WhatsApp: +8615515631079<br>Email: www.777910@gmail.com</p>
       </div>
       <div>
         <h4>Quick links</h4>

@@ -2,7 +2,7 @@
 <html lang="zh-CN" dir="">
 <head>
 <meta charset="UTF-8">
-<!-- KALOZEN 中文首页 build=20261125-v4-home 联系方式与页脚文案均为最新；如看到旧内容请强制刷新(Ctrl+F5) -->
+<!-- KALOZEN 中文首页 build=20261126-v5-home 联系方式与页脚文案均为最新；如看到旧内容请强制刷新(Ctrl+F5) -->
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate, max-age=0">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
@@ -23,7 +23,7 @@
 <meta property="og:image" content="https://kalozen.com/assets/img/home/hero-paper-hooks.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="assets/style.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://kalozen.com/#organization","name":"KALOZEN","url":"https://kalozen.com/","logo":{"@type":"ImageObject","url":"https://kalozen.com/assets/img/home/hero-paper-hooks.jpg"},"description":"面向全球企业的环保包装解决方案，涵盖零售展示包装（环保纸质挂钩、袜子展示卡）与食品及饮料包装（纸袋、餐盒、纸碗、纸杯等）。KALOZEN 采用合作供应链模式，协调产品开发、规格确认、质量检查与交付。"},{"@type":"WebSite","@id":"https://kalozen.com/#website","url":"https://kalozen.com/","name":"KALOZEN","inLanguage":"zh-CN"},{"@type":"WebPage","url":"https://kalozen.com/","name":"环保纸质挂钩与定制纸质包装解决方案 | KALOZEN","description":"面向全球企业的环保包装解决方案，涵盖零售展示包装（环保纸质挂钩、袜子展示卡）与食品及饮料包装（纸袋、餐盒、纸碗、纸杯等）。KALOZEN 采用合作供应链模式，协调产品开发、规格确认、质量检查与交付。","inLanguage":"zh-CN","isPartOf":{"@id":"https://kalozen.com/#website"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://kalozen.com/#organization","name":"KALOZEN","url":"https://kalozen.com/","logo":{"@type":"ImageObject","url":"https://kalozen.com/assets/img/home/hero-paper-hooks.jpg"},"description":"面向全球企业的环保包装解决方案，涵盖零售展示包装（环保纸质挂钩、袜子展示卡）与食品及饮料包装（纸袋、餐盒、纸碗、纸杯等）。KALOZEN 采用合作供应链模式，协调产品开发、规格确认、质量检查与交付。"},{"@type":"WebSite","@id":"https://kalozen.com/#website","url":"https://kalozen.com/","name":"KALOZEN","inLanguage":"zh-CN"},{"@type":"WebPage","url":"https://kalozen.com/","name":"环保包装解决方案 · 零售展示与食品饮料包装 | KALOZEN","description":"面向全球企业的环保包装解决方案，涵盖零售展示包装（环保纸质挂钩、袜子展示卡）与食品及饮料包装（纸袋、餐盒、纸碗、纸杯等）。KALOZEN 采用合作供应链模式，协调产品开发、规格确认、质量检查与交付。","inLanguage":"zh-CN","isPartOf":{"@id":"https://kalozen.com/#website"}}]}</script>
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 
 <style>
@@ -57,6 +57,31 @@
     .hero-adv span{font-size:11px}
     .gal-grid{grid-template-columns:1fr}
     .cat-body p{min-height:0}
+  }
+
+  /* v5 unified positioning */
+  .hero-duo{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .hero-duo figure{margin:0;position:relative;overflow:hidden;border-radius:var(--r-l);box-shadow:var(--shadow-l)}
+  .hero-duo img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+  .hero-duo figcaption{position:absolute;left:0;right:0;bottom:0;padding:9px 11px;background:linear-gradient(transparent,rgba(8,30,22,.86));color:#fff;font-size:11.5px;font-weight:600;line-height:1.3}
+  .hero-note{margin-top:12px;color:var(--ink-2);font-size:14px;line-height:1.7;max-width:620px}
+  .flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:26px}
+  .flow-step{flex:1 1 148px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 10px;text-align:center}
+  .flow-step b{display:block;color:var(--green);font-size:12px;margin-bottom:6px;letter-spacing:.06em}
+  .flow-step span{font-size:13px;color:var(--ink-2);line-height:1.45;display:block}
+  .flow-step small{display:block;font-size:11px;color:var(--muted);margin-top:3px}
+  .flow-sep{align-self:center;color:var(--green);font-weight:700;font-size:16px}
+  .scn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .scn-item{margin:0;background:#fff;border:1px solid var(--line);border-radius:var(--r-l);overflow:hidden}
+  .scn-item img{width:100%;height:190px;object-fit:cover;display:block}
+  .scn-item figcaption{padding:12px 14px;font-size:12.5px;color:var(--ink-2);line-height:1.55}
+  .scn-item b{color:var(--green)}
+  @media(max-width:900px){
+    .hero-duo{gap:8px}
+    .hero-duo figcaption{font-size:10px;padding:7px 8px}
+    .flow-sep{display:none}
+    .flow-step{flex:1 1 44%}
+    .scn-grid{grid-template-columns:1fr}
   }
 </style>
 </head>
@@ -100,24 +125,29 @@
     <div class="hero-copy">
       <div class="eyebrow"><i></i>KALOZEN · 环保包装解决方案</div>
       <h1>面向全球企业的<br>环保包装解决方案</h1>
-      <p class="lede">Retail Display Packaging &amp; Food and Beverage Packaging Solutions. 来自中国的零售展示包装与食品及饮料包装解决方案。</p>
+      <p class="lede">Retail Display Packaging &amp; Food and Beverage Packaging Solutions.</p>
+      <p class="hero-note">KALOZEN 为全球采购商协调定制包装开发、规格确认、制造伙伴对接、质量检查与交付安排。</p>
       <div class="hero-adv"><span>零售展示包装</span><span>食品及饮料包装</span><span>定制规格确认</span><span>合作供应链协调</span><span>质量检查与交付</span></div>
       <div class="btns" style="margin-top:26px">
-        <a class="btn primary" href="zh/products.html">查看产品 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn primary" href="zh/products.html">Explore Products / 查看产品 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="btn ghost" href="zh/contact.html">Request a Quote / 获取报价</a>
       </div>
     </div>
-    <div class="figure wide"><img src="assets/img/home/hero-paper-hooks.jpg" alt="Illustrative image of eco-friendly kraft paper hang hooks with rolled kraft paper" loading="eager" fetchpriority="high" decoding="async" width="1280" height="853"></div>
+    <div class="hero-duo">
+      <figure><img src="assets/img/home/socks-application.jpg" alt="零售展示包装：纸质挂钩与袜子展示卡（AI 示意图）" loading="eager" fetchpriority="high" decoding="async"><figcaption>A · Retail Display Packaging（AI 示意图）</figcaption></figure>
+      <figure><img src="assets/img/sku/F02_food_box.webp" alt="食品及饮料包装：牛皮纸外卖餐盒（AI 示意图）" loading="eager" fetchpriority="high" decoding="async"><figcaption>B · Food &amp; Beverage Packaging（AI 示意图）</figcaption></figure>
+    </div>
   </div>
 </header>
 
 <section class="hn-intro" style="padding-top:16px">
   <div class="wrap grid-2">
-    <div class="figure"><img src="assets/img/home/socks-application.jpg" alt="Illustrative image of paper hooks holding socks on a retail display rail" loading="lazy" decoding="async"></div>
+    <div class="figure"><img src="assets/img/home/custom-packaging.jpg" alt="环保纸质包装（AI 示意图）" loading="lazy" decoding="async"></div>
     <div>
-      <div class="sec-head reveal" style="text-align:left"><div class="kicker">关于 KALOZEN</div><h2>面向全球企业的环保包装解决方案伙伴</h2></div>
-      <p class="reveal">KALOZEN 面向全球品牌商、批发商与零售商，提供两大方向的环保包装：零售展示包装（环保纸质挂钩、袜子展示卡）与食品及饮料包装（纸袋、餐盒、纸碗、纸杯等）。我们协调产品开发、规格确认、质量检查与交付。</p>
-      <p class="reveal">KALOZEN 采用合作供应链生产模式，郑州为业务协调地点，并非自有生产工厂。我们与合作工厂协作协调模切、印刷及后整等流程，把设计与需求转化为可交付的产品。</p>
+      <div class="sec-head reveal" style="text-align:left"><div class="kicker">关于 KALOZEN · ABOUT US</div><h2>您的包装解决方案伙伴</h2></div>
+      <p class="reveal">KALOZEN 为全球采购商提供定制化的零售展示包装与食品及饮料包装解决方案。</p>
+      <p class="reveal">从纸质挂钩、袜子展示卡到食品包装产品，我们协调产品开发、规格确认、制造伙伴对接、质量检查与交付安排。</p>
+      <p class="reveal">我们与合作制造伙伴协作，依据已确认的产品要求进行生产协调。郑州为业务协调地点，KALOZEN 并非自有生产工厂。</p>
     </div>
   </div>
 </section>
@@ -127,29 +157,26 @@
     <div class="sec-head reveal"><div class="kicker">两大业务方向 · TWO BUSINESS DIRECTIONS</div><h2>两大包装方向，一站式协调</h2><p>从零售终端陈列到食品及饮料包装，KALOZEN 以合作供应链协调产品开发、规格确认、质量检查与交付。所有配图为 AI 示意图，非实物照片。</p></div>
     <div class="grid-2">
       <div class="card reveal cat-card"><a class="cat-link" href="#retail-display">
-        <div class="cat-body"><div class="num">A</div><h3>Retail Display Packaging · 零售展示包装</h3><p>环保纸质挂钩、袜子展示卡与定制纸质包装，帮助零售产品整齐上架。</p><span class="cat-cta">查看零售展示产品 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a></div>
+        <div class="cat-body"><div class="num">A</div><h3>Retail Display Packaging · 零售展示包装</h3><p>环保纸质挂钩与袜子展示卡，帮助零售产品整齐上架。</p><span class="cat-cta">查看零售展示产品 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a></div>
       <div class="card reveal cat-card"><a class="cat-link" href="zh/food-beverage.html">
-        <div class="cat-body"><div class="num">B</div><h3>Food &amp; Beverage Packaging · 食品及饮料包装</h3><p>牛皮纸袋、外卖餐盒、纸碗、纸杯等 9 种新增产品类别，归属定制纸质包装体系。</p><span class="cat-cta">查看食品包装集合 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a></div>
+        <div class="cat-body"><div class="num">B</div><h3>Food &amp; Beverage Packaging · 食品及饮料包装</h3><p>牛皮纸袋、外卖餐盒、纸碗、纸杯等 9 种产品入口，归属 Custom Paper Packaging 下的二级产品集合。</p><span class="cat-cta">查看食品包装集合 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a></div>
     </div>
   </div>
 </section>
 
 <section id="retail-display" style="padding-top:52px">
   <div class="wrap">
-    <div class="sec-head reveal"><div class="kicker">业务方向 A · RETAIL DISPLAY PACKAGING</div><h2>零售展示包装 · 三大产品品类</h2><p>纸质挂钩、袜子展示卡与定制纸质包装——围绕您的零售产品进行开发与协调。</p></div>
-    <div class="grid-3"><div class="card reveal cat-card"><a class="cat-link" href="zh/products.html">
-        <div class="card-media"><img src="assets/img/home/hook-structures.jpg" alt="Illustrative image of different structural designs of kraft paper hooks" loading="lazy" decoding="async"></div>
-        <div class="cat-body"><div class="num">01</div><h3>纸质挂钩</h3><p>用于袜子、服饰及多件装的牛皮纸模切挂钩，提供标准与加厚结构。</p>
-        <span class="cat-cta">View Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
-        </a></div><div class="card reveal cat-card"><a class="cat-link" href="zh/products.html">
-        <div class="card-media"><img src="assets/img/home/sock-display-cards.jpg" alt="Illustrative image of kraft paper sock display cards on a retail shelf" loading="lazy" decoding="async"></div>
-        <div class="cat-body"><div class="num">02</div><h3>袜子展示卡</h3><p>与纸质挂钩配套的印刷挂卡和展示卡，呈现整齐、可直接上架的陈列效果。</p>
-        <span class="cat-cta">View Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
-        </a></div><div class="card reveal cat-card"><a class="cat-link" href="zh/custom.html">
-        <div class="card-media"><img src="assets/img/home/custom-packaging.jpg" alt="Illustrative image of custom printed kraft paper packaging with foil stamping" loading="lazy" decoding="async"></div>
-        <div class="cat-body"><div class="num">03</div><h3>定制纸质包装</h3><p>根据您的品牌与产品定制的异形模切、印刷及后整效果。</p>
-        <span class="cat-cta">View Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
-        </a></div></div>
+    <div class="sec-head reveal"><div class="kicker">业务方向 A · RETAIL DISPLAY PACKAGING</div><h2>零售展示包装 · Retail Display Packaging</h2><p>环保纸质挂钩与袜子展示卡，围绕您的零售产品进行开发与协调。</p></div>
+    <div class="grid-2">
+      <div class="card reveal cat-card"><a class="cat-link" href="zh/products.html">
+        <div class="card-media"><img src="assets/img/home/hook-structures.jpg" alt="环保纸质挂钩（AI 示意图）" loading="lazy" decoding="async"></div>
+        <div class="cat-body"><div class="num">A1</div><h3>Eco Paper Hooks · 环保纸质挂钩</h3><p>用于袜子、服饰及多件装的牛皮纸模切挂钩，提供标准与加厚结构。</p><span class="cat-cta">View Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        </a></div>
+      <div class="card reveal cat-card"><a class="cat-link" href="zh/products.html">
+        <div class="card-media"><img src="assets/img/home/sock-display-cards.jpg" alt="袜子展示卡（AI 示意图）" loading="lazy" decoding="async"></div>
+        <div class="cat-body"><div class="num">A2</div><h3>Sock Display Cards · 袜子展示卡</h3><p>与纸质挂钩配套的印刷挂卡和展示卡，呈现整齐、可直接上架的陈列效果。</p><span class="cat-cta">View Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        </a></div>
+    </div>
   </div>
 </section>
 
@@ -203,17 +230,48 @@
 </a></div>
 </div></div></section>
 
-<section style="padding-top:44px">
+<section id="supply-chain" style="padding-top:52px">
   <div class="wrap">
-    <div class="sec-head reveal"><div class="kicker">从设计到交付</div><h2>每一步都为您协调</h2><p>从产品开发到出货安排，我们把各环节衔接起来。以下图片为示意图，非产品实拍。</p></div>
-    <div class="gal-grid"><figure class="gal-item reveal"><div class="gal-media"><img src="assets/img/home/socks-application.jpg" alt="纸质挂钩与袜子展示卡的零售陈列应用示意" loading="lazy" decoding="async"></div><figcaption>零售陈列应用：纸质挂钩与袜子展示卡（AI 示意图，非实物照片）</figcaption></figure><figure class="gal-item reveal"><div class="gal-media"><img src="assets/img/sku/F02_food_box.webp" alt="食品及饮料包装应用示意：牛皮纸外卖餐盒" loading="lazy" decoding="async"></div><figcaption>食品及饮料包装应用示例：外卖餐盒（AI 示意图，非实物照片）</figcaption></figure><figure class="gal-item reveal"><div class="gal-media"><img src="assets/img/home/partner-production.jpg" alt="合作供应链的模切与印刷流程示意" loading="lazy" decoding="async"></div><figcaption>合作供应链协调的模切、印刷与后整流程（AI 示意图，非 KALOZEN 自有工厂）</figcaption></figure></div>
+    <div class="sec-head reveal"><div class="kicker">供应链协调 · SUPPLY CHAIN COORDINATION</div><h2>从需求到交付的协作流程</h2><p>KALOZEN 负责流程协调与质量管理，实际生产由合作制造伙伴完成。</p></div>
+    <div class="flow reveal">
+    <div class="flow-step"><b>01</b><span>Customer Requirements<small>客户需求</small></span></div>
+    <div class="flow-sep">→</div>
+    <div class="flow-step"><b>02</b><span>Product Specifications<small>产品规格</small></span></div>
+    <div class="flow-sep">→</div>
+    <div class="flow-step"><b>03</b><span>Sample Confirmation<small>样品确认</small></span></div>
+    <div class="flow-sep">→</div>
+    <div class="flow-step"><b>04</b><span>Partner Manufacturing<small>伙伴生产</small></span></div>
+    <div class="flow-sep">→</div>
+    <div class="flow-step"><b>05</b><span>Quality Checks<small>质量检查</small></span></div>
+    <div class="flow-sep">→</div>
+    <div class="flow-step"><b>06</b><span>Packing & Delivery<small>装箱与交付</small></span></div>
+    </div>
+    <div class="foot-note reveal">KALOZEN 不拥有自有工厂或生产线；生产由合作工厂依据已确认的产品规格完成，郑州为业务协调地点。</div>
+  </div>
+</section>
+<section id="applications" style="padding-top:52px">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="kicker">应用场景 · APPLICATIONS</div><h2>覆盖零售陈列与食品包装</h2><p>以下为应用场景示意图，非真实客户案例，图片均为 AI 示意图。</p></div>
+    <div class="scn-grid">
+    <figure class="scn-item reveal"><img src="assets/img/home/socks-application.jpg" alt="Socks 与 Apparel Retail，袜子与服饰零售（AI 示意图）" loading="lazy" decoding="async"><figcaption><b>Retail</b><br>Socks &amp; Apparel Retail · 袜子与服饰零售<br><small>AI 示意图，非真实客户案例</small></figcaption></figure>
+<figure class="scn-item reveal"><img src="assets/img/retail-shelf.jpg" alt="Supermarkets 与 Retail Displays，超市与零售陈列（AI 示意图）" loading="lazy" decoding="async"><figcaption><b>Retail</b><br>Supermarkets &amp; Retail Displays · 超市与零售陈列<br><small>AI 示意图，非真实客户案例</small></figcaption></figure>
+<figure class="scn-item reveal"><img src="assets/img/home/custom-packaging.jpg" alt="Brand Packaging，品牌包装（AI 示意图）" loading="lazy" decoding="async"><figcaption><b>Retail</b><br>Brand Packaging · 品牌包装<br><small>AI 示意图，非真实客户案例</small></figcaption></figure>
+<figure class="scn-item reveal"><img src="assets/img/sku/F02_food_box.webp" alt="Takeaway 与 Food Delivery，外卖与食品配送（AI 示意图）" loading="lazy" decoding="async"><figcaption><b>Food &amp; Beverage</b><br>Takeaway &amp; Food Delivery · 外卖与食品配送<br><small>AI 示意图，非真实客户案例</small></figcaption></figure>
+<figure class="scn-item reveal"><img src="assets/img/sku/F04_paper_cup.webp" alt="Coffee Shops 与 Beverage Brands，咖啡店与饮品品牌（AI 示意图）" loading="lazy" decoding="async"><figcaption><b>Food &amp; Beverage</b><br>Coffee Shops &amp; Beverage Brands · 咖啡店与饮品品牌<br><small>AI 示意图，非真实客户案例</small></figcaption></figure>
+<figure class="scn-item reveal"><img src="assets/img/sku/F01_kraft_bag.webp" alt="Bakery 与 Food Retail，烘焙与食品零售（AI 示意图）" loading="lazy" decoding="async"><figcaption><b>Food &amp; Beverage</b><br>Bakery &amp; Food Retail · 烘焙与食品零售<br><small>AI 示意图，非真实客户案例</small></figcaption></figure>
+    </div>
   </div>
 </section>
 
 <section style="padding-top:52px">
   <div class="wrap">
-    <div class="sec-head reveal"><div class="kicker">我们的服务</div><h2>我们为您的订单协调什么</h2><p>从产品开发、规格确认到生产协调和订单交付——帮助采购商把想法变成可直接上架的包装。</p></div>
-    <div class="grid-3"><div class="card reveal svc-item"><div class="num">01</div><h3>定制结构与开发</h3><p>零售挂钩结构、袜子展示卡与食品包装盒型、袋型的方案开发。</p></div><div class="card reveal svc-item"><div class="num">02</div><h3>规格确认</h3><p>零售方向确认挂杆直径、孔径与纸板厚度；食品方向确认容量、口径、尺寸与盖型。</p></div><div class="card reveal svc-item"><div class="num">03</div><h3>材料协调</h3><p>协调牛皮纸、白卡、灰板等材料选项，按产品用途适用性确认。</p></div><div class="card reveal svc-item"><div class="num">04</div><h3>印刷与品牌方案</h3><p>协调 Logo、图案印刷与烫金等表面工艺选项。</p></div><div class="card reveal svc-item"><div class="num">05</div><h3>食品包装定制</h3><p>袋型、盒型、容量、杯型、配盖与防漏等按产品类别分别确认。</p></div><div class="card reveal svc-item"><div class="num">06</div><h3>合作供应链生产协调</h3><p>与合作工厂协调模切、印刷及生产安排；郑州为协调地点，非自有工厂。</p></div><div class="card reveal svc-item"><div class="num">07</div><h3>质量检查</h3><p>安排质量检查与出货前确认，以样品与书面确认为准。</p></div><div class="card reveal svc-item"><div class="num">08</div><h3>出口包装与交付协调</h3><p>协调出口包装、装箱与交付安排。</p></div></div>
+    <div class="sec-head reveal"><div class="kicker">我们的服务 · OUR SERVICES</div><h2>我们为您的订单协调什么</h2><p>六项服务同时适用于零售展示包装与食品及饮料包装——帮助采购商把想法变成可直接上架的包装。</p></div>
+    <div class="grid-3"><div class="card reveal svc-item"><div class="num">01</div><h3>Product Development &amp; Design Coordination · 产品开发与设计协调</h3><p>围绕零售展示包装与食品及饮料包装，协调产品结构与设计方案。</p></div>
+<div class="card reveal svc-item"><div class="num">02</div><h3>Custom Sizes &amp; Materials · 定制尺寸与材料</h3><p>按产品类型确认尺寸、容量与适用材料选项，覆盖零售展示与食品包装。</p></div>
+<div class="card reveal svc-item"><div class="num">03</div><h3>Printing &amp; Finishing Coordination · 印刷与后整协调</h3><p>协调 Logo、图案印刷及烫金等后整工艺，适用于展示卡与食品包装。</p></div>
+<div class="card reveal svc-item"><div class="num">04</div><h3>Manufacturing Partner Coordination · 制造伙伴协调</h3><p>依据已确认规格与合作工厂协调生产安排；郑州为业务协调地点，非自有工厂。</p></div>
+<div class="card reveal svc-item"><div class="num">05</div><h3>Quality Inspection Coordination · 质量检查协调</h3><p>按确认样品与书面规格安排质量检查与出货前确认。</p></div>
+<div class="card reveal svc-item"><div class="num">06</div><h3>Export Packaging &amp; Delivery Support · 出口包装与交付支持</h3><p>协调出口包装、装箱与交付安排，服务全球采购商。</p></div></div>
   </div>
 </section>
 
@@ -221,11 +279,11 @@
   <div class="wrap">
     <div class="cta-band reveal">
       <div>
-        <div class="kicker" style="color:var(--leaf-2)">开始合作</div>
-        <h2>需要零售展示包装或食品包装方案？</h2>
-        <p>告诉我们您的产品类型、所需规格与预计数量——无论纸质挂钩、袜子展示卡，还是纸袋、餐盒、纸杯等食品包装，我们都会协助协调合适的方案。</p>
+        <div class="kicker" style="color:var(--leaf-2)">开始合作 · LET US WORK TOGETHER</div>
+        <h2>Looking for Custom Packaging Solutions?</h2>
+        <p>告诉我们您的产品类型、规格与预计订购数量。KALOZEN 将通过其合作制造伙伴网络，协助协调合适的包装方案。</p>
       </div>
-      <div class="btns"><a class="btn primary" href="zh/contact.html">Request a Quote / 获取报价 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn ghost" href="zh/food-beverage.html">查看食品包装 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <div class="btns"><a class="btn primary" href="zh/products.html">Explore Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn ghost" href="zh/contact.html">Request a Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
     </div>
   </div>
 </section>
@@ -238,7 +296,7 @@
           <span style="width:28px;height:28px;border-radius:8px;background:var(--forest);display:grid;place-items:center"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c0-6.4 3.2-10.4 8.4-12.4C19.2 15.8 16.2 19.2 12 21z"/><path d="M12 21c0-6.4-3.2-10.4-8.4-12.4C4.8 15.8 7.8 19.2 12 21z"/><path d="M12 21v-5"/></svg></span>
           <b style="letter-spacing:.14em;font-size:13px">KALOZEN</b>
         </div>
-        <p>环保包装解决方案 · 零售展示包装 · 食品及饮料包装<br>合作供应链模式 · 郑州业务协调</p>
+        <p>Eco-friendly Packaging Solutions<br>Retail Display Packaging | Food &amp; Beverage Packaging<br>WhatsApp: +8615515631079<br>Email: www.777910@gmail.com</p>
       </div>
       <div>
         <h4>快速链接</h4>
