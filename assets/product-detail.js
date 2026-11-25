@@ -131,7 +131,7 @@
     if (img) {
       img.style.display = '';
       img.src = (/^https?:|^\//.test(d.image) ? d.image : '../assets/img/' + d.image);
-      img.alt = t(d.name) + ' (' + sku + '), illustrative image';
+      img.alt = t(d.name) + ' (' + sku + ')';
     }
     var note = byId('conceptNote');
     if (note) {

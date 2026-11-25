@@ -10,7 +10,7 @@
  *    FSC 认证/可降解/年份等），不虚构。
  *  - 精确参数（尺寸/厚度/孔径/克重）：未经逐款实测，统一标注「待确认」，
  *    不编造替代数值。材质/工艺给可选范围并注明待确认。
- *  - 图片：均为原创示意图（concept=true），非实拍，不得冒充实物照片。
+
  * ================================================================== */
 (function () {
   'use strict';
@@ -205,7 +205,7 @@
 
 
   // —— 9 款环保食品包装及餐饮用品（Custom Paper Packaging 体系下新增）——
-  // 说明：均为通用产品示意图（concept=true），非实拍；精确尺寸/材料/颜色/印刷/包装等参数
+
   //      未经逐款确认，统一标注「待确认 / Custom Specifications」，不编造认证或检测数据。
   var FOOD_SPEC = {
     dimensions: { zh:'Custom Specifications（尺寸待确认）', en:'Custom Specifications (dimensions to be confirmed)' },

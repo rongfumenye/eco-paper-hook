@@ -4,7 +4,7 @@
  * 统一口径：展示 14 款在售 SKU（H01–H08 纸质挂钩 + B01–B06 纸质挂板），
  * 与产品详情页完全一致。每张卡片整块可点击，进入对应 SKU 详情页。
  * 四语按 <html lang> 自动本地化；缺语种回退英文。
- * 图片均为示意图，非实拍。
+
  * ================================================================== */
 (function () {
   'use strict';
@@ -67,7 +67,7 @@
     return ''
       + '<article class="card reveal prod-card">'
       + '  <a class="prod-link" href="' + href + '" aria-label="' + tval(d.name) + '">'
-      + '    <div class="card-media"><img src="' + commonImg + '" alt="' + tval(d.name) + ' (' + sku + '), illustrative image" loading="lazy" decoding="async"></div>'
+      + '    <div class="card-media"><img src="' + commonImg + '" alt="' + tval(d.name) + ' (' + sku + ')" loading="lazy" decoding="async"></div>'
       + '    <div class="prod-body">'
       + '      <div class="num">' + esc(sku) + ' · ' + esc(typeLabel) + '</div>'
       + '      <h3>' + tval(d.name) + '</h3>'
