@@ -163,8 +163,8 @@
       productType:'Product type', category:'Application', material:'Material', thickness:'Board thickness (mm)',
       hole:'Hole diameter (mm)', barDiameter:'Bar diameter (mm)', itemWeight:'Item weight (g)',
       sizeCapacity:'Size/Capacity', lidType:'Lid type', packReq:'Packaging requirements',
-      cardSize:'Card size (mm)', cardThickness:'Card thickness (mm)', hangHole:'Hang-hole type',
-      foldStyle:'Fold style', socksPerCard:'Socks per card', printSides:'Print sides', qty:'Quantity',
+      cardSize:'Card Size (mm)', cardThickness:'Card Thickness (mm)', hangHole:'Hanging Hole Type',
+      foldStyle:'Folding Style', socksPerCard:'Socks per Card', printSides:'Printing Sides', qty:'Quantity',
       printing:'Printing/finishing', notes:'Requirements', productSku:'Product SKU' }
   };
   // —— v10：商品页询价邮件正文标签（中/英/俄/阿）——
