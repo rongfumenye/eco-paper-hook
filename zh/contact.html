@@ -170,6 +170,14 @@ input[name="productSku"],input[name="scene_name"],input[name="website"]{display:
             <div class="field"><label>纸板厚度 (mm)</label><input name="thickness" type="text" placeholder="纸钩专用：请填写实际厚度"></div>
             <div class="field"><label>挂钩孔径 (mm)</label><input name="hole" type="text" placeholder="纸钩专用：请填写实际孔径"></div>
           </div>
+          <div data-group="sock-board" style="display:none">
+            <div class="field"><label>卡片尺寸 (mm)</label><input name="cardSize" type="text" placeholder="展示卡专用：如卡片长 × 宽（待确认）"></div>
+            <div class="field"><label>卡纸厚度 (mm)</label><input name="cardThickness" type="text" placeholder="展示卡专用：实际厚度（待确认）"></div>
+            <div class="field"><label>挂孔形式</label><input name="hangHole" type="text" placeholder="展示卡专用：如圆孔 / 飞机孔 / 无孔"></div>
+            <div class="field"><label>折叠方式</label><input name="foldStyle" type="text" placeholder="展示卡专用：如对折 / 插卡 / 单页"></div>
+            <div class="field"><label>每卡袜子数量</label><input name="socksPerCard" type="text" placeholder="展示卡专用：每卡配几双 / 几只"></div>
+            <div class="field"><label>印刷面</label><input name="printSides" type="text" placeholder="展示卡专用：如单面 / 双面印刷"></div>
+          </div>
           <div data-group="food" style="display:none">
             <div class="field"><label>尺寸 / 容量</label><input name="sizeCapacity" type="text" placeholder="食品包装专用：如容量或长宽高"></div>
             <div class="field"><label>盖型</label><input name="lidType" type="text" placeholder="食品包装专用：如平盖 / 防滑盖"></div>
@@ -191,10 +199,13 @@ input[name="productSku"],input[name="scene_name"],input[name="website"]{display:
   function apply(){
     var v = (sel.value || '').trim();
     var isFood = v.indexOf('F') === 0;
-    var isHook = (v === 'hook' || v === 'sock-board');
+    var isHook = (v === 'hook');
+    var isSockBoard = (v === 'sock-board');
     for(var i=0;i<groups.length;i++){
       var g = groups[i], kind = g.getAttribute('data-group');
-      var show = (kind === 'food' && isFood) || (kind === 'hook' && isHook);
+      var show = (kind === 'food' && isFood)
+        || (kind === 'hook' && isHook)
+        || (kind === 'sock-board' && isSockBoard);
       g.style.display = show ? 'contents' : 'none';
       var els = g.querySelectorAll('input,select,textarea');
       for(var j=0;j<els.length;j++){
@@ -246,7 +257,7 @@ input[name="productSku"],input[name="scene_name"],input[name="website"]{display:
           <span style="width:28px;height:28px;border-radius:8px;background:var(--forest);display:grid;place-items:center"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c0-6.4 3.2-10.4 8.4-12.4C19.2 15.8 16.2 19.2 12 21z"/><path d="M12 21c0-6.4-3.2-10.4-8.4-12.4C4.8 15.8 7.8 19.2 12 21z"/><path d="M12 21v-5"/></svg></span>
           <b style="letter-spacing:.14em;font-size:13px">KALOZEN</b>
         </div>
-        <p>环保纸质挂钩 · 袜子展示卡 · 定制纸质包装<br>材质与认证以确认为准</p>
+        <p>KALOZEN · 环保包装解决方案 · 零售展示包装与食品及饮料包装<br>材质与认证以确认为准</p>
       </div>
       <div>
         <h4>快速导航</h4>

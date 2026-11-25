@@ -94,7 +94,7 @@ input[name="productSku"],input[name="scene_name"],input[name="website"]{display:
     <div class="crumb"><a href="index.html">Home</a><span>/</span>Contact</div>
     <div class="eyebrow"><i></i>CONTACT</div>
     <h1>Tell Us Your Packaging Needs. Let's Find the Right Solution.</h1>
-    <p class="lede">From Retail Display Packaging (eco paper hooks and sock display cards) to Food & Beverage Packaging, select your product and share your requirements — we will reply with options by material, structure and specification. You can also reach us directly via WhatsApp or email.</p>
+    <p class="lede">We work across Eco Paper Hooks, Sock Display Cards and Food & Beverage Packaging. Select your product and share your requirements — we will reply with options by material, structure and specification. You can also reach us directly via WhatsApp or email.</p>
   </div>
 </header>
 
@@ -169,6 +169,14 @@ input[name="productSku"],input[name="scene_name"],input[name="website"]{display:
             <div class="field"><label>Board thickness (mm)</label><input name="thickness" type="text" placeholder="For paper hooks: board thickness"></div>
             <div class="field"><label>Hole diameter (mm)</label><input name="hole" type="text" placeholder="For paper hooks: hole diameter"></div>
           </div>
+          <div data-group="sock-board" style="display:none">
+            <div class="field"><label>Card size (mm)</label><input name="cardSize" type="text" placeholder="For display cards: card length x width (to be confirmed)"></div>
+            <div class="field"><label>Card thickness (mm)</label><input name="cardThickness" type="text" placeholder="For display cards: actual thickness (to be confirmed)"></div>
+            <div class="field"><label>Hang-hole type</label><input name="hangHole" type="text" placeholder="For display cards: e.g. round hole / airplane hole / no hole"></div>
+            <div class="field"><label>Fold style</label><input name="foldStyle" type="text" placeholder="For display cards: e.g. folded / insert card / single sheet"></div>
+            <div class="field"><label>Socks per card</label><input name="socksPerCard" type="text" placeholder="For display cards: pairs or pieces per card"></div>
+            <div class="field"><label>Print sides</label><input name="printSides" type="text" placeholder="For display cards: e.g. single-sided / double-sided"></div>
+          </div>
           <div data-group="food" style="display:none">
             <div class="field"><label>Size / Capacity</label><input name="sizeCapacity" type="text" placeholder="For food packaging: capacity or dimensions"></div>
             <div class="field"><label>Lid Type</label><input name="lidType" type="text" placeholder="For food packaging: e.g. flat lid / anti-leak lid"></div>
@@ -190,10 +198,13 @@ input[name="productSku"],input[name="scene_name"],input[name="website"]{display:
   function apply(){
     var v = (sel.value || '').trim();
     var isFood = v.indexOf('F') === 0;
-    var isHook = (v === 'hook' || v === 'sock-board');
+    var isHook = (v === 'hook');
+    var isSockBoard = (v === 'sock-board');
     for(var i=0;i<groups.length;i++){
       var g = groups[i], kind = g.getAttribute('data-group');
-      var show = (kind === 'food' && isFood) || (kind === 'hook' && isHook);
+      var show = (kind === 'food' && isFood)
+        || (kind === 'hook' && isHook)
+        || (kind === 'sock-board' && isSockBoard);
       g.style.display = show ? 'contents' : 'none';
       var els = g.querySelectorAll('input,select,textarea');
       for(var j=0;j<els.length;j++){
@@ -245,7 +256,7 @@ input[name="productSku"],input[name="scene_name"],input[name="website"]{display:
           <span style="width:28px;height:28px;border-radius:8px;background:var(--forest);display:grid;place-items:center"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c0-6.4 3.2-10.4 8.4-12.4C19.2 15.8 16.2 19.2 12 21z"/><path d="M12 21c0-6.4-3.2-10.4-8.4-12.4C4.8 15.8 7.8 19.2 12 21z"/><path d="M12 21v-5"/></svg></span>
           <b style="letter-spacing:.14em;font-size:13px">KALOZEN</b>
         </div>
-        <p>Eco Paper Hooks · Sock Display Cards · Custom Paper Packaging<br>Materials and certifications subject to confirmation</p>
+        <p>KALOZEN · Eco-friendly Packaging Solutions · Retail Display Packaging & Food & Beverage Packaging<br>Materials and certifications subject to confirmation</p>
       </div>
       <div>
         <h4>Quick links</h4>
