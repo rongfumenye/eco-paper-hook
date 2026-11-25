@@ -30,8 +30,8 @@
       en: 'Exact dimensions, thickness and hole sizes are not per-item tested and are marked "To be confirmed". Request a spec sheet and samples for written confirmation.'
     },
     conceptNote: {
-      zh: '示意图，非产品实拍；实拍图待补。',
-      en: 'Illustration, not a real product photo. Actual photo to be added.'
+      zh: '',
+      en: ''
     }
   };
 

@@ -1,5 +1,5 @@
 {
-  "_readme": "真实产品照片登记表。仅当用户提供并核实为真实产品照片后，才把对应 SKU 的值从 null 改为站点根相对路径（如 assets/img/real/H01.webp）。留空/null 表示尚未提供真实照片，页面一律显示 AI 示意图并保持 AI 标识。严禁将 AI 示意图路径填入此处，严禁使用未经授权的客户项目照片。",
+  "_readme": "真实产品照片登记表。仅当用户提供并核实为真实产品照片后，才把对应 SKU 的值从 null 改为站点根相对路径（如 assets/img/real/H01.webp）。留空/null 表示尚未提供真实照片，页面沿用现有配图。严禁使用未经授权的客户项目照片。",
   "_priority": "优先补充 H01-H08、B01-B06，其次 F01-F09。",
   "H01": null, "H02": null, "H03": null, "H04": null, "H05": null, "H06": null, "H07": null, "H08": null,
   "B01": null, "B02": null, "B03": null, "B04": null, "B05": null, "B06": null,

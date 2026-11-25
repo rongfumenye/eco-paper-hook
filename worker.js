@@ -25,6 +25,16 @@ export default {
       return listOnRequest({ request: request, env: env, ctx: ctx });
     }
 
+    // 中文联系我们页面已下线：旧链接 301 到英文联系我们页面，避免 404。
+    // 仅重定向该页面本身，不影响其他中文页面。
+    var contactPath = path.replace(/\/$/, '').replace(/\.html$/, '');
+    if (contactPath === '/zh/contact') {
+      return new Response(null, {
+        status: 301,
+        headers: { Location: '/en/contact', 'Cache-Control': 'no-store' }
+      });
+    }
+
     // 静态资源：交由 Assets 绑定处理；未绑定则给出明确响应
     if (env && env.ASSETS && typeof env.ASSETS.fetch === 'function') {
       return env.ASSETS.fetch(request);

@@ -278,18 +278,6 @@
   <url>
     <loc>https://kalozen.com/en/contact.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/contact.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <lastmod>2026-11-20</lastmod>
-  </url>
-  <url>
-    <loc>https://kalozen.com/zh/contact.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/contact.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/contact.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/contact.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/contact.html"/>
@@ -300,7 +288,6 @@
   <url>
     <loc>https://kalozen.com/ru/contact.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/contact.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/contact.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/contact.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/contact.html"/>
@@ -311,7 +298,6 @@
   <url>
     <loc>https://kalozen.com/ar/contact.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/contact.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/contact.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/contact.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/contact.html"/>

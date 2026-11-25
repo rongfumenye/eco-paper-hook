@@ -34,7 +34,7 @@
       sku:'SKU 编号', nameZh:'中文名称', nameEn:'英文名称', features:'结构与特点', use:'适用场景',
       dimensions:'产品尺寸', material:'纸张材质', thickness:'厚度', hole:'孔位 / 挂孔规格',
       printing:'印刷及表面工艺', customizable:'可定制内容',
-      specTitle:'产品规格', concept:'示意图，非产品实拍；实拍图待补。',
+      specTitle:'产品规格', concept:'',
       inquire:'Request a Quote', back:'返回产品中心',
       notfound:'未找到该 SKU，请从产品中心选择产品。',
       nodata:'产品数据未能加载。请刷新页面（Ctrl+F5 / Cmd+Shift+R）后重试，或从产品中心重新进入。',
@@ -49,7 +49,7 @@
       sku:'SKU', nameZh:'Chinese name', nameEn:'English name', features:'Structure & Features', use:'Applications',
       dimensions:'Dimensions', material:'Board material', thickness:'Thickness', hole:'Hole / hanging spec',
       printing:'Printing & finishing', customizable:'Customisation options',
-      specTitle:'Product specifications', concept:'Illustration, not a real product photo. Actual photo to be added.',
+      specTitle:'Product specifications', concept:'',
       inquire:'Request a Quote', back:'Back to products',
       notfound:'SKU not found. Please choose a product from the product centre.',
       nodata:'Product data could not be loaded. Please hard-refresh (Ctrl+F5 / Cmd+Shift+R) and retry, or re-enter from the product centre.',
@@ -177,7 +177,7 @@
       + '&name=' + encodeURIComponent(t(d.name))
       + '&source=' + encodeURIComponent(curUrl);
     var inq = byId('pInquiry');
-    if (inq) { inq.href = 'contact.html' + qp; inq.setAttribute('data-inq', '1'); }
+    if (inq) { inq.href = 'https://kalozen.com/en/contact' + qp; inq.setAttribute('data-inq', '1'); }
 
     var fSku = byId('qSku'); if (fSku) fSku.value = sku;
     var fName = byId('qName'); if (fName) fName.value = t(d.name);

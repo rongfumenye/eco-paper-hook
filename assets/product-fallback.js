@@ -29,8 +29,8 @@
     ar:'قابل للتخصيص: الشكل، الأبعاد، الفتحة، الخامة، الطباعة والتشطيب (يُؤكد بالرسم والعينة).'
   };
   var CONCEPT = {
-    zh:'示意图，非产品实拍；实拍图待补。',
-    en:'Illustration, not a real product photo. Actual photo to be added.',
+    zh:'',
+    en:'',
     ru:'Иллюстрация, не фото товара.',
     ar:'رسم توضيحي، ليس صورة منتج حقيقية.'
   };
@@ -129,7 +129,7 @@
 
     var curUrl = location.href;
     var inq = byId('pInquiry');
-    if (inq) inq.href = 'contact.html?sku=' + encodeURIComponent(sku) + '&name=' + encodeURIComponent(t(d.name, L)) + '&source=' + encodeURIComponent(curUrl);
+    if (inq) inq.href = 'https://kalozen.com/en/contact?sku=' + encodeURIComponent(sku) + '&name=' + encodeURIComponent(t(d.name, L)) + '&source=' + encodeURIComponent(curUrl);
     var fSku = byId('qSku'); if (fSku) fSku.value = sku;
     var fName = byId('qName'); if (fName) fName.value = t(d.name, L);
     var fSrc = byId('qSource'); if (fSrc) fSrc.value = curUrl;
