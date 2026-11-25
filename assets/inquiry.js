@@ -162,6 +162,72 @@
       sizeCapacity:'Size/Capacity', lidType:'Lid type', packReq:'Packaging requirements', qty:'Quantity',
       printing:'Printing/finishing', notes:'Requirements', productSku:'Product SKU' }
   };
+  // —— v10：商品页询价邮件正文标签（中/英/俄/阿）——
+  var MAIL_LABEL = {
+    zh: { productSku:'产品型号', productName:'产品名称', styleCode:'款式型号', styleName:'款式名称',
+      styleSpecs:'相关规格', qty:'预计数量', material:'材质/规格', printing:'印刷/表面工艺',
+      notes:'其他要求', name:'姓名', email:'邮箱', company:'公司', phone:'WhatsApp/电话' },
+    en: { productSku:'Product Code', productName:'Product Name', styleCode:'Selected Style Code', styleName:'Style Name',
+      styleSpecs:'Relevant Specifications', qty:'Estimated Quantity', material:'Material / Spec', printing:'Printing / Finishing',
+      notes:'Other Requirements', name:'Name', email:'Email', company:'Company', phone:'WhatsApp/Phone' },
+    ru: { productSku:'Артикул', productName:'Название продукта', styleCode:'Код стиля', styleName:'Название стиля',
+      styleSpecs:'Спецификации', qty:'Количество', material:'Материал', printing:'Печать',
+      notes:'Комментарии', name:'Имя', email:'E-mail', company:'Компания', phone:'WhatsApp/Телефон' },
+    ar: { productSku:'رمز المنتج', productName:'اسم المنتج', styleCode:'رمز الطراز', styleName:'اسم الطراز',
+      styleSpecs:'المواصفات', qty:'الكمية', material:'الخامة', printing:'الطباعة',
+      notes:'ملاحظات', name:'الاسم', email:'البريد', company:'الشركة', phone:'واتساب/هاتف' }
+  };
+  // 商品页没有 #formTip 时，自建一个提示节点（不改页面结构，仅追加）
+  function qaTip(form, msg, isErr) {
+    var tip = document.getElementById('formTip');
+    if (!tip) {
+      tip = document.createElement('div');
+      tip.id = 'formTip';
+      tip.setAttribute('role', 'status');
+      tip.style.cssText = 'margin-top:12px;padding:11px 14px;border-radius:9px;font-size:13px;line-height:1.6;white-space:pre-line';
+      (form.parentNode || document.body).appendChild(tip);
+    }
+    var wa = (CFG.whatsapp && CFG.whatsapp.number) ? CFG.whatsapp.number : '';
+    msg = String(msg).replace(/\{WA\}/g, wa).replace(/\{MAIL\}/g, RECV_EMAIL);
+    tip.style.display = 'block';
+    tip.style.color = isErr ? '#b3261e' : 'var(--green)';
+    tip.textContent = msg;
+  }
+  // 商品页询价按钮：打开邮件客户端并预填收件人/主题/正文（同步，不依赖后端）
+  window.qaInquiryMail = function (form, ev) {
+    if (ev && ev.preventDefault) ev.preventDefault();
+    form = form || (ev && ev.target) || q('.inq-form');
+    if (!form) return false;
+    var t = T[LANG] || T.en;
+    var name = val(form, 'name'), email = val(form, 'email'), qty = val(form, 'qty');
+    var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    var consent = form.elements['privacy'];
+    if (!name || !emailOk || !qty || (consent && !consent.checked)) {
+      qaTip(form, t.need, true);
+      return false;
+    }
+    var payload = collect(form);
+    // 补读款式三要素（collect 的 keys 不含这些，商品页表单以隐藏字段提供）
+    ['styleCode', 'styleName', 'styleSpecs'].forEach(function (k) {
+      var el = form.elements[k];
+      if (el && el.value) payload[k] = String(el.value).trim();
+    });
+    var LBL = MAIL_LABEL[LANG] || MAIL_LABEL.en;
+    var order = ['productSku', 'productName', 'styleCode', 'styleName', 'styleSpecs',
+      'qty', 'material', 'printing', 'notes', 'name', 'email', 'company', 'phone'];
+    var lines = [];
+    order.forEach(function (k) { if (payload[k]) lines.push((LBL[k] || k) + ': ' + payload[k]); });
+    lines.push('', 'Page: ' + payload.page_url, 'Language: ' + payload.page_language, 'Time: ' + payload.inquiry_time);
+    var subject = 'New Inquiry - KALOZEN - ' + (payload.productSku || '') + ' - ' + (payload.styleCode || '');
+    if (RECV_EMAIL) {
+      window.location.href = 'mailto:' + RECV_EMAIL
+        + '?subject=' + encodeURIComponent(subject)
+        + '&body=' + encodeURIComponent(lines.join('\n'));
+    }
+    qaTip(form, t.okMailto, false);
+    return false;  // 阻止 GET 跳转联系页
+  };
+
   function mailtoFallback(form, payload, t) {
     var subject = 'New Inquiry - KALOZEN Website - ' + (payload.name || '') + ' - ' + (payload.productType || payload.productSku || payload.category || 'General');
     var lines = [];
