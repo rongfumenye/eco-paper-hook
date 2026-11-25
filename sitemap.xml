@@ -2,571 +2,1009 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://kalozen.com/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/index.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/"/>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/en/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/index.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/index.html"/>
+    <loc>https://kalozen.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/"/>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/zh/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/index.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/index.html"/>
+    <loc>https://kalozen.com/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/"/>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/ru/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/index.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/index.html"/>
+    <loc>https://kalozen.com/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/"/>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/ar/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/index.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/index.html"/>
+    <loc>https://kalozen.com/ar/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/"/>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/en/eco.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/eco.html"/>
+    <loc>https://kalozen.com/en/eco</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/eco"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/eco"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/eco"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/eco"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/eco"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/zh/eco.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/eco.html"/>
+    <loc>https://kalozen.com/zh/eco</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/eco"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/eco"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/eco"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/eco"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/eco"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/ru/eco.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/eco.html"/>
+    <loc>https://kalozen.com/ru/eco</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/eco"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/eco"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/eco"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/eco"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/eco"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/ar/eco.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/eco.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/eco.html"/>
+    <loc>https://kalozen.com/ar/eco</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/eco"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/eco"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/eco"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/eco"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/eco"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/en/products.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/products.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/products.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/products.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/products.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/products.html"/>
+    <loc>https://kalozen.com/en/products</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/products"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/products"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/products"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/products"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/products"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/zh/products.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/products.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/products.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/products.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/products.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/products.html"/>
+    <loc>https://kalozen.com/zh/products</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/products"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/products"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/products"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/products"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/products"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/ru/products.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/products.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/products.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/products.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/products.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/products.html"/>
+    <loc>https://kalozen.com/ru/products</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/products"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/products"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/products"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/products"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/products"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/ar/products.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/products.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/products.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/products.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/products.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/products.html"/>
+    <loc>https://kalozen.com/ar/products</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/products"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/products"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/products"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/products"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/products"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/en/custom.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/custom.html"/>
+    <loc>https://kalozen.com/en/custom</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/custom"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/custom"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/custom"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/custom"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/custom"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/zh/custom.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/custom.html"/>
+    <loc>https://kalozen.com/zh/custom</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/custom"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/custom"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/custom"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/custom"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/custom"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/ru/custom.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/custom.html"/>
+    <loc>https://kalozen.com/ru/custom</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/custom"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/custom"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/custom"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/custom"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/custom"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/ar/custom.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/custom.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/custom.html"/>
+    <loc>https://kalozen.com/ar/custom</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/custom"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/custom"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/custom"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/custom"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/custom"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/en/cases.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/cases.html"/>
+    <loc>https://kalozen.com/en/cases</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/cases"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/cases"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/cases"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/cases"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/cases"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/zh/cases.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/cases.html"/>
+    <loc>https://kalozen.com/zh/cases</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/cases"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/cases"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/cases"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/cases"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/cases"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/ru/cases.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/cases.html"/>
+    <loc>https://kalozen.com/ru/cases</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/cases"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/cases"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/cases"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/cases"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/cases"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/ar/cases.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/cases.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/cases.html"/>
+    <loc>https://kalozen.com/ar/cases</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/cases"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/cases"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/cases"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/cases"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/cases"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/en/about.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/about.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/about.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/about.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/about.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/about.html"/>
+    <loc>https://kalozen.com/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/about"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/about"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/about"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/about"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/zh/about.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/about.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/about.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/about.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/about.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/about.html"/>
+    <loc>https://kalozen.com/zh/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/about"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/about"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/about"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/about"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/ru/about.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/about.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/about.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/about.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/about.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/about.html"/>
+    <loc>https://kalozen.com/ru/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/about"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/about"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/about"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/about"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/ar/about.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/about.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/about.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/about.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/about.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/about.html"/>
+    <loc>https://kalozen.com/ar/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/about"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/about"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/about"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/about"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/en/contact.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/contact.html"/>
+    <loc>https://kalozen.com/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/contact"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/contact"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/ru/contact.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/contact.html"/>
+    <loc>https://kalozen.com/ru/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/contact"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/contact"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/ar/contact.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/contact.html"/>
+    <loc>https://kalozen.com/ar/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/contact"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/contact"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/en/privacy.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/privacy.html"/>
+    <loc>https://kalozen.com/en/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/privacy"/>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/zh/privacy.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/privacy.html"/>
+    <loc>https://kalozen.com/zh/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/privacy"/>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/ru/privacy.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/privacy.html"/>
+    <loc>https://kalozen.com/ru/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/privacy"/>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/ar/privacy.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/privacy.html"/>
+    <loc>https://kalozen.com/ar/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/privacy"/>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/en/terms.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/terms.html"/>
+    <loc>https://kalozen.com/en/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/terms"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/terms"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/terms"/>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/zh/terms.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/terms.html"/>
+    <loc>https://kalozen.com/zh/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/terms"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/terms"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/terms"/>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/ru/terms.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/terms.html"/>
+    <loc>https://kalozen.com/ru/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/terms"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/terms"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/terms"/>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/ar/terms.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/terms.html"/>
+    <loc>https://kalozen.com/ar/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/terms"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/terms"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/terms"/>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/en/cookie.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/cookie.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/cookie.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/cookie.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/cookie.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/cookie.html"/>
+    <loc>https://kalozen.com/en/cookie</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/cookie"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/cookie"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/cookie"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/cookie"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/cookie"/>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/zh/cookie.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/cookie.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/cookie.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/cookie.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/cookie.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/cookie.html"/>
+    <loc>https://kalozen.com/zh/cookie</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/cookie"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/cookie"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/cookie"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/cookie"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/cookie"/>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/ru/cookie.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/cookie.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/cookie.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/cookie.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/cookie.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/cookie.html"/>
+    <loc>https://kalozen.com/ru/cookie</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/cookie"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/cookie"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/cookie"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/cookie"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/cookie"/>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/ar/cookie.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/cookie.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/cookie.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/cookie.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/cookie.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/cookie.html"/>
+    <loc>https://kalozen.com/ar/cookie</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/cookie"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/cookie"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/cookie"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/cookie"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/cookie"/>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/en/faq.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/faq.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/faq.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/faq.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/faq.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/faq.html"/>
+    <loc>https://kalozen.com/en/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/faq"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/faq"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/faq"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/faq"/>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/zh/faq.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/faq.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/faq.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/faq.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/faq.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/faq.html"/>
+    <loc>https://kalozen.com/zh/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/faq"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/faq"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/faq"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/faq"/>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/ru/faq.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/faq.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/faq.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/faq.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/faq.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/faq.html"/>
+    <loc>https://kalozen.com/ru/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/faq"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/faq"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/faq"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/faq"/>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/ar/faq.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/faq.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/faq.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/faq.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/faq.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/faq.html"/>
+    <loc>https://kalozen.com/ar/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/faq"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/faq"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/faq"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/faq"/>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/en/sample.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/sample.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/sample.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/sample.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/sample.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/sample.html"/>
+    <loc>https://kalozen.com/en/sample</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/sample"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/sample"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/sample"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/sample"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/sample"/>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/zh/sample.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/sample.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/sample.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/sample.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/sample.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/sample.html"/>
+    <loc>https://kalozen.com/zh/sample</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/sample"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/sample"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/sample"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/sample"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/sample"/>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/ru/sample.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/sample.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/sample.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/sample.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/sample.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/sample.html"/>
+    <loc>https://kalozen.com/ru/sample</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/sample"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/sample"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/sample"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/sample"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/sample"/>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/ar/sample.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/sample.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/sample.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/sample.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/sample.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/sample.html"/>
+    <loc>https://kalozen.com/ar/sample</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/sample"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/sample"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/sample"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/sample"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/sample"/>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/en/product.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/product.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/product.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/product.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/product.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/product.html"/>
+    <loc>https://kalozen.com/en/product</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/product"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/product"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/product"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/product"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/product"/>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/zh/product.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/product.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/product.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/product.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/product.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/product.html"/>
+    <loc>https://kalozen.com/zh/product</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/product"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/product"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/product"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/product"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/product"/>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/ru/product.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/product.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/product.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/product.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/product.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/product.html"/>
+    <loc>https://kalozen.com/ru/product</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/product"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/product"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/product"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/product"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/product"/>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2026-11-21</lastmod>
   </url>
   <url>
-    <loc>https://kalozen.com/ar/product.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/product.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/product.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/product.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/product.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/product.html"/>
+    <loc>https://kalozen.com/ar/product</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/product"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/product"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kalozen.com/ru/product"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kalozen.com/ar/product"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/product"/>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/zh/p/H01</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/H01"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/H01"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/H01"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/p/H01</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/H01"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/H01"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/H01"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/zh/p/H02</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/H02"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/H02"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/H02"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/p/H02</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/H02"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/H02"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/H02"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/zh/p/H03</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/H03"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/H03"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/H03"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/p/H03</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/H03"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/H03"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/H03"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/zh/p/H04</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/H04"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/H04"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/H04"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/p/H04</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/H04"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/H04"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/H04"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/zh/p/H05</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/H05"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/H05"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/H05"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/p/H05</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/H05"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/H05"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/H05"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/zh/p/H06</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/H06"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/H06"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/H06"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/p/H06</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/H06"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/H06"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/H06"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/zh/p/H07</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/H07"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/H07"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/H07"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/p/H07</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/H07"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/H07"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/H07"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/zh/p/H08</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/H08"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/H08"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/H08"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/p/H08</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/H08"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/H08"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/H08"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/zh/p/B01</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/B01"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/B01"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/B01"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/p/B01</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/B01"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/B01"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/B01"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/zh/p/B02</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/B02"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/B02"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/B02"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/p/B02</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/B02"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/B02"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/B02"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/zh/p/B03</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/B03"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/B03"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/B03"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/p/B03</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/B03"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/B03"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/B03"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/zh/p/B04</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/B04"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/B04"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/B04"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/p/B04</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/B04"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/B04"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/B04"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/zh/p/B05</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/B05"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/B05"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/B05"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/p/B05</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/B05"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/B05"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/B05"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/zh/p/B06</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/B06"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/B06"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/B06"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/p/B06</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/B06"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/B06"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/B06"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/zh/p/F01</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/F01"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/F01"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/F01"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/p/F01</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/F01"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/F01"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/F01"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/zh/p/F02</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/F02"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/F02"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/F02"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/p/F02</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/F02"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/F02"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/F02"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/zh/p/F03</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/F03"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/F03"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/F03"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/p/F03</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/F03"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/F03"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/F03"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/zh/p/F04</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/F04"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/F04"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/F04"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/p/F04</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/F04"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/F04"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/F04"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/zh/p/F05</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/F05"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/F05"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/F05"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/p/F05</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/F05"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/F05"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/F05"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/zh/p/F06</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/F06"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/F06"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/F06"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/p/F06</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/F06"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/F06"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/F06"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/zh/p/F07</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/F07"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/F07"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/F07"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/p/F07</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/F07"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/F07"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/F07"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/zh/p/F08</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/F08"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/F08"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/F08"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/p/F08</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/F08"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/F08"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/F08"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/zh/p/F09</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/F09"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/F09"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/F09"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/p/F09</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kalozen.com/zh/p/F09"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/p/F09"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/p/F09"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/guides/choose-paper-hooks-for-sock-packaging</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/guides/choose-paper-hooks-for-sock-packaging"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/guides/choose-paper-hooks-for-sock-packaging"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/guides/paper-hooks-vs-plastic-hooks</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/guides/paper-hooks-vs-plastic-hooks"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/guides/paper-hooks-vs-plastic-hooks"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://kalozen.com/en/guides/design-custom-sock-display-cards</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalozen.com/en/guides/design-custom-sock-display-cards"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalozen.com/en/guides/design-custom-sock-display-cards"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-11-25</lastmod>
   </url>
 </urlset>
