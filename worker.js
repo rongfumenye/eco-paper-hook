@@ -14,9 +14,22 @@ import { onRequest as listOnRequest } from './functions/api/inquiries.js';
 
 export default {
   async fetch(request, env, ctx) {
-    var path;
-    try { path = new URL(request.url).pathname; }
-    catch (e) { path = '/'; }
+    var url, path;
+    try { url = new URL(request.url); path = url.pathname; }
+    catch (e) { url = null; path = '/'; }
+
+    // 统一协议：正式域名上的 http 请求 301 跳转到 https，避免 http/https 两套重复网址。
+    // 边缘可能改写 request.url 的 scheme，因此同时检查 X-Forwarded-Proto。
+    // 仅对正式域名生效，不影响本地 wrangler dev（localhost）。
+    if (url) {
+      var host = (url.hostname || '').toLowerCase();
+      var fwdProto = (request.headers.get('X-Forwarded-Proto') || '').split(',')[0].trim().toLowerCase();
+      var isHttp = url.protocol === 'http:' || fwdProto === 'http';
+      if (isHttp && host === 'kalozen.com') {
+        var target = 'https://kalozen.com' + url.pathname + (url.search || '');
+        return new Response(null, { status: 301, headers: { Location: target, 'Cache-Control': 'no-store' } });
+      }
+    }
 
     if (path.replace(/\/$/, '') === '/api/inquiry') {
       return inquiryOnRequest({ request: request, env: env, ctx: ctx });
